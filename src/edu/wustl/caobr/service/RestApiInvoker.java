@@ -1,15 +1,12 @@
 package edu.wustl.caobr.service;
 import java.io.BufferedReader;
 import java.io.DataOutputStream;
-import java.io.File;
-import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.io.PrintStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.rmi.RemoteException;
-import java.util.Date;
 import java.util.List;
 
 import edu.wustl.caobr.Annotation;
@@ -17,15 +14,16 @@ import edu.wustl.caobr.Concept;
 import edu.wustl.caobr.service.util.SearchBean;
 
 /**
+ * This has all methods that deals with REST API invocation
  * @author chandrakant_talele
  * @author lalit_chand
  */
 public class RestApiInvoker {
 
     /**
-     * @param targetUrl
-     * @return It calls the GET method on REST services
-     * @throws RemoteException
+     * It invokes given URL using GET method and returns the string of response 
+     * @param targetUrl URL to invoke
+     * @return HTTP response string
      */
     public static String getResult(String targetUrl) {
 
@@ -63,12 +61,13 @@ public class RestApiInvoker {
     }
 
     /**
-     * @param targetUrl
-     * @param parameters
-     * @return It calls the POST method on REST services
-     * @throws RemoteException
+     * It invokes given URL using POST method and returns the string of response. 
+     * It also passes the parameters to the call  
+     * @param targetUrl URL to invoke
+     * @param parameters request parameters
+     * @return HTTP response string
      */
-    public String getResultFromPost(String targetUrl, String parameters) throws RemoteException {
+    public String getResultFromPost(String targetUrl, String parameters) {
 
         StringBuilder retrunData = new StringBuilder();
         try {
@@ -102,23 +101,16 @@ public class RestApiInvoker {
                 data = in.readLine();
             }
             in.close();
-        } catch (Exception e) {
+        } catch (IOException e) {
             e.printStackTrace();
         }
-        System.out.println("Printing..................");
-        System.out.println(retrunData);
+//        System.out.println("Printing..................");
+//        System.out.println(retrunData);
         return retrunData.toString();
 
     }
-
     /**
-     * @param xml
-     * @return
-     */
-    public static List<Annotation> getParsedAnnotation(String xml) {
-        return new XmlToObjectTransformer().getAnnotation(xml);
-    }
-    /**
+     * This parses the given XML string to generate list of Search Bean
      * @param targetUrl
      * @return
      */

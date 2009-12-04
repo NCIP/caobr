@@ -8,12 +8,14 @@ import edu.wustl.caobr.Annotation;
 import edu.wustl.caobr.service.util.RestApiInfo;
 
 /**
+ * Callable task to get annotations for given URL parameters using a POST call.
  * @author chandrakant_talele
  */
 public class FetchAnnotationFromRestTask implements Callable<List<Annotation>> {
     private String urlParamForPostCall;
 
     /**
+     * Constructor
      * @param urlParamForPostCall
      */
     public FetchAnnotationFromRestTask(String urlParamForPostCall) {
@@ -27,7 +29,7 @@ public class FetchAnnotationFromRestTask implements Callable<List<Annotation>> {
         String targetUrl = RestApiInfo.getObrResultURL();
         try {
             String res = new RestApiInvoker().getResultFromPost(targetUrl, urlParamForPostCall);
-            return RestApiInvoker.getParsedAnnotation(res);
+            return new XmlToObjectTransformer().getAnnotation(res);
         } catch (Exception e1) {
             //TODO Do exception handling
             e1.printStackTrace();
