@@ -1,0 +1,3567 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<success>
+<accessedResource>/bioportal/ontologies/</accessedResource>
+<accessDate>2009-11-25 02:07:48.150 PST</accessDate>
+<data>
+<list>
+	<ontologyBean>
+		<id>39336</id>
+		<ontologyId>1158</ontologyId>
+		<displayLabel>Cell Behavior Ontology</displayLabel>
+		<description>The Cell Behavior Ontology is designed as a structured controlled vocabulary for what cells do. This ontology is a draft and independent of cell type.</description>
+		<abbreviation>CBO</abbreviation>
+		<format>PROTEGE</format>
+		<internalVersionNumber>2</internalVersionNumber>
+		<versionNumber>0.0</versionNumber>
+		<contactName>Benjamin Zaitlen</contactName>
+		<contactEmail>bzaitlen@indiana.edu</contactEmail>
+		<statusId>4</statusId>
+		<categoryIds/>
+		<groupIds/>
+		<isFoundry>0</isFoundry>
+		<dateCreated>2009-05-05 09:51:59.0 PDT</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>40734</id>
+		<ontologyId>1016</ontologyId>
+		<displayLabel>Drosophila development</displayLabel>
+		<description>A structured controlled vocabulary of the development of &lt;i&gt;Drosophila melanogaster&lt;/i&gt;.</description>
+		<abbreviation>FBdv</abbreviation>
+		<format>OBO</format>
+		<internalVersionNumber>5</internalVersionNumber>
+		<versionNumber>1.15</versionNumber>
+		<versionStatus>production</versionStatus>
+		<contactName>Http://obo Administrators</contactName>
+		<contactEmail>obo-anatomy@lists.sourceforge.net</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds>
+		<int>2803</int>
+		<int>2818</int>
+		</categoryIds>
+		<groupIds>
+		<int>6001</int>
+		</groupIds>
+		<isFoundry>1</isFoundry>
+		<dateCreated>2009-10-22 22:25:32.0 PDT</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>3155</id>
+		<ontologyId>1033</ontologyId>
+		<displayLabel>NMR-instrument specific component of metabolomics investigations</displayLabel>
+		<description>Descriptors relevant to the experimental conditions of the Nuclear Magnetic Resonance (NMR) component in a metabolomics investigation.</description>
+		<abbreviation>NMR</abbreviation>
+		<format>OWL</format>
+		<internalVersionNumber>1</internalVersionNumber>
+		<versionNumber>See Remote Site</versionNumber>
+		<versionStatus>pre_production</versionStatus>
+		<contactName>Https://svn Administrators</contactName>
+		<contactEmail>msi-workgroups-ontology@lists.sourceforge.net</contactEmail>
+		<statusId>5</statusId>
+		<categoryIds>
+		<int>2801</int>
+		</categoryIds>
+		<groupIds>
+		<int>6001</int>
+		</groupIds>
+		<isFoundry>1</isFoundry>
+		<dateCreated>2009-04-13 02:33:46.0 PDT</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>40401</id>
+		<ontologyId>1351</ontologyId>
+		<displayLabel>Medical Subject Headings</displayLabel>
+		<description>Medical Subject Headings (MeSH);National Library of Medicine;Februrary, 2009;Bethesda, MD;ENG</description>
+		<abbreviation>MSH</abbreviation>
+		<format>RRF</format>
+		<internalVersionNumber>1</internalVersionNumber>
+		<versionNumber>2009_2009_02_13</versionNumber>
+		<contactName>Stuart Nelson, M.D.</contactName>
+		<contactEmail>nelson@nlm.nih.gov</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds>
+		<int>5058</int>
+		</categoryIds>
+		<groupIds>
+		<int>6008</int>
+		</groupIds>
+		<isFoundry>0</isFoundry>
+		<dateCreated>2009-07-31 06:01:06.0 PDT</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>40571</id>
+		<ontologyId>1146</ontologyId>
+		<displayLabel>Electrocardiography Ontology</displayLabel>
+		<description>The Electrocardiography (ECG) Ontology is a Driving Biological Project of the NCBO. The ECG Ontology will contain terms for describing electrocardiograms, their capture method(s) and their waveforms.</description>
+		<abbreviation>ECG</abbreviation>
+		<format>OWL</format>
+		<internalVersionNumber>7</internalVersionNumber>
+		<versionNumber>0.1.5</versionNumber>
+		<contactName>Raimond L. Winslow, PhD &amp; Stephen Granite</contactName>
+		<contactEmail>rwinslow@jhu.edu</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds>
+		<int>5059</int>
+		</categoryIds>
+		<groupIds/>
+		<isFoundry>0</isFoundry>
+		<dateCreated>2009-09-01 08:23:55.0 PDT</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>38359</id>
+		<ontologyId>1041</ontologyId>
+		<displayLabel>Protein modification</displayLabel>
+		<description>PSI-MOD is an ontology consisting of terms that describe protein chemical modifications, logically linked by an is_a relationship in such a way as to form a direct acyclic graph (DAG). The PSI-MOD ontology has more than 45 top-level nodes, and provides alternative hierarchical paths for classifying protein modifications either by the molecular structure of the modification, or by the amino acid residue that is modified.</description>
+		<abbreviation>MOD</abbreviation>
+		<format>OBO</format>
+		<internalVersionNumber>2</internalVersionNumber>
+		<versionNumber>See Remote Site</versionNumber>
+		<versionStatus>pre_production</versionStatus>
+		<contactName>Psi-mod Administrators</contactName>
+		<contactEmail>luisa@ebi.ac.uk</contactEmail>
+		<statusId>5</statusId>
+		<categoryIds/>
+		<groupIds>
+		<int>6006</int>
+		</groupIds>
+		<isFoundry>1</isFoundry>
+		<dateCreated>2009-04-13 02:33:46.0 PDT</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>39280</id>
+		<ontologyId>1153</ontologyId>
+		<displayLabel>NeLI Vocabulary</displayLabel>
+		<description>A SKOS vocabulary for the infectious disease domain, developed for the National electronic Library for Infection (http://www.neli.org.uk/). Beta version.</description>
+		<abbreviation>NeLI</abbreviation>
+		<format>PROTEGE</format>
+		<internalVersionNumber>1</internalVersionNumber>
+		<versionNumber>beta</versionNumber>
+		<contactName>Patty Kostkova</contactName>
+		<contactEmail>patty@soi.city.ac.uk</contactEmail>
+		<statusId>4</statusId>
+		<categoryIds>
+		<int>5058</int>
+		</categoryIds>
+		<groupIds/>
+		<isFoundry>0</isFoundry>
+		<dateCreated>2009-05-14 13:12:32.0 PDT</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>40835</id>
+		<ontologyId>1062</ontologyId>
+		<displayLabel>PRotein Ontology (PRO)</displayLabel>
+		<description>PRotein Ontology (PRO) has been designed to describe the relationships of proteins and protein evolutionary classes (ontology for ProEvo), to delineate the multiple protein forms of a gene locus (ontology for protein forms), and to interconnect existing ontologies</description>
+		<abbreviation>PRO</abbreviation>
+		<format>OBO</format>
+		<internalVersionNumber>14</internalVersionNumber>
+		<versionNumber>1.15</versionNumber>
+		<versionStatus>pre_production</versionStatus>
+		<contactName>Darren Natale</contactName>
+		<contactEmail>dan5@georgetown.edu</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds>
+		<int>2806</int>
+		</categoryIds>
+		<groupIds>
+		<int>6001</int>
+		</groupIds>
+		<isFoundry>1</isFoundry>
+		<dateCreated>2009-11-10 22:26:26.0 PST</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>40819</id>
+		<ontologyId>1000</ontologyId>
+		<displayLabel>Mouse adult gross anatomy</displayLabel>
+		<description>A structured controlled vocabulary of the adult anatomy of the mouse (Mus).</description>
+		<abbreviation>MA</abbreviation>
+		<format>OBO</format>
+		<internalVersionNumber>11</internalVersionNumber>
+		<versionNumber>1.196</versionNumber>
+		<versionStatus>production</versionStatus>
+		<contactName>Anatomy JAX</contactName>
+		<contactEmail>anatomy@informatics.jax.org</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds>
+		<int>2812</int>
+		<int>2817</int>
+		<int>2810</int>
+		<int>2811</int>
+		</categoryIds>
+		<groupIds>
+		<int>6001</int>
+		</groupIds>
+		<isFoundry>1</isFoundry>
+		<dateCreated>2009-11-07 22:24:41.0 PST</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>38366</id>
+		<ontologyId>1065</ontologyId>
+		<displayLabel>Tick gross anatomy</displayLabel>
+		<description>The anatomy of the Tick, Families: Ixodidae, Argassidae. </description>
+		<abbreviation>TADS</abbreviation>
+		<format>OBO</format>
+		<internalVersionNumber>2</internalVersionNumber>
+		<versionNumber>1.2</versionNumber>
+		<versionStatus>pre_production</versionStatus>
+		<contactName>Http://www Administrators</contactName>
+		<contactEmail>dsonensh@odu.edu</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds>
+		<int>2810</int>
+		<int>2812</int>
+		<int>2811</int>
+		</categoryIds>
+		<groupIds>
+		<int>6001</int>
+		</groupIds>
+		<isFoundry>1</isFoundry>
+		<dateCreated>2008-07-30 20:34:47.0 PDT</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>40832</id>
+		<ontologyId>1123</ontologyId>
+		<displayLabel>Ontology for Biomedical Investigations</displayLabel>
+		<description>OBI is an ontology of investigations, the protocols and instrumentation used, the material used, the data generated and the types of analysis performed on it. Access the current version of OBI at http://purl.obolibrary.org/obo/obi.owl and view release notes at  http://purl.obolibrary.org/obo/obi/release-notes.html</description>
+		<abbreviation>OBI</abbreviation>
+		<format>OWL</format>
+		<internalVersionNumber>12</internalVersionNumber>
+		<versionNumber>2009-11-06 Philly (aka version 1.0) Release Candidate</versionNumber>
+		<contactName>OBI Consortium</contactName>
+		<contactEmail>obi-users@googlegroups.com</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds>
+		<int>2805</int>
+		</categoryIds>
+		<groupIds>
+		<int>6001</int>
+		</groupIds>
+		<isFoundry>0</isFoundry>
+		<dateCreated>2009-11-10 21:45:33.0 PST</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>39215</id>
+		<ontologyId>1058</ontologyId>
+		<displayLabel>SNP-Ontology</displayLabel>
+		<description>SNP-Ontology is a domain ontology that provides a formal representation (OWL-DL) of genomic variations. Despite its name, SNP-Ontology, is not limited to the representation of SNPs but it encompasses genomic variations in a broader meaning. SNP-Ontology is general enough to enable the representation of variations observed in genome of various species. Latest versions of SNP-Ontology include the representation of haplotype and of CNV. The unambiguous representation of genomic variations provided by SNP-Ontology enables to integrate heterogeneous data related to genomic variations. To achieve this goal SNP-Ontology enables (1) to represent one variation in accordance with various ways that exist for describing it, (2) to represent the equivalence between two distinct descriptions of one variation, and (3) to represent correspondence between a genomic variation and its outcome at the transcriptome and proteome levels.</description>
+		<abbreviation>SNPO</abbreviation>
+		<format>OWL-DL</format>
+		<internalVersionNumber>4</internalVersionNumber>
+		<versionNumber>1.6</versionNumber>
+		<contactName>Adrien Coulet</contactName>
+		<contactEmail>adrien.coulet@loria.fr</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds>
+		<int>2806</int>
+		</categoryIds>
+		<groupIds/>
+		<isFoundry>0</isFoundry>
+		<dateCreated>2009-01-15 16:19:40.0 PST</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>40223</id>
+		<ontologyId>1099</ontologyId>
+		<displayLabel>African Traditional Medicine</displayLabel>
+		<description>African Traditional Medicine Ontology (ATMO) describes the actors' function (healer, fetishist or soothsayer); the different types of proposed process treatment, the symptom's roles and the disease consideration.</description>
+		<abbreviation>ATMO</abbreviation>
+		<format>OBO</format>
+		<internalVersionNumber>2</internalVersionNumber>
+		<versionNumber>1.101</versionNumber>
+		<contactName>Ghislain Atemezing</contactName>
+		<contactEmail>atemezing@yahoo.com</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds>
+		<int>5058</int>
+		</categoryIds>
+		<groupIds/>
+		<isFoundry>0</isFoundry>
+		<dateCreated>2009-06-28 00:46:40.0 PDT</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>38828</id>
+		<ontologyId>1134</ontologyId>
+		<displayLabel>BioTop</displayLabel>
+		<description>A top-domain ontology that provides definitions for the foundational entities of biomedicine as a basic vocabulary to unambiguously describe facts in this domain.</description>
+		<format>OWL-DL</format>
+		<internalVersionNumber>1</internalVersionNumber>
+		<versionNumber>dev</versionNumber>
+		<contactName>Holger Stenzhorn</contactName>
+		<contactEmail>holger.stenzhorn@uniklinik-freiburg.de</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds>
+		<int>2801</int>
+		</categoryIds>
+		<groupIds/>
+		<isFoundry>0</isFoundry>
+		<dateCreated>2009-04-27 13:05:35.0 PDT</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>40827</id>
+		<ontologyId>1078</ontologyId>
+		<displayLabel>Spatial Ontology</displayLabel>
+		<description>A small ontology for anatomical spatiol references, such as dorsal, ventral, axis, and so forth.</description>
+		<abbreviation>BSPO</abbreviation>
+		<format>OBO</format>
+		<internalVersionNumber>6</internalVersionNumber>
+		<versionNumber>1.17</versionNumber>
+		<versionStatus>pre_production</versionStatus>
+		<contactName>Http://obo Administrators</contactName>
+		<contactEmail>obo-anatomy@lists.sourceforge.net</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds>
+		<int>2810</int>
+		</categoryIds>
+		<groupIds>
+		<int>6001</int>
+		</groupIds>
+		<isFoundry>1</isFoundry>
+		<dateCreated>2009-11-09 22:25:20.0 PST</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>39933</id>
+		<ontologyId>1247</ontologyId>
+		<displayLabel>GeoSpecies Ontology</displayLabel>
+		<description>This ontology was designed to help integrate species concepts with species occurrences, gene sequences, images, references and geographical information.</description>
+		<abbreviation>gsontology</abbreviation>
+		<format>OWL</format>
+		<internalVersionNumber>1</internalVersionNumber>
+		<versionNumber>beta</versionNumber>
+		<contactName>Peter J. DeVries</contactName>
+		<contactEmail>pdevries@wisc.edu</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds>
+		<int>2801</int>
+		</categoryIds>
+		<groupIds/>
+		<isFoundry>0</isFoundry>
+		<dateCreated>2009-05-06 10:13:56.0 PDT</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>40808</id>
+		<ontologyId>1007</ontologyId>
+		<displayLabel>Chemical entities of biological interest</displayLabel>
+		<description>A structured classification of chemical compounds of biological relevance.</description>
+		<abbreviation>CHEBI</abbreviation>
+		<format>OBO</format>
+		<internalVersionNumber>18</internalVersionNumber>
+		<versionNumber>1.59</versionNumber>
+		<versionStatus>production</versionStatus>
+		<contactName>Chebi Administrators</contactName>
+		<contactEmail>chebi-help@ebi.ac.uk</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds>
+		<int>2802</int>
+		</categoryIds>
+		<groupIds>
+		<int>6001</int>
+		</groupIds>
+		<isFoundry>1</isFoundry>
+		<dateCreated>2009-11-05 22:25:26.0 PST</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>3066</id>
+		<ontologyId>1024</ontologyId>
+		<displayLabel>Loggerhead nesting</displayLabel>
+		<description>A demonstration of ontology construction as a general technique for coding ethograms and other descriptions of behavior into machine understandable forms. An ontology for Loggerhead sea turtle (&lt;i&gt;Caretta caretta&lt;/i&gt;) nesting behavior, based on the published ethogram of Hailman and Elowson.</description>
+		<abbreviation>
+		</abbreviation>
+		<format>OBO</format>
+		<internalVersionNumber>1</internalVersionNumber>
+		<versionNumber>See Remote Site</versionNumber>
+		<versionStatus>pre_production</versionStatus>
+		<contactName>Http://www Administrators</contactName>
+		<contactEmail>peteremidford@yahoo.com</contactEmail>
+		<statusId>5</statusId>
+		<categoryIds>
+		<int>2804</int>
+		</categoryIds>
+		<groupIds/>
+		<isFoundry>0</isFoundry>
+		<dateCreated>2009-04-13 02:33:15.0 PDT</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>39976</id>
+		<ontologyId>1257</ontologyId>
+		<displayLabel>MeGO</displayLabel>
+		<description>bacteriophage and plasmid reproduction and maintenance processes</description>
+		<abbreviation>MeGO</abbreviation>
+		<format>OBO</format>
+		<internalVersionNumber>1</internalVersionNumber>
+		<versionNumber>1_8</versionNumber>
+		<contactName>Ariane Toussaint</contactName>
+		<contactEmail>ariane@bigre.ulb.ac.be</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds>
+		<int>2820</int>
+		<int>5060</int>
+		</categoryIds>
+		<groupIds/>
+		<isFoundry>0</isFoundry>
+		<dateCreated>2009-05-14 09:27:10.0 PDT</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>38873</id>
+		<ontologyId>1135</ontologyId>
+		<displayLabel>Pseudogene</displayLabel>
+		<format>OBO</format>
+		<internalVersionNumber>1</internalVersionNumber>
+		<versionNumber>0.1</versionNumber>
+		<contactName>Gerstein Lab</contactName>
+		<contactEmail>yhl3@gersteinlab.org</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds/>
+		<groupIds/>
+		<isFoundry>0</isFoundry>
+		<dateCreated>2008-11-18 14:43:00.0 PST</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>25148</id>
+		<ontologyId>1049</ontologyId>
+		<displayLabel>C. elegans development</displayLabel>
+		<description>A structured controlled vocabulary of the development of Caenorhabditis elegans.</description>
+		<abbreviation>WBls</abbreviation>
+		<format>OBO</format>
+		<internalVersionNumber>1</internalVersionNumber>
+		<versionNumber>1.3</versionNumber>
+		<versionStatus>production</versionStatus>
+		<contactName>Worm_development Administrators</contactName>
+		<contactEmail>wchen@its.caltech.edu</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds>
+		<int>2818</int>
+		<int>2803</int>
+		</categoryIds>
+		<groupIds>
+		<int>6001</int>
+		</groupIds>
+		<isFoundry>1</isFoundry>
+		<dateCreated>2008-07-30 20:34:53.0 PDT</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>40913</id>
+		<ontologyId>1070</ontologyId>
+		<displayLabel>Gene Ontology</displayLabel>
+		<description>Provides structured controlled vocabularies for the annotation of gene products with respect to their molecular function, cellular component, and biological role. The Gene Ontology consists of three Vocabularies.</description>
+		<abbreviation>GO</abbreviation>
+		<format>OBO</format>
+		<internalVersionNumber>391</internalVersionNumber>
+		<versionNumber>1.713</versionNumber>
+		<versionStatus>production</versionStatus>
+		<contactName>Gene Ontology</contactName>
+		<contactEmail>go@geneontology.org</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds>
+		<int>2806</int>
+		</categoryIds>
+		<groupIds>
+		<int>6001</int>
+		<int>6008</int>
+		</groupIds>
+		<isFoundry>1</isFoundry>
+		<dateCreated>2009-11-24 22:25:44.0 PST</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>38631</id>
+		<ontologyId>1126</ontologyId>
+		<displayLabel>Family Health History Ontology</displayLabel>
+		<description>The FHHO facilitates representing the family health histories of persons related by biological and/or social family relationships (e.g. step, adoptive) who share genetic, behavioral, and/or environmental risk factors for disease. SWRL rules are included to compute 3 generations of biological relationships based on parentage and family history findings based on personal health findings.</description>
+		<abbreviation>FHHO</abbreviation>
+		<format>OWL-DL</format>
+		<internalVersionNumber>1</internalVersionNumber>
+		<versionNumber>1.0</versionNumber>
+		<contactName>Jane Peace</contactName>
+		<contactEmail>peace@wisc.edu</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds>
+		<int>5058</int>
+		</categoryIds>
+		<groupIds/>
+		<isFoundry>0</isFoundry>
+		<dateCreated>2009-05-10 14:26:51.0 PDT</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>40892</id>
+		<ontologyId>1108</ontologyId>
+		<displayLabel>Plant structure</displayLabel>
+		<description>A controlled vocabulary of plant morphological and anatomical structures representing organs, tissues, cell types, and their biological relationships based on spatial and developmental organization.&lt;br&gt;The plant ontologies, which includes both the plant structure and growth and development stages can be downloaded as a &lt;a href="http://brebiou.cshl.edu/viewcvs/Poc/ontology/OBO_format/plant_ontology.obo"&gt;single file in OBO format&lt;/a&gt;.</description>
+		<abbreviation>PO</abbreviation>
+		<format>OBO</format>
+		<internalVersionNumber>9</internalVersionNumber>
+		<versionNumber>See Remote Site</versionNumber>
+		<versionStatus>pre_production</versionStatus>
+		<contactName>Po_anatomy Administrators</contactName>
+		<contactEmail>po-dev@plantontology.org</contactEmail>
+		<statusId>5</statusId>
+		<categoryIds>
+		<int>2810</int>
+		<int>2811</int>
+		<int>2816</int>
+		</categoryIds>
+		<groupIds>
+		<int>6001</int>
+		</groupIds>
+		<isFoundry>1</isFoundry>
+		<dateCreated>2009-11-20 22:25:59.0 PST</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>38434</id>
+		<ontologyId>1114</ontologyId>
+		<displayLabel>Bilateria anatomy</displayLabel>
+		<description>
+		</description>
+		<abbreviation>BILA</abbreviation>
+		<format>OBO</format>
+		<internalVersionNumber>1</internalVersionNumber>
+		<versionNumber>See Remote Site</versionNumber>
+		<versionStatus>pre_production</versionStatus>
+		<contactName>Thorsten Heinrich</contactName>
+		<contactEmail>henrich@embl.de</contactEmail>
+		<statusId>5</statusId>
+		<categoryIds/>
+		<groupIds/>
+		<isFoundry>0</isFoundry>
+		<dateCreated>2009-04-13 02:32:15.0 PDT</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>40117</id>
+		<ontologyId>1100</ontologyId>
+		<displayLabel>Ontology for Genetic Interval</displayLabel>
+		<description>An ontology to describe the genetic interval, and the relations between genetic intervals.</description>
+		<abbreviation>OGI</abbreviation>
+		<format>OWL-DL</format>
+		<internalVersionNumber>4</internalVersionNumber>
+		<versionNumber>0.15</versionNumber>
+		<contactName>Yu Lin</contactName>
+		<contactEmail>linyu@cdb.riken.jp</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds>
+		<int>2806</int>
+		</categoryIds>
+		<groupIds/>
+		<isFoundry>0</isFoundry>
+		<dateCreated>2009-06-09 22:13:33.0 PDT</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>40806</id>
+		<ontologyId>1136</ontologyId>
+		<displayLabel>Experimental Factor Ontology</displayLabel>
+		<description>The Experimental Factor Ontology (EFO) is an application focused ontology modelling the experimental factors in ArrayExpress.  The ontology has been developed to increase the richness of the annotations that are currently made in the ArrayExpress repository, to promote consistent annotation, to facilitate automatic annotation and to integrate external data.  The methodology employed in the development of EFO involves construction of mappings to multiple existing domain specific ontologies, such as the Disease Ontology and Cell Type Ontology. This is achieved using a combination of automated and manual curation steps and the use of a phonetic matching algorithm.  The ontology is evaluated with use cases from the ArrayExpress repository.</description>
+		<abbreviation>EFO</abbreviation>
+		<format>OWL</format>
+		<internalVersionNumber>13</internalVersionNumber>
+		<versionNumber>1.7</versionNumber>
+		<contactName>James Malone</contactName>
+		<contactEmail>malone@ebi.ac.uk</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds>
+		<int>2805</int>
+		</categoryIds>
+		<groupIds/>
+		<isFoundry>0</isFoundry>
+		<dateCreated>2009-11-05 09:32:42.0 PST</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>38990</id>
+		<ontologyId>1141</ontologyId>
+		<displayLabel>Ontology of Physics for Biology</displayLabel>
+		<description>The OPB is a reference ontology of classical physics as applied to the dynamics of biological systems. It is designed to encompass the multiple structural scales (multiscale atoms to organisms) and multiple physical domains (multidomain fluid dynamics, chemical kinetics, particle diffusion, etc.) that are encountered in the study and analysis of biological organisms.</description>
+		<abbreviation>OPB</abbreviation>
+		<format>OWL-DL</format>
+		<internalVersionNumber>1</internalVersionNumber>
+		<versionNumber>0.8</versionNumber>
+		<contactName>Daniel L. Cook</contactName>
+		<contactEmail>dcook@u.washington.edu</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds>
+		<int>5060</int>
+		</categoryIds>
+		<groupIds/>
+		<isFoundry>0</isFoundry>
+		<dateCreated>2009-08-03 17:08:20.0 PDT</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>39509</id>
+		<ontologyId>1044</ontologyId>
+		<displayLabel>Sample processing and separation techniques</displayLabel>
+		<description>A structured controlled vocabulary for the annotation of sample processing and separation techniques in scientific experiments, such as, and including, gel electrophoresis, column chromatography, capillary electrophoresis, centrifugation and so on. Developed jointly by the HUPO Proteomics Standards Initiative and The Metabolomics Standards Initiative.</description>
+		<abbreviation>SEP</abbreviation>
+		<format>OBO</format>
+		<internalVersionNumber>2</internalVersionNumber>
+		<versionNumber>1.070708</versionNumber>
+		<contactName>Http://psidev Administrators</contactName>
+		<contactEmail>psidev-gps-dev@lists.sourceforge.net</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds/>
+		<groupIds>
+		<int>6006</int>
+		</groupIds>
+		<isFoundry>0</isFoundry>
+		<dateCreated>2009-02-28 19:49:54.0 PST</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>40397</id>
+		<ontologyId>1347</ontologyId>
+		<displayLabel>MedlinePlus Health Topics</displayLabel>
+		<description>MedlinePlus Health Topics;National Library of Medicine;June 14, 2008;Bethesda, MD</description>
+		<abbreviation>MEDLINEPLUS</abbreviation>
+		<format>RRF</format>
+		<internalVersionNumber>1</internalVersionNumber>
+		<versionNumber>20080614</versionNumber>
+		<contactName>Ms. Naomi Miller</contactName>
+		<contactEmail>millern@mail.nlm.nih.gov</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds>
+		<int>5058</int>
+		</categoryIds>
+		<groupIds>
+		<int>6008</int>
+		</groupIds>
+		<isFoundry>0</isFoundry>
+		<dateCreated>2009-07-31 06:02:00.0 PDT</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>40643</id>
+		<ontologyId>1005</ontologyId>
+		<displayLabel>BRENDA tissue / enzyme source</displayLabel>
+		<description>A structured controlled vocabulary for the source of an enzyme. It comprises terms for tissues, cell lines, cell types and cell cultures from uni- and multicellular organisms.</description>
+		<abbreviation>BTO</abbreviation>
+		<format>OBO</format>
+		<internalVersionNumber>3</internalVersionNumber>
+		<versionNumber>1.3</versionNumber>
+		<contactName>BrendaTissue Administrators</contactName>
+		<contactEmail>marion.gremse@uni-koeln.de</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds/>
+		<groupIds/>
+		<isFoundry>0</isFoundry>
+		<dateCreated>2009-09-18 01:45:11.0 PDT</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>40245</id>
+		<ontologyId>1152</ontologyId>
+		<displayLabel>Minimal anatomical terminology</displayLabel>
+		<description>Minimal set of terms for anatomy</description>
+		<abbreviation>MAT</abbreviation>
+		<format>OBO</format>
+		<internalVersionNumber>2</internalVersionNumber>
+		<versionNumber>1.1</versionNumber>
+		<contactName>EMAP Administrators</contactName>
+		<contactEmail>J.Bard@ed.ac.uk</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds>
+		<int>2810</int>
+		<int>2812</int>
+		<int>2811</int>
+		</categoryIds>
+		<groupIds/>
+		<isFoundry>0</isFoundry>
+		<dateCreated>2009-07-05 14:05:03.0 PDT</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>13305</id>
+		<ontologyId>1063</ontologyId>
+		<displayLabel>Common Anatomy Reference Ontology</displayLabel>
+		<description>The Common Anatomy Reference Ontology (CARO) is being developed to facilitate interoperability between existing anatomy ontologies for different species, and will provide a template for building new anatomy ontologies</description>
+		<abbreviation>CARO</abbreviation>
+		<format>OBO</format>
+		<internalVersionNumber>1</internalVersionNumber>
+		<versionNumber>1.3</versionNumber>
+		<versionStatus>pre_production</versionStatus>
+		<contactName>Melissa Haendel</contactName>
+		<contactEmail>mhaendel@uoneuro.uoregon.edu</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds>
+		<int>2810</int>
+		</categoryIds>
+		<groupIds>
+		<int>6001</int>
+		</groupIds>
+		<isFoundry>1</isFoundry>
+		<dateCreated>2007-08-24 09:17:11.0 PDT</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>40522</id>
+		<ontologyId>1321</ontologyId>
+		<displayLabel>Neural ElectroMagnetic Ontologies</displayLabel>
+		<description>Neural ElectroMagnetic Ontologies (NEMO) describe classes of event-related brain potentials (ERP) and their properties, including spatial, temporal, functional (cognitive/behavioral) attributes, and data-level attributes (acquisition and analysis parameters).</description>
+		<abbreviation>NEMO</abbreviation>
+		<format>OWL</format>
+		<internalVersionNumber>2</internalVersionNumber>
+		<versionNumber>.9</versionNumber>
+		<contactName>Gwen Frishkoff</contactName>
+		<contactEmail>sasha@cs.uoregon.edu</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds/>
+		<groupIds/>
+		<isFoundry>0</isFoundry>
+		<dateCreated>2009-08-22 11:28:45.0 PDT</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>13397</id>
+		<ontologyId>1043</ontologyId>
+		<displayLabel>Physico-chemical process</displayLabel>
+		<abbreviation>REX</abbreviation>
+		<format>OBO</format>
+		<internalVersionNumber>1</internalVersionNumber>
+		<versionNumber>1.13</versionNumber>
+		<versionStatus>production</versionStatus>
+		<contactName>Chebi Administrators</contactName>
+		<contactEmail>chebi-help@ebi.ac.uk</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds>
+		<int>2822</int>
+		</categoryIds>
+		<groupIds/>
+		<isFoundry>0</isFoundry>
+		<dateCreated>2008-07-30 20:34:29.0 PDT</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>13342</id>
+		<ontologyId>1064</ontologyId>
+		<displayLabel>Fly taxonomy</displayLabel>
+		<description>The taxonomy of the family &lt;i&gt;Drosophilidae&lt;/i&gt; (largely after Baechli) and of other taxa referred to in FlyBase.</description>
+		<abbreviation>FBsp</abbreviation>
+		<format>OBO</format>
+		<internalVersionNumber>1</internalVersionNumber>
+		<versionNumber>1.1</versionNumber>
+		<versionStatus>pre_production</versionStatus>
+		<contactName>Evidence_code Administrators</contactName>
+		<contactEmail>ma11@gen.cam.ac.uk</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds>
+		<int>2808</int>
+		</categoryIds>
+		<groupIds>
+		<int>6001</int>
+		</groupIds>
+		<isFoundry>1</isFoundry>
+		<dateCreated>2007-08-24 09:18:09.0 PDT</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>29684</id>
+		<ontologyId>1089</ontologyId>
+		<displayLabel>BIRNLex</displayLabel>
+		<description>The BIRN Project lexicon will provide entities for data and database annotation for the BIRN project, covering anatomy, disease, data collection, project management and experimental design.</description>
+		<abbreviation>birnlex</abbreviation>
+		<format>OWL-DL</format>
+		<internalVersionNumber>1</internalVersionNumber>
+		<versionNumber>1.3.1</versionNumber>
+		<versionStatus>production</versionStatus>
+		<contactName>William Bug</contactName>
+		<contactEmail>wbug@ncmir.ucsd.edu</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds>
+		<int>2810</int>
+		<int>5057</int>
+		</categoryIds>
+		<groupIds/>
+		<isFoundry>0</isFoundry>
+		<dateCreated>2008-03-24 17:39:39.0 PDT</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>40688</id>
+		<ontologyId>1076</ontologyId>
+		<displayLabel>Ontology of Clinical Research (OCRe)</displayLabel>
+		<description>OCRe is an ontology designed to support systematic description of, and interoperable queries on, human studies and study elements.</description>
+		<abbreviation>OCRe</abbreviation>
+		<format>OWL-DL</format>
+		<internalVersionNumber>6</internalVersionNumber>
+		<versionNumber>0.95</versionNumber>
+		<contactName>Ida Sim</contactName>
+		<contactEmail>ida.sim@ucsf.edu</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds>
+		<int>2805</int>
+		</categoryIds>
+		<groupIds/>
+		<isFoundry>0</isFoundry>
+		<dateCreated>2009-10-14 15:33:34.0 PDT</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>40916</id>
+		<ontologyId>1110</ontologyId>
+		<displayLabel>Teleost anatomy and development</displayLabel>
+		<description>Multispecies fish anatomy ontology. Originally seeded from ZFA, but intended to cover terms relevant to other taxa</description>
+		<abbreviation>TAO</abbreviation>
+		<format>OBO</format>
+		<internalVersionNumber>58</internalVersionNumber>
+		<versionNumber>1.126</versionNumber>
+		<versionStatus>pre_production</versionStatus>
+		<contactName>Wasila Dahdul</contactName>
+		<contactEmail>wasila.dahdul@usd.edu</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds>
+		<int>2812</int>
+		<int>2810</int>
+		<int>2813</int>
+		<int>2811</int>
+		</categoryIds>
+		<groupIds>
+		<int>6001</int>
+		</groupIds>
+		<isFoundry>1</isFoundry>
+		<dateCreated>2009-11-24 22:26:34.0 PST</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>40660</id>
+		<ontologyId>1362</ontologyId>
+		<displayLabel>Hymenoptera Anatomy Ontology</displayLabel>
+		<description>A structured controlled vocabulary of the anatomy of the Hymenoptera (bees, wasps, and ants)</description>
+		<abbreviation>HAO</abbreviation>
+		<format>OBO</format>
+		<internalVersionNumber>3</internalVersionNumber>
+		<versionNumber>SVN Revision 2804</versionNumber>
+		<contactName>HAO developers</contactName>
+		<contactEmail>diapriid@gmail.com</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds>
+		<int>2810</int>
+		</categoryIds>
+		<groupIds/>
+		<isFoundry>0</isFoundry>
+		<dateCreated>2009-10-08 10:41:01.0 PDT</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>39331</id>
+		<ontologyId>1030</ontologyId>
+		<displayLabel>Mosquito gross anatomy</displayLabel>
+		<description>A structured controlled vocabulary of the anatomy of mosquitoes.</description>
+		<abbreviation>TGMA</abbreviation>
+		<format>OBO</format>
+		<internalVersionNumber>3</internalVersionNumber>
+		<versionNumber>1.10</versionNumber>
+		<versionStatus>production</versionStatus>
+		<contactName>C. Louis</contactName>
+		<contactEmail>louis@imbb.forth.gr</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds>
+		<int>2811</int>
+		<int>2810</int>
+		<int>2812</int>
+		</categoryIds>
+		<groupIds>
+		<int>6001</int>
+		</groupIds>
+		<isFoundry>1</isFoundry>
+		<dateCreated>2009-02-05 02:33:54.0 PST</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>38351</id>
+		<ontologyId>1029</ontologyId>
+		<displayLabel>Molecule role (INOH Protein name/family name ontology)</displayLabel>
+		<description>A structured controlled vocabulary of concrete protein names and generic (abstract) protein names. This ontology is a INOH pathway annotation ontology, one of a set of ontologies intended to be used in pathway data annotation to ease data integration. This ontology is used to annotate protein names, protein family names, generic/concrete protein names in the INOH pathway data.&lt;br&gt;INOH is part of the BioPAX working group.</description>
+		<abbreviation>IMR</abbreviation>
+		<format>OBO</format>
+		<internalVersionNumber>2</internalVersionNumber>
+		<versionNumber>See Remote Site</versionNumber>
+		<versionStatus>production</versionStatus>
+		<contactName>Event Administrators</contactName>
+		<contactEmail>curator@inoh.org</contactEmail>
+		<statusId>5</statusId>
+		<categoryIds/>
+		<groupIds/>
+		<isFoundry>0</isFoundry>
+		<dateCreated>2009-04-13 02:33:45.0 PDT</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>40546</id>
+		<ontologyId>1116</ontologyId>
+		<displayLabel>Bleeding History Phenotype</displayLabel>
+		<description>An application ontology devoted to the standardized recording of phenotypic data related to hemorrhagic disorders.</description>
+		<abbreviation>BHO</abbreviation>
+		<format>OWL</format>
+		<internalVersionNumber>2</internalVersionNumber>
+		<versionNumber>0.3.1</versionNumber>
+		<contactName>Andreas Mauer</contactName>
+		<contactEmail>amauer@rockefeller.edu</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds>
+		<int>2807</int>
+		</categoryIds>
+		<groupIds/>
+		<isFoundry>0</isFoundry>
+		<dateCreated>2009-08-26 15:47:14.0 PDT</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>40656</id>
+		<ontologyId>1104</ontologyId>
+		<displayLabel>Biomedical Resource Ontology</displayLabel>
+		<description>A controlled terminology of resources, which is used to improve the sensitivity and specificity of web searches.</description>
+		<abbreviation>BRO</abbreviation>
+		<format>OWL-FULL</format>
+		<internalVersionNumber>10</internalVersionNumber>
+		<versionNumber>2.7.1</versionNumber>
+		<contactName>Trish Whetzel, Csongor Nyulas, Natasha Noy</contactName>
+		<contactEmail>bro-discuss@googlegroups.com</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds>
+		<int>5059</int>
+		</categoryIds>
+		<groupIds/>
+		<isFoundry>0</isFoundry>
+		<dateCreated>2009-09-29 16:33:49.0 PDT</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>40238</id>
+		<ontologyId>1144</ontologyId>
+		<displayLabel>Dendritic cell</displayLabel>
+		<description>Representation of types of dendritic cell. Note that the domain of this ontology is wholly subsumed by the domain of the Cell ontology (CL).</description>
+		<abbreviation>DC_CL</abbreviation>
+		<format>OBO</format>
+		<internalVersionNumber>5</internalVersionNumber>
+		<versionNumber>1.5</versionNumber>
+		<versionStatus>production</versionStatus>
+		<contactName>Lindsay Cowell</contactName>
+		<contactEmail>cowel001@mc.duke.edu</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds>
+		<int>2810</int>
+		</categoryIds>
+		<groupIds/>
+		<isFoundry>0</isFoundry>
+		<dateCreated>2009-07-01 05:40:50.0 PDT</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>38550</id>
+		<ontologyId>1072</ontologyId>
+		<displayLabel>Cell Cycle Ontology (A. thaliana)</displayLabel>
+		<description>An ontology that integrates and manages knowledge about the cell cycle components and regulatory aspects of A. thaliana.</description>
+		<abbreviation>CCO</abbreviation>
+		<format>OBO</format>
+		<internalVersionNumber>3</internalVersionNumber>
+		<versionNumber>1.02</versionNumber>
+		<contactName>Erick Antezana</contactName>
+		<contactEmail>erant@psb.ugent.be</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds>
+		<int>5060</int>
+		<int>5061</int>
+		</categoryIds>
+		<groupIds/>
+		<isFoundry>0</isFoundry>
+		<dateCreated>2008-09-03 02:45:57.0 PDT</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>40908</id>
+		<ontologyId>1125</ontologyId>
+		<displayLabel>human phenotype ontology</displayLabel>
+		<description>The Human Phenotype Ontology is being developed to provide a structured and controlled vocabulary for the phenotypic features encountered in human hereditary and other disease. Our goal is to provide resource for the computational analysis of the human phenome, with a current focus on monogenic diseases listed in the Online Mendelian Inheritance in Man (OMIM) database, for which annotations are also provided.</description>
+		<abbreviation>HP</abbreviation>
+		<format>OBO</format>
+		<internalVersionNumber>67</internalVersionNumber>
+		<versionNumber>1.71</versionNumber>
+		<versionStatus>pre_production</versionStatus>
+		<contactName>OBO Phenotype</contactName>
+		<contactEmail>obo-human-phenotype@lists.sourceforge.net</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds>
+		<int>2807</int>
+		</categoryIds>
+		<groupIds/>
+		<isFoundry>0</isFoundry>
+		<dateCreated>2009-11-23 22:25:37.0 PST</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>3057</id>
+		<ontologyId>1023</ontologyId>
+		<displayLabel>Biological imaging methods</displayLabel>
+		<description>This CV covers sample preparation, visualization and imaging methods.</description>
+		<abbreviation>FBbi</abbreviation>
+		<format>OBO</format>
+		<internalVersionNumber>1</internalVersionNumber>
+		<versionNumber>1.1</versionNumber>
+		<versionStatus>pre_production</versionStatus>
+		<contactName>Image Administrators</contactName>
+		<contactEmail>matthewk@indiana.edu</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds>
+		<int>2805</int>
+		<int>5057</int>
+		</categoryIds>
+		<groupIds/>
+		<isFoundry>0</isFoundry>
+		<dateCreated>2008-07-30 20:33:43.0 PDT</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>40505</id>
+		<ontologyId>1375</ontologyId>
+		<displayLabel>Malaria Ontology</displayLabel>
+		<description>An application ontology to cover all aspects of malaria (clinical, epidemiological, biological, etc) as well as the intervention attempts to control it.</description>
+		<abbreviation>IDOMAL</abbreviation>
+		<format>OBO</format>
+		<internalVersionNumber>1</internalVersionNumber>
+		<versionNumber>See Remote Site</versionNumber>
+		<versionStatus>pre_production</versionStatus>
+		<contactName>topalis topalis</contactName>
+		<contactEmail>topalis@mbb.forth.gr</contactEmail>
+		<statusId>5</statusId>
+		<categoryIds/>
+		<groupIds/>
+		<isFoundry>0</isFoundry>
+		<dateCreated>2009-08-18 02:36:38.0 PDT</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>13352</id>
+		<ontologyId>1021</ontologyId>
+		<displayLabel>Human developmental anatomy, abstract version</displayLabel>
+		<abbreviation>EHDAA</abbreviation>
+		<format>OBO</format>
+		<internalVersionNumber>1</internalVersionNumber>
+		<versionNumber>1.3</versionNumber>
+		<versionStatus>pre_production</versionStatus>
+		<contactName>EMAP Administrators</contactName>
+		<contactEmail>J.Bard@ed.ac.uk</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds>
+		<int>2810</int>
+		<int>2811</int>
+		<int>2814</int>
+		<int>2812</int>
+		</categoryIds>
+		<groupIds>
+		<int>6001</int>
+		</groupIds>
+		<isFoundry>1</isFoundry>
+		<dateCreated>2008-07-30 20:33:43.0 PDT</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>40764</id>
+		<ontologyId>1046</ontologyId>
+		<displayLabel>Systems Biology</displayLabel>
+		<description>The Systems Biology Ontology aims to strictly index and define terms used in quantitative biochemistry. The ontology is made up of four orthogonal vocabularies. A controlled vocabulary defines the roles of reaction participants, such as "substrate", "catalyst", etc. A taxonomy orders the quantitative parameters used in biochemistry such as "Michaelis constant", but also "first-order forward rate constant". A precise classification of rate laws defines them, such as "first-order reversible mass action kinetics". Each term contains a precise mathematical expression stored as a MathML lambda function. Finally, a list of simulation frameworks, such as "discrete" or "continuous" precises the validity of a rate-law. The Systems Biology Ontology can be used to increase the semantic content of quantitative models. SBO vocabularies can also be used to annotate results of biochemical experiments in order to facilitate their efficient reuse.</description>
+		<abbreviation>SBO</abbreviation>
+		<format>OBO</format>
+		<internalVersionNumber>2</internalVersionNumber>
+		<versionNumber>1.0</versionNumber>
+		<contactName>Http://www Administrators</contactName>
+		<contactEmail>lenov@ebi.ac.uk</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds>
+		<int>2802</int>
+		</categoryIds>
+		<groupIds>
+		<int>6001</int>
+		</groupIds>
+		<isFoundry>0</isFoundry>
+		<dateCreated>2009-10-28 00:47:25.0 PDT</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>40797</id>
+		<ontologyId>1051</ontologyId>
+		<displayLabel>Zebrafish anatomy and development</displayLabel>
+		<description>A structured controlled vocabulary of the anatomy and development of the Zebrafish (&lt;i&gt;Danio rerio&lt;/i&gt;).</description>
+		<abbreviation>ZFA</abbreviation>
+		<format>OBO</format>
+		<internalVersionNumber>8</internalVersionNumber>
+		<versionNumber>1.23</versionNumber>
+		<versionStatus>production</versionStatus>
+		<contactName>ZFIN administrators</contactName>
+		<contactEmail>zfinadmin@zfin.org</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds>
+		<int>2812</int>
+		<int>2810</int>
+		<int>2813</int>
+		<int>2811</int>
+		</categoryIds>
+		<groupIds>
+		<int>6001</int>
+		</groupIds>
+		<isFoundry>1</isFoundry>
+		<dateCreated>2009-11-02 22:25:29.0 PST</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>40915</id>
+		<ontologyId>1037</ontologyId>
+		<displayLabel>Cereal plant trait</displayLabel>
+		<description>A controlled vocabulary of describe phenotypic traits in cereal plants. Each trait is a distinguishable feature, characteristic, quality or phenotypic feature of a developing or mature cereal plant.</description>
+		<abbreviation>TO</abbreviation>
+		<format>OBO</format>
+		<internalVersionNumber>19</internalVersionNumber>
+		<versionNumber>1.80</versionNumber>
+		<versionStatus>pre_production</versionStatus>
+		<contactName>Po_anatomy Administrators</contactName>
+		<contactEmail>gramene@gramene.org</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds>
+		<int>2807</int>
+		</categoryIds>
+		<groupIds>
+		<int>6001</int>
+		</groupIds>
+		<isFoundry>1</isFoundry>
+		<dateCreated>2009-11-24 22:26:31.0 PST</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>40400</id>
+		<ontologyId>1350</ontologyId>
+		<displayLabel>Logical Observation Identifier Names and Codes</displayLabel>
+		<description>Logical Observation Identifier Names and Codes (LOINC);Version 2.26;January 2, 2009</description>
+		<abbreviation>LNC</abbreviation>
+		<format>RRF</format>
+		<internalVersionNumber>1</internalVersionNumber>
+		<versionNumber>226</versionNumber>
+		<contactName>Ms. Kathy Mercer, LOINC Developer</contactName>
+		<contactEmail>loinc@regenstrief.org</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds>
+		<int>5058</int>
+		</categoryIds>
+		<groupIds>
+		<int>6008</int>
+		</groupIds>
+		<isFoundry>0</isFoundry>
+		<dateCreated>2009-07-31 06:00:06.0 PDT</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>39624</id>
+		<ontologyId>1082</ontologyId>
+		<displayLabel>Gene Regulation Ontology</displayLabel>
+		<description>The Gene Regulation Ontology (GRO) is a conceptual model for the domain of gene regulation. It covers processes that are linked to the regulation of gene expression as well as physical entities that are involved in these processes (such as genes and transcription factors) in terms of ontology classes and semantic relations between classes. </description>
+		<abbreviation>GRO</abbreviation>
+		<format>OWL-DL</format>
+		<internalVersionNumber>2</internalVersionNumber>
+		<versionNumber>0.4</versionNumber>
+		<contactName>Vivian Lee</contactName>
+		<contactEmail>vlee@ebi.ac.uk</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds>
+		<int>2806</int>
+		</categoryIds>
+		<groupIds/>
+		<isFoundry>0</isFoundry>
+		<dateCreated>2009-05-04 19:58:50.0 PDT</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>40838</id>
+		<ontologyId>1107</ontologyId>
+		<displayLabel>Phenotypic quality</displayLabel>
+		<description>Phenotypic qualities (properties). This ontology can be used in conjunction with other ontologies such as GO or anatomical ontologies to refer to phenotypes. Examples of qualities are red, ectopic, high temperature, fused, small, edematous and arrested.</description>
+		<abbreviation>PATO</abbreviation>
+		<format>OBO</format>
+		<internalVersionNumber>39</internalVersionNumber>
+		<versionNumber>1.186</versionNumber>
+		<versionStatus>production</versionStatus>
+		<contactName>Quality Administrators</contactName>
+		<contactEmail>obo-phenotype@lists.sourceforge.net</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds>
+		<int>2807</int>
+		</categoryIds>
+		<groupIds>
+		<int>6001</int>
+		</groupIds>
+		<isFoundry>1</isFoundry>
+		<dateCreated>2009-11-11 22:25:47.0 PST</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>40796</id>
+		<ontologyId>1081</ontologyId>
+		<displayLabel>Teleost taxonomy</displayLabel>
+		<description>The Teleost taxonomy ontology is being used to facilitate annotation of phenotypes, particularly for taxa that are not covered by NCBI because no submissions of molecular data have been made. Taxonomy ontologies can also be valuable in annotating legacy data, where authors make phenotype or ecological assertions (e.g., host-parasite associations) that refer to groups that are reorganized or no longer recognized. The taxonomy ontology serves as the source of taxa for our project's use for identifying evolutionary changes that match the phenotype of a zebrafish mutant.</description>
+		<abbreviation>TTO</abbreviation>
+		<format>OBO</format>
+		<internalVersionNumber>27</internalVersionNumber>
+		<versionNumber>1.50</versionNumber>
+		<versionStatus>pre_production</versionStatus>
+		<contactName>Http://www Administrators</contactName>
+		<contactEmail>peteremidford@yahoo.com</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds>
+		<int>2808</int>
+		</categoryIds>
+		<groupIds>
+		<int>6001</int>
+		</groupIds>
+		<isFoundry>1</isFoundry>
+		<dateCreated>2009-11-02 22:25:12.0 PST</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>40902</id>
+		<ontologyId>1048</ontologyId>
+		<displayLabel>C. elegans gross anatomy</displayLabel>
+		<description>A structured controlled vocabulary of the anatomy of &lt;i&gt;Caenorhabditis elegans&lt;/i&gt;.</description>
+		<abbreviation>WBbt</abbreviation>
+		<format>OBO</format>
+		<internalVersionNumber>30</internalVersionNumber>
+		<versionNumber>1.38</versionNumber>
+		<versionStatus>production</versionStatus>
+		<contactName>Http://brebiou Administrators</contactName>
+		<contactEmail>raymond@caltech.edu</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds>
+		<int>2812</int>
+		<int>2810</int>
+		<int>2811</int>
+		</categoryIds>
+		<groupIds>
+		<int>6001</int>
+		</groupIds>
+		<isFoundry>1</isFoundry>
+		<dateCreated>2009-11-21 22:27:10.0 PST</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>38371</id>
+		<ontologyId>1050</ontologyId>
+		<displayLabel>Maize gross anatomy</displayLabel>
+		<description>A structured controlled vocabulary for the anatomy of &lt;i&gt;Zea mays&lt;/i&gt;.</description>
+		<abbreviation>ZEA</abbreviation>
+		<format>OBO</format>
+		<internalVersionNumber>2</internalVersionNumber>
+		<versionNumber>See Remote Site</versionNumber>
+		<versionStatus>pre_production</versionStatus>
+		<contactName>Zea_mays_anatomy Administrators</contactName>
+		<contactEmail>Leszek@missouri.edu</contactEmail>
+		<statusId>5</statusId>
+		<categoryIds>
+		<int>2816</int>
+		</categoryIds>
+		<groupIds/>
+		<isFoundry>0</isFoundry>
+		<dateCreated>2009-01-30 02:35:21.0 PST</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>38365</id>
+		<ontologyId>1047</ontologyId>
+		<displayLabel>Cereal plant development</displayLabel>
+		<description>A structured controlled vocabulary for expressing cereal plant development and growth stages.</description>
+		<abbreviation>GRO</abbreviation>
+		<format>OBO</format>
+		<internalVersionNumber>2</internalVersionNumber>
+		<versionNumber>See Remote Site</versionNumber>
+		<versionStatus>pre_production</versionStatus>
+		<contactName>Po_anatomy Administrators</contactName>
+		<contactEmail>gramene@gramene.org</contactEmail>
+		<statusId>5</statusId>
+		<categoryIds>
+		<int>2803</int>
+		<int>5063</int>
+		<int>2819</int>
+		</categoryIds>
+		<groupIds/>
+		<isFoundry>0</isFoundry>
+		<dateCreated>2009-04-13 02:33:47.0 PDT</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>40399</id>
+		<ontologyId>1349</ontologyId>
+		<displayLabel>Physician Data Query</displayLabel>
+		<description>Physician Data Query. Bethesda (MD): National Cancer Institute, February 2007.</description>
+		<abbreviation>PDQ</abbreviation>
+		<format>RRF</format>
+		<internalVersionNumber>1</internalVersionNumber>
+		<versionNumber>2007_02</versionNumber>
+		<contactName>Margaret Haber</contactName>
+		<contactEmail>mhaber@mail.nih.gov</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds>
+		<int>5058</int>
+		</categoryIds>
+		<groupIds>
+		<int>6008</int>
+		</groupIds>
+		<isFoundry>0</isFoundry>
+		<dateCreated>2009-07-31 06:04:32.0 PDT</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>39544</id>
+		<ontologyId>1190</ontologyId>
+		<displayLabel>Parasite Life Cycle</displayLabel>
+		<description>This ontology models the life cycle stage details of Trypanosoma cruzi and two related kinetoplastids, Trypanosoma brucei and Leishmania major. In addition to life cycle stages, the ontology also models necessary contextual details such as host information, vector information, strain and anatomical location. All the entities in the ontology are linked to each other by explicitly modeled named relationships.</description>
+		<abbreviation>PLO</abbreviation>
+		<format>OWL-DL</format>
+		<internalVersionNumber>1</internalVersionNumber>
+		<versionNumber>0.10</versionNumber>
+		<contactName>Satya S. Sahoo, Brent Weatherly, Flora Logan</contactName>
+		<contactEmail>satyasahoo@ieee.org</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds>
+		<int>2803</int>
+		</categoryIds>
+		<groupIds/>
+		<isFoundry>0</isFoundry>
+		<dateCreated>2009-03-07 14:34:22.0 PST</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>39183</id>
+		<ontologyId>1036</ontologyId>
+		<displayLabel>Plant environmental conditions</displayLabel>
+		<abbreviation>EO</abbreviation>
+		<format>OBO</format>
+		<internalVersionNumber>2</internalVersionNumber>
+		<versionNumber>1.6</versionNumber>
+		<versionStatus>pre_production</versionStatus>
+		<contactName>Pankaj Jaiswal</contactName>
+		<contactEmail>pj37@cornell.edu</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds>
+		<int>2807</int>
+		</categoryIds>
+		<groupIds/>
+		<isFoundry>0</isFoundry>
+		<dateCreated>2009-01-10 02:32:48.0 PST</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>40894</id>
+		<ontologyId>1109</ontologyId>
+		<displayLabel>Sequence types and features</displayLabel>
+		<description>The Sequence Ontology provides a structured controlled vocabulary for sequence annotation, for the exchange of annotation data and for the description of sequence objects in databases. &lt;a href="http://obo.cvs.sourceforge.net/*checkout*/song/ontology/sofa.obo"&gt;SOFA&lt;/a&gt; is a minimal version of SO for use in data exchange.</description>
+		<abbreviation>SO</abbreviation>
+		<format>OBO</format>
+		<internalVersionNumber>42</internalVersionNumber>
+		<versionNumber>1.158</versionNumber>
+		<versionStatus>production</versionStatus>
+		<contactName>So Administrators</contactName>
+		<contactEmail>song-devel@lists.sourceforge.net</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds>
+		<int>2806</int>
+		</categoryIds>
+		<groupIds>
+		<int>6001</int>
+		</groupIds>
+		<isFoundry>1</isFoundry>
+		<dateCreated>2009-11-20 22:26:00.0 PST</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>36417</id>
+		<ontologyId>1075</ontologyId>
+		<displayLabel>Cell Cycle Ontology (H. sapiens)</displayLabel>
+		<description>An ontology that integrates and manages knowledge about the cell cycle components and regulatory aspects of H. sapiens.</description>
+		<abbreviation>CCO</abbreviation>
+		<format>OBO</format>
+		<internalVersionNumber>1</internalVersionNumber>
+		<versionNumber>1.01</versionNumber>
+		<versionStatus>production</versionStatus>
+		<contactName>Erick Antezana</contactName>
+		<contactEmail>erant@psb.ugent.be</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds>
+		<int>5060</int>
+		<int>5062</int>
+		</categoryIds>
+		<groupIds/>
+		<isFoundry>0</isFoundry>
+		<dateCreated>2008-05-27 10:53:17.0 PDT</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>40009</id>
+		<ontologyId>1192</ontologyId>
+		<displayLabel>Proteomics Pipeline Infrastructure for CPTAC</displayLabel>
+		<description>a basic ontology which describes the proteomics pipeline infrastructure for CPTAC project</description>
+		<abbreviation>CPTAC</abbreviation>
+		<format>OWL</format>
+		<internalVersionNumber>2</internalVersionNumber>
+		<versionNumber>alpha 1.1</versionNumber>
+		<contactName>Fan Zhang</contactName>
+		<contactEmail>fanzhan@iupui.edu</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds>
+		<int>2806</int>
+		</categoryIds>
+		<groupIds/>
+		<isFoundry>0</isFoundry>
+		<dateCreated>2009-05-20 15:37:43.0 PDT</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>40402</id>
+		<ontologyId>1352</ontologyId>
+		<displayLabel>National Drug File</displayLabel>
+		<description>National Drug File - Reference Terminology Public Inferred Edition, 2008_03_11</description>
+		<abbreviation>NDFRT</abbreviation>
+		<format>RRF</format>
+		<internalVersionNumber>1</internalVersionNumber>
+		<versionNumber>2008_03_11</versionNumber>
+		<contactName>Steven H. Brown;MD</contactName>
+		<contactEmail>steven.brown@va.gov</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds>
+		<int>5058</int>
+		</categoryIds>
+		<groupIds>
+		<int>6008</int>
+		</groupIds>
+		<isFoundry>0</isFoundry>
+		<dateCreated>2009-07-31 06:03:05.0 PDT</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>39734</id>
+		<ontologyId>1059</ontologyId>
+		<displayLabel>Computer-based Patient Record Ontology</displayLabel>
+		<format>OWL-DL</format>
+		<internalVersionNumber>2</internalVersionNumber>
+		<versionNumber>0.85</versionNumber>
+		<contactName>Chimezie Ogbuji</contactName>
+		<contactEmail>chimezie@gmail.com</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds>
+		<int>5058</int>
+		</categoryIds>
+		<groupIds/>
+		<isFoundry>0</isFoundry>
+		<dateCreated>2009-04-04 22:27:01.0 PDT</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>3905</id>
+		<ontologyId>1052</ontologyId>
+		<displayLabel>Protein Ontology</displayLabel>
+		<format>OWL-FULL</format>
+		<internalVersionNumber>1</internalVersionNumber>
+		<versionNumber>2.0</versionNumber>
+		<versionStatus>production</versionStatus>
+		<contactName>Amandeep S. Sidhu</contactName>
+		<contactEmail>asidhu@biomap.org</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds>
+		<int>2821</int>
+		<int>2806</int>
+		</categoryIds>
+		<groupIds/>
+		<isFoundry>0</isFoundry>
+		<dateCreated>2009-05-18 19:04:48.0 PDT</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>40390</id>
+		<ontologyId>1341</ontologyId>
+		<displayLabel>COSTART</displayLabel>
+		<description>Coding Symbols for Thesaurus of Adverse Reaction Terms (COSTART). 5th ed. Rockville (MD)</description>
+		<abbreviation>CST</abbreviation>
+		<format>RRF</format>
+		<internalVersionNumber>1</internalVersionNumber>
+		<versionNumber>1995</versionNumber>
+		<contactName>U.S. Food and Drug Administration Center for Drug Evaluation and Research</contactName>
+		<contactEmail>info@ntis.gov</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds>
+		<int>5058</int>
+		</categoryIds>
+		<groupIds>
+		<int>6008</int>
+		</groupIds>
+		<isFoundry>0</isFoundry>
+		<dateCreated>2009-07-31 05:55:56.0 PDT</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>40202</id>
+		<ontologyId>1304</ontologyId>
+		<displayLabel>Breast Cancer Grading Ontology</displayLabel>
+		<description>assigns a grade to a tumor starting from the 3 criteria of the NGS</description>
+		<abbreviation>BCGO</abbreviation>
+		<format>OWL</format>
+		<internalVersionNumber>1</internalVersionNumber>
+		<versionNumber>1.4</versionNumber>
+		<contactName>Emina Szocs</contactName>
+		<contactEmail>sugarblue18@gmail.com</contactEmail>
+		<statusId>5</statusId>
+		<categoryIds>
+		<int>5060</int>
+		</categoryIds>
+		<groupIds/>
+		<isFoundry>0</isFoundry>
+		<dateCreated>2009-06-26 05:37:49.0 PDT</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>40393</id>
+		<ontologyId>1344</ontologyId>
+		<displayLabel>International Classification of Primary Care</displayLabel>
+		<description>The International Classification of Primary Care (ICPC). Denmark: World Organisation of Family Doctors, 1993.</description>
+		<abbreviation>ICPC</abbreviation>
+		<format>RRF</format>
+		<internalVersionNumber>1</internalVersionNumber>
+		<versionNumber>1993</versionNumber>
+		<contactName>Henk Lamberts, University of Amsterdam</contactName>
+		<contactEmail>H.Lamberts@AMC.UVA.NL</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds>
+		<int>5058</int>
+		</categoryIds>
+		<groupIds>
+		<int>6008</int>
+		</groupIds>
+		<isFoundry>0</isFoundry>
+		<dateCreated>2009-07-31 05:59:08.0 PDT</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>39343</id>
+		<ontologyId>1061</ontologyId>
+		<displayLabel>Suggested Ontology for Pharmacogenomics</displayLabel>
+		<description>SO-Pharm (Suggested Ontology for Pharmacogenomics) is a domain ontology implemented in OWL-DL, which proposes a formal description of pharmacogenomic knowledge. SO-Pharm articulates different ontologies that represent complementary sub-domains of pharmacogenomics, i.e. related to genotype, phenotype, drugs, and clinical trials. SO-Pharm enables to represent pharmacogenomic relationships between a drug, a genomic variation and a phenotype trait. In addition, it enables to represent patient and more largely panel included in trials, and populations. SO-Pharm enables the representation of measured items on this patients such as results from the observation of a phenotype trait or of genomic variations. SO-Pharm supports knowledge about pharmacogenomic hypothesis, case study, and investigations in pharmacogenomics. SO-Pharm is designed to facilitate data integration and knowledge discovery in pharmacogenomics. In addition it provides a consistent articulation of ontologies of pharmacogenomic sub-domains.</description>
+		<abbreviation>SOPHARM</abbreviation>
+		<format>OWL</format>
+		<internalVersionNumber>9</internalVersionNumber>
+		<versionNumber>2.1.2</versionNumber>
+		<contactName>Adrien Coulet</contactName>
+		<contactEmail>adrien.coulet@loria.fr</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds>
+		<int>2806</int>
+		</categoryIds>
+		<groupIds/>
+		<isFoundry>0</isFoundry>
+		<dateCreated>2009-02-06 11:52:12.0 PST</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>40403</id>
+		<ontologyId>1353</ontologyId>
+		<displayLabel>SNOMED Clinical Terms</displayLabel>
+		<description>SNOMED Clinical Terms, 2009_01_31</description>
+		<abbreviation>SNOMEDCT</abbreviation>
+		<format>RRF</format>
+		<internalVersionNumber>1</internalVersionNumber>
+		<versionNumber>2009_01_31</versionNumber>
+		<contactName>Vivian A. Auld</contactName>
+		<contactEmail>auld@nlm.nih.gov</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds>
+		<int>5058</int>
+		</categoryIds>
+		<groupIds>
+		<int>6008</int>
+		</groupIds>
+		<isFoundry>0</isFoundry>
+		<dateCreated>2009-07-31 06:05:37.0 PDT</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>13356</id>
+		<ontologyId>1022</ontologyId>
+		<displayLabel>Human developmental anatomy, timed version</displayLabel>
+		<abbreviation>EHDA</abbreviation>
+		<format>OBO</format>
+		<internalVersionNumber>1</internalVersionNumber>
+		<versionNumber>1.3</versionNumber>
+		<versionStatus>pre_production</versionStatus>
+		<contactName>EMAP Administrators</contactName>
+		<contactEmail>J.Bard@ed.ac.uk</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds>
+		<int>2811</int>
+		<int>2810</int>
+		<int>2812</int>
+		<int>2814</int>
+		</categoryIds>
+		<groupIds>
+		<int>6001</int>
+		</groupIds>
+		<isFoundry>1</isFoundry>
+		<dateCreated>2008-07-30 20:33:43.0 PDT</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>40765</id>
+		<ontologyId>1111</ontologyId>
+		<displayLabel>Uber anatomy ontology</displayLabel>
+		<description>Uberon is a multi-species anatomy ontology created to facilitate comparison of phenotypes across multiple species. Uberon is generated semi-automatically from the union of existing species-centric anatomy ontologies.</description>
+		<abbreviation>UBERON</abbreviation>
+		<format>OBO</format>
+		<internalVersionNumber>42</internalVersionNumber>
+		<versionNumber>1.71</versionNumber>
+		<contactName>Http://obo Administrators</contactName>
+		<contactEmail>obo-anatomy@lists.sourceforge.net</contactEmail>
+		<statusId>4</statusId>
+		<categoryIds>
+		<int>2810</int>
+		</categoryIds>
+		<groupIds/>
+		<isFoundry>0</isFoundry>
+		<dateCreated>2009-10-28 00:48:45.0 PDT</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>38348</id>
+		<ontologyId>1014</ontologyId>
+		<displayLabel>Physico-chemical methods and properties</displayLabel>
+		<description>FIX consists of two ontologies: methods and properties (but not objects, which are subject of the chemical ontology). The methods are applied to study the properties.</description>
+		<abbreviation>FIX</abbreviation>
+		<format>OBO</format>
+		<internalVersionNumber>2</internalVersionNumber>
+		<versionNumber>See Remote Site</versionNumber>
+		<versionStatus>pre_production</versionStatus>
+		<contactName>Chebi Administrators</contactName>
+		<contactEmail>chebi-help@ebi.ac.uk</contactEmail>
+		<statusId>5</statusId>
+		<categoryIds>
+		<int>2802</int>
+		</categoryIds>
+		<groupIds/>
+		<isFoundry>0</isFoundry>
+		<dateCreated>2009-04-13 02:33:12.0 PDT</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>39727</id>
+		<ontologyId>1224</ontologyId>
+		<displayLabel>Symptom Ontology</displayLabel>
+		<description>The symptom ontology was designed around the guiding concept of a symptom being: "A perceived change in function, sensation or appearance reported by a patient indicative of a disease". Understanding the close relationship of Signs and Symptoms, where Signs are the objective observation of an illness, the Symptom Ontology will work to broaden it's scope to capture and document in a more robust manor these two sets of terms. Understanding that at times, the same term may be both a Sign and a Symptom</description>
+		<abbreviation>SYMP</abbreviation>
+		<format>OBO</format>
+		<internalVersionNumber>1</internalVersionNumber>
+		<versionNumber>See Remote Site</versionNumber>
+		<versionStatus>pre_production</versionStatus>
+		<contactName>Lynn Schriml</contactName>
+		<contactEmail>lynn.schriml@gmail.com</contactEmail>
+		<statusId>5</statusId>
+		<categoryIds/>
+		<groupIds/>
+		<isFoundry>0</isFoundry>
+		<dateCreated>2009-04-13 02:33:47.0 PDT</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>40686</id>
+		<ontologyId>1095</ontologyId>
+		<displayLabel>Xenopus anatomy and development</displayLabel>
+		<description>A structured controlled vocabulary of the anatomy and development of the African clawed frog (&lt;i&gt;Xenopus laevis&lt;/i&gt;).</description>
+		<abbreviation>XAO</abbreviation>
+		<format>OBO</format>
+		<internalVersionNumber>7</internalVersionNumber>
+		<versionNumber>1.19</versionNumber>
+		<versionStatus>pre_production</versionStatus>
+		<contactName>Erik Segerdell</contactName>
+		<contactEmail>esegerde@ucalgary.ca</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds>
+		<int>2812</int>
+		<int>2810</int>
+		<int>2811</int>
+		</categoryIds>
+		<groupIds>
+		<int>6001</int>
+		</groupIds>
+		<isFoundry>1</isFoundry>
+		<dateCreated>2009-10-12 14:20:57.0 PDT</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>38360</id>
+		<ontologyId>1042</ontologyId>
+		<displayLabel>OBO relationship types</displayLabel>
+		<description>Defines core relations used in all OBO ontologies.</description>
+		<abbreviation>OBO_REL</abbreviation>
+		<format>OBO</format>
+		<internalVersionNumber>2</internalVersionNumber>
+		<versionNumber>1.1</versionNumber>
+		<versionStatus>production</versionStatus>
+		<contactName>Chris Mungall</contactName>
+		<contactEmail>obo-relations@lists.sourceforge.net</contactEmail>
+		<statusId>4</statusId>
+		<categoryIds/>
+		<groupIds>
+		<int>6001</int>
+		</groupIds>
+		<isFoundry>1</isFoundry>
+		<dateCreated>2008-07-30 20:34:29.0 PDT</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>38347</id>
+		<ontologyId>1013</ontologyId>
+		<displayLabel>eVOC (Expressed Sequence Annotation for Humans)</displayLabel>
+		<description>Provides structured controlled vocabularies for the annotation of expressed sequences with respect to anatomical system, cell type, developmental stage, experimental technique, microarray platform, pathology, pooling, tissue preparation and treatment.</description>
+		<abbreviation>EV</abbreviation>
+		<format>OBO</format>
+		<internalVersionNumber>2</internalVersionNumber>
+		<versionNumber>See Remote Site</versionNumber>
+		<versionStatus>production</versionStatus>
+		<contactName>Evoc Administrators</contactName>
+		<contactEmail>evoc@sanbi.ac.za</contactEmail>
+		<statusId>5</statusId>
+		<categoryIds>
+		<int>2807</int>
+		</categoryIds>
+		<groupIds/>
+		<isFoundry>0</isFoundry>
+		<dateCreated>2009-04-13 02:33:12.0 PDT</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>39815</id>
+		<ontologyId>1149</ontologyId>
+		<displayLabel>DermLex: The Dermatology Lexicon</displayLabel>
+		<description>Version 1.0 of the American Academy of Dermatology's DermLex: The Dermatology Lexicon, a standardized terminology of dermatologic diagnoses, therapies, procedures, and laboratory tests.</description>
+		<abbreviation>DermLex</abbreviation>
+		<format>OWL</format>
+		<internalVersionNumber>4</internalVersionNumber>
+		<versionNumber>1.0</versionNumber>
+		<contactName>Naomi Levinthal</contactName>
+		<contactEmail>nlevinthal@aad.org</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds>
+		<int>5058</int>
+		</categoryIds>
+		<groupIds/>
+		<isFoundry>0</isFoundry>
+		<dateCreated>2009-04-17 12:12:06.0 PDT</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>40463</id>
+		<ontologyId>1311</ontologyId>
+		<displayLabel>Malaria Ontology</displayLabel>
+		<description>An application ontology for malaria extending the infectious disease ontology (IDO).</description>
+		<abbreviation>MALIDO</abbreviation>
+		<format>OBO</format>
+		<internalVersionNumber>3</internalVersionNumber>
+		<versionNumber>0.2b</versionNumber>
+		<contactName>Pantelis Topalis</contactName>
+		<contactEmail>topalis@imbb.forth.gr</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds>
+		<int>2807</int>
+		<int>2801</int>
+		<int>5062</int>
+		<int>5058</int>
+		<int>5060</int>
+		</categoryIds>
+		<groupIds/>
+		<isFoundry>0</isFoundry>
+		<dateCreated>2009-08-10 10:15:20.0 PDT</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>40425</id>
+		<ontologyId>1335</ontologyId>
+		<displayLabel>Parasite Experiment Ontology</displayLabel>
+		<abbreviation>PEO</abbreviation>
+		<format>OWL-DL</format>
+		<internalVersionNumber>3</internalVersionNumber>
+		<versionNumber>0.10</versionNumber>
+		<contactName>Satya S. Sahoo, Brent Weatherly, Flora Logan</contactName>
+		<contactEmail>satyasahoo@ieee.org</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds>
+		<int>2805</int>
+		</categoryIds>
+		<groupIds/>
+		<isFoundry>0</isFoundry>
+		<dateCreated>2009-08-03 14:35:41.0 PDT</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>40791</id>
+		<ontologyId>1370</ontologyId>
+		<displayLabel>Amphibian taxonomy</displayLabel>
+		<description>A taxonomy of Amphibia</description>
+		<abbreviation>ATO</abbreviation>
+		<format>OBO</format>
+		<internalVersionNumber>2</internalVersionNumber>
+		<versionNumber>See Remote Site</versionNumber>
+		<contactName>AmphiAnat list</contactName>
+		<contactEmail>sbhdbe@mst.edu</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds>
+		<int>2808</int>
+		</categoryIds>
+		<groupIds/>
+		<isFoundry>0</isFoundry>
+		<dateCreated>2009-11-02 13:58:28.0 PST</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>3093</id>
+		<ontologyId>1027</ontologyId>
+		<displayLabel>Medaka fish anatomy and development</displayLabel>
+		<description>A structured controlled vocabulary of the anatomy and development of the Japanese medaka fish, Oryzias latipes.</description>
+		<abbreviation>MFO</abbreviation>
+		<format>OBO</format>
+		<internalVersionNumber>1</internalVersionNumber>
+		<versionNumber>1.1</versionNumber>
+		<versionStatus>pre_production</versionStatus>
+		<contactName>Medaka_ontology Administrators</contactName>
+		<contactEmail>Thorsten.Henrich@embl-heidelberg.de</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds>
+		<int>2810</int>
+		<int>2813</int>
+		<int>2812</int>
+		<int>2811</int>
+		</categoryIds>
+		<groupIds>
+		<int>6001</int>
+		</groupIds>
+		<isFoundry>1</isFoundry>
+		<dateCreated>2008-07-30 20:33:49.0 PDT</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>40404</id>
+		<ontologyId>1354</ontologyId>
+		<displayLabel>WHO Adverse Reaction Terminology</displayLabel>
+		<description>WHO Adverse Reaction Terminology, 1997</description>
+		<abbreviation>WHO</abbreviation>
+		<format>RRF</format>
+		<internalVersionNumber>1</internalVersionNumber>
+		<versionNumber>1997</versionNumber>
+		<contactName>WHO Collaborating Centre for International Drug Monitoring</contactName>
+		<contactEmail>support@who.int</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds>
+		<int>5058</int>
+		</categoryIds>
+		<groupIds>
+		<int>6008</int>
+		</groupIds>
+		<isFoundry>0</isFoundry>
+		<dateCreated>2009-07-31 05:54:13.0 PDT</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>38346</id>
+		<ontologyId>1011</ontologyId>
+		<displayLabel>Event (INOH pathway ontology)</displayLabel>
+		<description>A structured controlled vocabulary of pathway centric biological processes. This ontology is a INOH pathway annotation ontology, one of a set of ontologies intended to be used in pathway data annotation to ease data integration. This ontology is used to annotate biological processes, pathways, sub-pathways in the INOH pathway data.&lt;br&gt;INOH is part of the BioPAX working group.</description>
+		<abbreviation>IEV</abbreviation>
+		<format>OBO</format>
+		<internalVersionNumber>2</internalVersionNumber>
+		<versionNumber>See Remote Site</versionNumber>
+		<versionStatus>production</versionStatus>
+		<contactName>Event Administrators</contactName>
+		<contactEmail>curator@inoh.org</contactEmail>
+		<statusId>5</statusId>
+		<categoryIds/>
+		<groupIds/>
+		<isFoundry>0</isFoundry>
+		<dateCreated>2009-04-13 02:33:12.0 PDT</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>13323</id>
+		<ontologyId>1010</ontologyId>
+		<displayLabel>Mouse gross anatomy and development</displayLabel>
+		<description>A structured controlled vocabulary of stage-specific anatomical structures of the mouse (Mus).</description>
+		<abbreviation>EMAP</abbreviation>
+		<format>OBO</format>
+		<internalVersionNumber>1</internalVersionNumber>
+		<versionNumber>1.2</versionNumber>
+		<versionStatus>production</versionStatus>
+		<contactName>EMAP Administrators</contactName>
+		<contactEmail>J.Bard@ed.ac.uk</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds>
+		<int>2817</int>
+		<int>2811</int>
+		<int>2812</int>
+		<int>2810</int>
+		</categoryIds>
+		<groupIds>
+		<int>6001</int>
+		</groupIds>
+		<isFoundry>1</isFoundry>
+		<dateCreated>2008-07-30 20:33:41.0 PDT</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>40179</id>
+		<ontologyId>1015</ontologyId>
+		<displayLabel>Drosophila gross anatomy</displayLabel>
+		<description>A structured controlled vocabulary of the anatomy of &lt;i&gt;Drosophila melanogaster&lt;/i&gt;.</description>
+		<abbreviation>FBbt</abbreviation>
+		<format>OBO</format>
+		<internalVersionNumber>4</internalVersionNumber>
+		<versionNumber>1.30</versionNumber>
+		<versionStatus>production</versionStatus>
+		<contactName>Http://obo Administrators</contactName>
+		<contactEmail>obo-anatomy@lists.sourceforge.net</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds>
+		<int>2810</int>
+		<int>2812</int>
+		<int>2811</int>
+		</categoryIds>
+		<groupIds>
+		<int>6001</int>
+		</groupIds>
+		<isFoundry>1</isFoundry>
+		<dateCreated>2009-06-23 02:35:32.0 PDT</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>37911</id>
+		<ontologyId>1090</ontologyId>
+		<displayLabel>Amphibian gross anatomy</displayLabel>
+		<description>A structured controlled vocabulary of the anatomy of Amphibians. </description>
+		<abbreviation>AAO</abbreviation>
+		<format>OBO</format>
+		<internalVersionNumber>1</internalVersionNumber>
+		<versionNumber>1.8</versionNumber>
+		<versionStatus>pre_production</versionStatus>
+		<contactName>AmphiAnat list</contactName>
+		<contactEmail>sbhdbe@mst.edu</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds>
+		<int>2810</int>
+		<int>2812</int>
+		<int>2811</int>
+		</categoryIds>
+		<groupIds>
+		<int>6001</int>
+		</groupIds>
+		<isFoundry>1</isFoundry>
+		<dateCreated>2008-07-30 20:31:48.0 PDT</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>3036</id>
+		<ontologyId>1020</ontologyId>
+		<displayLabel>Habronattus courtship</displayLabel>
+		<description>A demonstration of ontology construction as a general technique for coding ethograms and other descriptions of behavior into machine understandable forms. An ontology for courtship behavior of the spider &lt;i&gt;Habronattus californicus&lt;/i&gt;.</description>
+		<abbreviation>
+		</abbreviation>
+		<format>PROTEGE</format>
+		<internalVersionNumber>1</internalVersionNumber>
+		<versionNumber>See Remote Site</versionNumber>
+		<versionStatus>pre_production</versionStatus>
+		<contactName>Http://www Administrators</contactName>
+		<contactEmail>peteremidford@yahoo.com</contactEmail>
+		<statusId>5</statusId>
+		<categoryIds>
+		<int>2801</int>
+		</categoryIds>
+		<groupIds/>
+		<isFoundry>0</isFoundry>
+		<dateCreated>2009-04-13 02:33:12.0 PDT</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>39545</id>
+		<ontologyId>1148</ontologyId>
+		<displayLabel>BioPortal Metadata</displayLabel>
+		<description>This ontology represents the structure that BioPortal will use to represent all of its metadata (ontology details, mappings, notes, reviews, views)</description>
+		<abbreviation>BPMetadata</abbreviation>
+		<format>OWL</format>
+		<internalVersionNumber>2</internalVersionNumber>
+		<versionNumber>0.2</versionNumber>
+		<contactName>Natasha Noy</contactName>
+		<contactEmail>noy@stanford.edu</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds>
+		<int>2801</int>
+		</categoryIds>
+		<groupIds/>
+		<isFoundry>0</isFoundry>
+		<dateCreated>2009-03-05 16:56:46.0 PST</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>40893</id>
+		<ontologyId>1038</ontologyId>
+		<displayLabel>Plant growth and developmental stage</displayLabel>
+		<description>A controlled vocabulary of growth and developmental stages in various plants.&lt;br&gt;The plant ontologies, which includes both the plant structure and growth and development stages can be downloaded as a &lt;a href="http://brebiou.cshl.edu/viewcvs/Poc/ontology/OBO_format/plant_ontology.obo"&gt;single file in OBO format&lt;/a&gt;.</description>
+		<abbreviation>PO</abbreviation>
+		<format>OBO</format>
+		<internalVersionNumber>2</internalVersionNumber>
+		<versionNumber>See Remote Site</versionNumber>
+		<versionStatus>pre_production</versionStatus>
+		<contactName>Po_anatomy Administrators</contactName>
+		<contactEmail>po-dev@plantontology.org</contactEmail>
+		<statusId>5</statusId>
+		<categoryIds>
+		<int>2803</int>
+		<int>2819</int>
+		</categoryIds>
+		<groupIds>
+		<int>6001</int>
+		</groupIds>
+		<isFoundry>1</isFoundry>
+		<dateCreated>2009-11-20 22:25:59.0 PST</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>40391</id>
+		<ontologyId>1342</ontologyId>
+		<displayLabel>HL7 Version 2.5</displayLabel>
+		<description>HL7 Vocabulary Version 2.5, 2003_08_30</description>
+		<abbreviation>HL7V2.5</abbreviation>
+		<format>RRF</format>
+		<internalVersionNumber>1</internalVersionNumber>
+		<versionNumber>V2.5</versionNumber>
+		<contactName>Mark McDougall, Executive Director, Health Level Seven</contactName>
+		<contactEmail>HQ@HL7.ORG</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds>
+		<int>5058</int>
+		</categoryIds>
+		<groupIds>
+		<int>6008</int>
+		</groupIds>
+		<isFoundry>0</isFoundry>
+		<dateCreated>2009-07-31 05:57:28.0 PDT</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>38802</id>
+		<ontologyId>1132</ontologyId>
+		<displayLabel>NCBI organismal classification</displayLabel>
+		<description>A taxonomic classification of living organisms and associated artifacts for their controlled description within the context of databases.</description>
+		<format>OBO</format>
+		<internalVersionNumber>1</internalVersionNumber>
+		<versionNumber>1.2</versionNumber>
+		<contactName>NCBI information</contactName>
+		<contactEmail>info@ncbi.nlm.nih.gov</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds>
+		<int>2808</int>
+		</categoryIds>
+		<groupIds>
+		<int>6008</int>
+		</groupIds>
+		<isFoundry>0</isFoundry>
+		<dateCreated>2009-05-13 18:04:34.0 PDT</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>40497</id>
+		<ontologyId>1328</ontologyId>
+		<displayLabel>Ontology of homology and related concepts in biology</displayLabel>
+		<description>This ontology represents concepts related to homology, as well as other concepts used to describe similarity and non-homology.</description>
+		<abbreviation>HOM</abbreviation>
+		<format>OBO</format>
+		<internalVersionNumber>3</internalVersionNumber>
+		<versionNumber>1.2</versionNumber>
+		<contactName>Julien Roux</contactName>
+		<contactEmail>julien.roux@unil.ch</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds>
+		<int>5069</int>
+		<int>2810</int>
+		<int>2803</int>
+		<int>2801</int>
+		<int>5073</int>
+		</categoryIds>
+		<groupIds/>
+		<isFoundry>0</isFoundry>
+		<dateCreated>2009-08-16 23:30:28.0 PDT</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>40872</id>
+		<ontologyId>1019</ontologyId>
+		<displayLabel>Fungal gross anatomy</displayLabel>
+		<description>A structured controlled vocabulary for the anatomy of fungi.</description>
+		<abbreviation>FAO</abbreviation>
+		<format>OBO</format>
+		<internalVersionNumber>4</internalVersionNumber>
+		<versionNumber>1.4</versionNumber>
+		<versionStatus>production</versionStatus>
+		<contactName>Fungal_anatomy Administrators</contactName>
+		<contactEmail>maria@genome.stanford.edu</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds>
+		<int>2810</int>
+		<int>2811</int>
+		<int>2815</int>
+		</categoryIds>
+		<groupIds>
+		<int>6001</int>
+		</groupIds>
+		<isFoundry>1</isFoundry>
+		<dateCreated>2009-11-17 22:26:06.0 PST</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>40133</id>
+		<ontologyId>1290</ontologyId>
+		<displayLabel>ABA Adult Mouse Brain</displayLabel>
+		<description>Allen Brain Atlas P56 Mouse Ontology</description>
+		<abbreviation>ABA</abbreviation>
+		<format>OWL</format>
+		<internalVersionNumber>1</internalVersionNumber>
+		<versionNumber>1.0</versionNumber>
+		<contactName>Allen Institute for Brain Science</contactName>
+		<contactEmail>chinhda@alleninstitute.org</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds>
+		<int>2817</int>
+		</categoryIds>
+		<groupIds/>
+		<isFoundry>0</isFoundry>
+		<dateCreated>2009-08-08 17:18:35.0 PDT</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>40517</id>
+		<ontologyId>1378</ontologyId>
+		<displayLabel>homology_ontology</displayLabel>
+		<description>This ontology represents concepts related to homology, as well as other concepts used to describe similarity and non-homology.</description>
+		<abbreviation>HOM</abbreviation>
+		<format>OBO</format>
+		<internalVersionNumber>1</internalVersionNumber>
+		<versionNumber>See Remote Site</versionNumber>
+		<versionStatus>pre_production</versionStatus>
+		<contactName>julien.roux julien.roux</contactName>
+		<contactEmail>julien.roux@unil.ch</contactEmail>
+		<statusId>5</statusId>
+		<categoryIds/>
+		<groupIds/>
+		<isFoundry>0</isFoundry>
+		<dateCreated>2009-08-20 02:34:47.0 PDT</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>40912</id>
+		<ontologyId>1067</ontologyId>
+		<displayLabel>C. elegans phenotype</displayLabel>
+		<description>A structured controlled vocabulary of &lt;i&gt;Caenorhabditis elegans&lt;/i&gt; phenotypes</description>
+		<abbreviation>WBPhenotype</abbreviation>
+		<format>OBO</format>
+		<internalVersionNumber>68</internalVersionNumber>
+		<versionNumber>1.105</versionNumber>
+		<versionStatus>pre_production</versionStatus>
+		<contactName>Http://tazendra Administrators</contactName>
+		<contactEmail>garys@caltech.edu</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds>
+		<int>2807</int>
+		</categoryIds>
+		<groupIds>
+		<int>6001</int>
+		</groupIds>
+		<isFoundry>1</isFoundry>
+		<dateCreated>2009-11-23 22:25:54.0 PST</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>40794</id>
+		<ontologyId>1069</ontologyId>
+		<displayLabel>Environment Ontology</displayLabel>
+		<description>Ontology of environmental features and habitats</description>
+		<abbreviation>ENVO</abbreviation>
+		<format>OBO</format>
+		<internalVersionNumber>12</internalVersionNumber>
+		<versionNumber>1.52</versionNumber>
+		<versionStatus>pre_production</versionStatus>
+		<contactName>Envo Administrators</contactName>
+		<contactEmail>obo-envo@lists.sourceforge.net</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds/>
+		<groupIds>
+		<int>6001</int>
+		</groupIds>
+		<isFoundry>1</isFoundry>
+		<dateCreated>2009-11-02 22:25:02.0 PST</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>4525</id>
+		<ontologyId>1055</ontologyId>
+		<displayLabel>Galen</displayLabel>
+		<format>OWL-FULL</format>
+		<internalVersionNumber>1</internalVersionNumber>
+		<versionNumber>1.1</versionNumber>
+		<versionStatus>production</versionStatus>
+		<statusId>3</statusId>
+		<categoryIds>
+		<int>2801</int>
+		</categoryIds>
+		<groupIds/>
+		<isFoundry>0</isFoundry>
+		<dateCreated>2007-01-16 13:51:57.0 PST</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>40358</id>
+		<ontologyId>1332</ontologyId>
+		<displayLabel>Basic Formal Ontology</displayLabel>
+		<description>BFO grows out of a philosophical orientation which overlaps with that of DOLCE and SUMO. Unlike these, however, it is narrowly focused on the task of providing a genuine upper ontology which can be used in support of domain ontologies developed for scientific research, as for example in biomedicine within the framework of the OBO Foundry. Thus BFO does not contain physical, chemical, biological or other terms which would properly fall within the special sciences domains.</description>
+		<abbreviation>BFO</abbreviation>
+		<format>OWL</format>
+		<internalVersionNumber>1</internalVersionNumber>
+		<versionNumber>1.1</versionNumber>
+		<versionStatus>production</versionStatus>
+		<contactEmail>bfo-discuss@googlegroups.com</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds>
+		<int>2801</int>
+		</categoryIds>
+		<groupIds/>
+		<isFoundry>0</isFoundry>
+		<dateCreated>2009-07-24 08:50:33.0 PDT</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>39897</id>
+		<ontologyId>1183</ontologyId>
+		<displayLabel>Lipid Ontology</displayLabel>
+		<description>Lipid research is increasingly integrated within systems level biology such as lipidomics where lipid classification is required before appropriate annotation of chemical functions can be applied. The ontology describes the LIPIDMAPS nomenclature classification explicitly using description logics (OWL-DL). Lipid classes are organized hierarchically with the super-classes restricted by generic necessary conditions. More specific necessary conditions are used to define membership requirements for sub classes of lipid according to appropriate functional groups.</description>
+		<abbreviation>LiPrO</abbreviation>
+		<format>OWL</format>
+		<internalVersionNumber>2</internalVersionNumber>
+		<versionNumber>See Remote Site</versionNumber>
+		<versionStatus>production</versionStatus>
+		<contactName>Christipher Baker</contactName>
+		<contactEmail>bakerc@unb.ca</contactEmail>
+		<statusId>5</statusId>
+		<categoryIds>
+		<int>2802</int>
+		</categoryIds>
+		<groupIds/>
+		<isFoundry>0</isFoundry>
+		<dateCreated>2009-04-30 02:33:06.0 PDT</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>3083</id>
+		<ontologyId>1026</ontologyId>
+		<displayLabel>Multiple alignment</displayLabel>
+		<abbreviation>RO</abbreviation>
+		<format>OBO</format>
+		<internalVersionNumber>1</internalVersionNumber>
+		<versionNumber>1.1</versionNumber>
+		<versionStatus>production</versionStatus>
+		<contactName>Julie Thompson</contactName>
+		<contactEmail>julie.thompson@igbmc.u-strasbg.fr</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds>
+		<int>2806</int>
+		</categoryIds>
+		<groupIds/>
+		<isFoundry>0</isFoundry>
+		<dateCreated>2006-12-08 15:48:05.0 PST</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>38787</id>
+		<ontologyId>1130</ontologyId>
+		<displayLabel>Cancer Research and Management ACGT Master Ontology</displayLabel>
+		<description>The intention of the ACGT Master Ontology (MO) is to represent the domain of cancer research and management in a computationally tractable manner.</description>
+		<format>OWL-DL</format>
+		<internalVersionNumber>1</internalVersionNumber>
+		<versionNumber>1.0</versionNumber>
+		<contactName>Mathias Brochhausen</contactName>
+		<contactEmail>mathias.brochhausen@ifomis.uni-saarland.de</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds>
+		<int>5058</int>
+		</categoryIds>
+		<groupIds/>
+		<isFoundry>0</isFoundry>
+		<dateCreated>2009-04-27 19:49:30.0 PDT</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>8056</id>
+		<ontologyId>1060</ontologyId>
+		<displayLabel>Epoch Clinical Trial Ontologies</displayLabel>
+		<abbreviation>ClinicalTrialOntology</abbreviation>
+		<format>OWL-FULL</format>
+		<internalVersionNumber>1</internalVersionNumber>
+		<versionNumber>0.9</versionNumber>
+		<versionStatus>production</versionStatus>
+		<contactName>Ravi Shankar, Stanford Medical Informatics</contactName>
+		<contactEmail>rshankar@stanford.edu</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds>
+		<int>2805</int>
+		</categoryIds>
+		<groupIds/>
+		<isFoundry>0</isFoundry>
+		<dateCreated>2007-03-20 11:47:37.0 PDT</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>40305</id>
+		<ontologyId>1112</ontologyId>
+		<displayLabel>Units of measurement</displayLabel>
+		<description>Metrical units for use in conjunction with PATO</description>
+		<abbreviation>UO</abbreviation>
+		<format>OBO</format>
+		<internalVersionNumber>6</internalVersionNumber>
+		<versionNumber>1.21</versionNumber>
+		<versionStatus>production</versionStatus>
+		<contactName>Unit Administrators</contactName>
+		<contactEmail>obo-unit@lists.sourceforge.net</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds>
+		<int>2807</int>
+		</categoryIds>
+		<groupIds>
+		<int>6001</int>
+		</groupIds>
+		<isFoundry>1</isFoundry>
+		<dateCreated>2009-07-15 02:34:30.0 PDT</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>40483</id>
+		<ontologyId>1369</ontologyId>
+		<displayLabel>PhysicalFields</displayLabel>
+		<abbreviation>Field</abbreviation>
+		<format>OWL</format>
+		<internalVersionNumber>1</internalVersionNumber>
+		<versionNumber>v0.1</versionNumber>
+		<contactName>Marco Viceconti</contactName>
+		<contactEmail>viceconti@tecno.ior.it</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds>
+		<int>2822</int>
+		</categoryIds>
+		<groupIds/>
+		<isFoundry>0</isFoundry>
+		<dateCreated>2009-08-13 23:37:10.0 PDT</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>39579</id>
+		<ontologyId>1086</ontologyId>
+		<displayLabel>Ontology for disease genetic investigation</displayLabel>
+		<description>The ontology for the original papers investigating the relations between genetic factors and disease.</description>
+		<format>OWL-DL</format>
+		<internalVersionNumber>2</internalVersionNumber>
+		<versionNumber>0.7.1</versionNumber>
+		<contactName>Yu Lin</contactName>
+		<contactEmail>linyu@cdb.riken.jp</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds>
+		<int>2805</int>
+		</categoryIds>
+		<groupIds/>
+		<isFoundry>0</isFoundry>
+		<dateCreated>2009-05-18 19:25:18.0 PDT</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>36425</id>
+		<ontologyId>1074</ontologyId>
+		<displayLabel>Cell Cycle Ontology (S. cerevisiae)</displayLabel>
+		<description>An ontology that integrates and manages knowledge about the cell cycle components and regulatory aspects of S. cerevisiae.</description>
+		<abbreviation>CCO</abbreviation>
+		<format>OBO</format>
+		<internalVersionNumber>1</internalVersionNumber>
+		<versionNumber>1.01</versionNumber>
+		<versionStatus>production</versionStatus>
+		<contactName>Erick Antezana</contactName>
+		<contactEmail>erant@psb.ugent.be</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds>
+		<int>5064</int>
+		<int>5060</int>
+		</categoryIds>
+		<groupIds/>
+		<isFoundry>0</isFoundry>
+		<dateCreated>2008-05-27 10:57:58.0 PDT</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>40626</id>
+		<ontologyId>1091</ontologyId>
+		<displayLabel>Spider Ontology</displayLabel>
+		<description>An ontology for spider comparative biology including anatomical parts (e.g. leg, claw), behavior (e.g. courtship, combing) and products (i.g. silk, web, borrow).</description>
+		<abbreviation>SPD</abbreviation>
+		<format>OBO</format>
+		<internalVersionNumber>12</internalVersionNumber>
+		<versionNumber>1.17</versionNumber>
+		<versionStatus>pre_production</versionStatus>
+		<contactName>Martin Ramirez</contactName>
+		<contactEmail>ramirez@macn.gov.ar</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds>
+		<int>2812</int>
+		<int>2810</int>
+		<int>2811</int>
+		</categoryIds>
+		<groupIds>
+		<int>6001</int>
+		</groupIds>
+		<isFoundry>1</isFoundry>
+		<dateCreated>2009-09-12 02:34:58.0 PDT</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>36430</id>
+		<ontologyId>1073</ontologyId>
+		<displayLabel>Cell Cycle Ontology (S. pombe)</displayLabel>
+		<description>An ontology that integrates and manages knowledge about the cell cycle components and regulatory aspects S. pombe.</description>
+		<abbreviation>CCO</abbreviation>
+		<format>OBO</format>
+		<internalVersionNumber>1</internalVersionNumber>
+		<versionNumber>1.01</versionNumber>
+		<versionStatus>production</versionStatus>
+		<contactName>Erick Antezana</contactName>
+		<contactEmail>erant@psb.ugent.be</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds>
+		<int>5060</int>
+		<int>5064</int>
+		</categoryIds>
+		<groupIds/>
+		<isFoundry>0</isFoundry>
+		<dateCreated>2008-05-27 10:59:45.0 PDT</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>39366</id>
+		<ontologyId>1017</ontologyId>
+		<displayLabel>FlyBase Controlled Vocabulary</displayLabel>
+		<description>A structured controlled vocabulary used for various aspects of annotation by FlyBase.&lt;br&gt;This ontology is maintained by FlyBase for various aspects of annotation not covered, or not yet covered, by other OBO ontologies.  If and when community ontologies are available for the domains here covered FlyBase will use them.</description>
+		<abbreviation>FBcv</abbreviation>
+		<format>OBO</format>
+		<internalVersionNumber>4</internalVersionNumber>
+		<versionNumber>1.17</versionNumber>
+		<versionStatus>pre_production</versionStatus>
+		<contactName>Evidence_code Administrators</contactName>
+		<contactEmail>ma11@gen.cam.ac.uk</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds>
+		<int>2809</int>
+		</categoryIds>
+		<groupIds/>
+		<isFoundry>0</isFoundry>
+		<dateCreated>2009-02-10 02:41:04.0 PST</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>40398</id>
+		<ontologyId>1348</ontologyId>
+		<displayLabel>Online Mendelian Inheritance in Man</displayLabel>
+		<description>Online Mendelian Inheritance in Man, OMIM (TM). McKusick-Nathans Institute for Genetic Medicine, Johns Hopkins University (Baltimore, MD) and National Center for Biotechnology Information, National Library of Medicine</description>
+		<abbreviation>OMIM</abbreviation>
+		<format>RRF</format>
+		<internalVersionNumber>1</internalVersionNumber>
+		<versionNumber>2007_12_19</versionNumber>
+		<contactName>Jan Willis, NLM</contactName>
+		<contactEmail>willisj@mail.nlm.nih.gov</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds>
+		<int>5058</int>
+		</categoryIds>
+		<groupIds>
+		<int>6008</int>
+		</groupIds>
+		<isFoundry>0</isFoundry>
+		<dateCreated>2009-07-31 06:03:52.0 PDT</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>38611</id>
+		<ontologyId>1122</ontologyId>
+		<displayLabel>Skin Physiology Ontology</displayLabel>
+		<abbreviation>SPO</abbreviation>
+		<format>OWL-DL</format>
+		<internalVersionNumber>1</internalVersionNumber>
+		<versionNumber>2.0</versionNumber>
+		<contactName>Tariq Abdulla</contactName>
+		<contactEmail>tariq.abdulla@gmail.com</contactEmail>
+		<statusId>4</statusId>
+		<categoryIds>
+		<int>5060</int>
+		</categoryIds>
+		<groupIds/>
+		<isFoundry>0</isFoundry>
+		<dateCreated>2008-09-18 22:35:09.0 PDT</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>39038</id>
+		<ontologyId>1142</ontologyId>
+		<displayLabel>Cardiac Electrophysiology Ontology</displayLabel>
+		<description>The Cardiac Electrophysiology Ontology contains terms describing single-channel electrophysiological experiments and data obtained using voltage-clamp, current clamp and fluorescence imaging techniques applied at the cell level and multi-channel fluorescence imaging techniques applied at the cell, tissue and whole heart levels.</description>
+		<abbreviation>EP</abbreviation>
+		<format>OWL</format>
+		<internalVersionNumber>2</internalVersionNumber>
+		<versionNumber>1.0</versionNumber>
+		<contactName>Raimond L. Winslow, PhD</contactName>
+		<contactEmail>rwinslow@jhu.edu</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds>
+		<int>2805</int>
+		</categoryIds>
+		<groupIds/>
+		<isFoundry>0</isFoundry>
+		<dateCreated>2009-04-27 19:50:51.0 PDT</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>40648</id>
+		<ontologyId>1128</ontologyId>
+		<displayLabel>Comparative Data Analysis Ontology</displayLabel>
+		<description>An ontology intended to provide a common ontological framework for evolutionary analysis regardless of the type of data involved.</description>
+		<abbreviation>CDAO</abbreviation>
+		<format>OWL-FULL</format>
+		<internalVersionNumber>3</internalVersionNumber>
+		<versionNumber>1.26</versionNumber>
+		<contactName>Enrico Pontelli</contactName>
+		<contactEmail>epontell@cs.nmsu.edu</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds>
+		<int>2805</int>
+		</categoryIds>
+		<groupIds/>
+		<isFoundry>0</isFoundry>
+		<dateCreated>2009-09-22 01:06:09.0 PDT</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>40616</id>
+		<ontologyId>1172</ontologyId>
+		<displayLabel>Vaccine Ontology</displayLabel>
+		<description>Vaccines play a central role in preventing infectious diseases and improving public health. To standardize vaccine annotation, integrate varied vaccine types for comprehensive data analysis, and support automated reasoning, the community-based Vaccine Ontology (VO) has been developed. VO utilizes the Basic Formal Ontology (BFO) as the top ontology and the Relation Ontology (RO) for definition of term relationships. Currently VO covers varied vaccine related aspects with an emphasis on classification of vaccines and vaccine components, vaccine quality and phenotypes, and host immune response to vaccines.</description>
+		<abbreviation>VO</abbreviation>
+		<format>OWL-DL</format>
+		<internalVersionNumber>12</internalVersionNumber>
+		<versionNumber>1.0.125</versionNumber>
+		<contactName>Yongqun "Oliver" He</contactName>
+		<contactEmail>yongqunh@med.umich.edu</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds>
+		<int>5058</int>
+		</categoryIds>
+		<groupIds/>
+		<isFoundry>0</isFoundry>
+		<dateCreated>2009-09-10 11:29:16.0 PDT</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>39804</id>
+		<ontologyId>1088</ontologyId>
+		<displayLabel>MaHCO - An MHC Ontology</displayLabel>
+		<description>The MaHCO contains terms necessary for describing and categorizing concepts related to MHC, in general, and for a number of model species, and also for humans. </description>
+		<abbreviation>MHC</abbreviation>
+		<format>OWL-DL</format>
+		<internalVersionNumber>4</internalVersionNumber>
+		<versionNumber>1.0.1</versionNumber>
+		<contactName>David S. DeLuca</contactName>
+		<contactEmail>david_deluca@dfci.harvard.edu</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds>
+		<int>2806</int>
+		</categoryIds>
+		<groupIds/>
+		<isFoundry>0</isFoundry>
+		<dateCreated>2009-04-15 11:19:00.0 PDT</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>39927</id>
+		<ontologyId>1245</ontologyId>
+		<displayLabel>Cell line ontology</displayLabel>
+		<description>Cell lines are key experimental models to understand protein interactions and signaling pathways. With a large pool of such data coming from different cell lines of different origin -of normal and -pathological tissues, proper analysis requires segregating data pertaining to specific cell lines. The project envisaged brings together hierarchical trees of organs, mammalian cell lines and diseases in one platform. Certain specific terms from Cell Type (CL) ontology, Foundational Model of Anatomy (FMA) and DOID ontologies are mapped for searchability. Ontology is developed in both OBO and OWL. </description>
+		<abbreviation>MCCL</abbreviation>
+		<format>OBO</format>
+		<internalVersionNumber>1</internalVersionNumber>
+		<versionNumber>1.0</versionNumber>
+		<contactName>Usha Mahadevan</contactName>
+		<contactEmail>usha@molecularconnections.com</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds/>
+		<groupIds/>
+		<isFoundry>0</isFoundry>
+		<dateCreated>2009-07-21 02:59:09.0 PDT</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>40869</id>
+		<ontologyId>1222</ontologyId>
+		<displayLabel>Ascomycete phenotype ontology</displayLabel>
+		<description>A structured controlled vocabulary for the phenotypes of Ascomycete fungi</description>
+		<abbreviation>APO</abbreviation>
+		<format>OBO</format>
+		<internalVersionNumber>8</internalVersionNumber>
+		<versionNumber>1.8</versionNumber>
+		<versionStatus>production</versionStatus>
+		<contactName>Fungal_anatomy Administrators</contactName>
+		<contactEmail>maria@genome.stanford.edu</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds>
+		<int>2807</int>
+		</categoryIds>
+		<groupIds/>
+		<isFoundry>1</isFoundry>
+		<dateCreated>2009-11-17 22:24:46.0 PST</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>39939</id>
+		<ontologyId>1249</ontologyId>
+		<displayLabel>Smoking Behavior Risk Ontology</displayLabel>
+		<description>An ontology representing a causal model of smoking behavior risk, including genetic and environmental components.  It also includes concepts for describing smoking-related phenotypes.</description>
+		<abbreviation>SBRO</abbreviation>
+		<format>OWL</format>
+		<internalVersionNumber>1</internalVersionNumber>
+		<versionNumber>1.0</versionNumber>
+		<contactEmail>paul.thomas@sri.com</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds/>
+		<groupIds/>
+		<isFoundry>0</isFoundry>
+		<dateCreated>2009-05-07 17:50:29.0 PDT</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>13386</id>
+		<ontologyId>1039</ontologyId>
+		<displayLabel>Proteomics data and process provenance</displayLabel>
+		<description>A comprehensive proteomics data and process provenance ontology.</description>
+		<abbreviation>ProPreO</abbreviation>
+		<format>OWL-DL</format>
+		<internalVersionNumber>1</internalVersionNumber>
+		<versionNumber>1.1</versionNumber>
+		<contactName>Satya S. Sahoo</contactName>
+		<contactEmail>satyasahoo@ieee.org</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds/>
+		<groupIds/>
+		<isFoundry>0</isFoundry>
+		<dateCreated>2009-03-05 15:15:45.0 PST</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>40884</id>
+		<ontologyId>1105</ontologyId>
+		<displayLabel>Mass spectrometry</displayLabel>
+		<description>A structured controlled vocabulary for the annotation of mass spectrometry experiments. Developed by the HUPO Proteomics Standards Initiative.</description>
+		<abbreviation>MS</abbreviation>
+		<format>OBO</format>
+		<internalVersionNumber>12</internalVersionNumber>
+		<versionNumber>1.127</versionNumber>
+		<versionStatus>pre_production</versionStatus>
+		<contactName>PSI-MS Administrators</contactName>
+		<contactEmail>psidev-ms-vocab@lists.sourceforge.net</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds/>
+		<groupIds>
+		<int>6001</int>
+		<int>6006</int>
+		</groupIds>
+		<isFoundry>0</isFoundry>
+		<dateCreated>2009-11-18 22:28:44.0 PST</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>39508</id>
+		<ontologyId>1040</ontologyId>
+		<displayLabel>Protein-protein interaction</displayLabel>
+		<description>A structured controlled vocabulary for the annotation of experiments concerned with protein-protein interactions. Developed by the HUPO Proteomics Standards Initiative.</description>
+		<abbreviation>MI</abbreviation>
+		<format>OBO</format>
+		<internalVersionNumber>3</internalVersionNumber>
+		<versionNumber>1.52</versionNumber>
+		<contactName>Psi-mi Administrators</contactName>
+		<contactEmail>Henning.Hermjakob@ebi.ac.uk</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds/>
+		<groupIds>
+		<int>6001</int>
+		<int>6006</int>
+		</groupIds>
+		<isFoundry>0</isFoundry>
+		<dateCreated>2009-02-28 19:43:17.0 PST</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>39798</id>
+		<ontologyId>1237</ontologyId>
+		<displayLabel>Situation-Based Access Control</displayLabel>
+		<description>Context-based healthcare access-control policies </description>
+		<abbreviation>SitBAC</abbreviation>
+		<format>OWL</format>
+		<internalVersionNumber>1</internalVersionNumber>
+		<versionNumber>1</versionNumber>
+		<contactName>Mor Peleg</contactName>
+		<contactEmail>peleg.mor@gmail.com</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds>
+		<int>2801</int>
+		</categoryIds>
+		<groupIds/>
+		<isFoundry>0</isFoundry>
+		<dateCreated>2009-04-14 14:12:43.0 PDT</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>36622</id>
+		<ontologyId>1008</ontologyId>
+		<displayLabel>Dictyostelium discoideum anatomy</displayLabel>
+		<description>A structured controlled vocabulary of the anatomy of the slime-mould Dictyostelium discoideum.</description>
+		<abbreviation>DDANAT</abbreviation>
+		<format>OBO</format>
+		<internalVersionNumber>1</internalVersionNumber>
+		<versionNumber>1.9</versionNumber>
+		<versionStatus>production</versionStatus>
+		<contactName>Rex Chisholm</contactName>
+		<contactEmail>dictybase@northwestern.edu</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds>
+		<int>2815</int>
+		<int>2810</int>
+		<int>2811</int>
+		</categoryIds>
+		<groupIds>
+		<int>6001</int>
+		</groupIds>
+		<isFoundry>1</isFoundry>
+		<dateCreated>2008-07-30 20:32:58.0 PDT</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>14391</id>
+		<ontologyId>1068</ontologyId>
+		<displayLabel>Subcellular Anatomy Ontology (SAO)</displayLabel>
+		<description>SAO describes structures from the dimensional range encompassing cellular and subcellular structure, supracellular domains, and macromolecules.</description>
+		<format>OWL-DL</format>
+		<internalVersionNumber>1</internalVersionNumber>
+		<versionNumber>1.2.5</versionNumber>
+		<versionStatus>production</versionStatus>
+		<contactName>Maryann Martone</contactName>
+		<contactEmail>mmartone@ucsd.edu</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds>
+		<int>2810</int>
+		</categoryIds>
+		<groupIds/>
+		<isFoundry>0</isFoundry>
+		<dateCreated>2007-09-17 11:00:41.0 PDT</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>39577</id>
+		<ontologyId>1087</ontologyId>
+		<displayLabel>Ontology of Geographical Region</displayLabel>
+		<description>This OWL ontology classified the  geograhical regions related vocabularies extracted from UMLS.</description>
+		<format>OWL-DL</format>
+		<internalVersionNumber>2</internalVersionNumber>
+		<versionNumber>1.1</versionNumber>
+		<contactName>Yu Lin</contactName>
+		<contactEmail>linyu@cdb.riken.jp</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds>
+		<int>2809</int>
+		</categoryIds>
+		<groupIds/>
+		<isFoundry>0</isFoundry>
+		<dateCreated>2009-05-19 19:55:37.0 PDT</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>39234</id>
+		<ontologyId>1150</ontologyId>
+		<displayLabel>Rat Strain Ontology</displayLabel>
+		<description>This ontology defines the hierarchical display of the different rat strains as derived from the parental strains</description>
+		<abbreviation>RS</abbreviation>
+		<format>OBO</format>
+		<internalVersionNumber>1</internalVersionNumber>
+		<versionNumber>1.0</versionNumber>
+		<contactName>Rajni Nigam</contactName>
+		<contactEmail>rnigam@mcw.edu</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds/>
+		<groupIds/>
+		<isFoundry>0</isFoundry>
+		<dateCreated>2009-01-21 12:48:25.0 PST</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>35686</id>
+		<ontologyId>1101</ontologyId>
+		<displayLabel>International Classification of Diseases</displayLabel>
+		<description>The ICD is the international standard diagnostic classification for all general epidemiological, many health management purposes and clinical use.</description>
+		<abbreviation>ICD-9</abbreviation>
+		<format>LEXGRID-XML</format>
+		<internalVersionNumber>1</internalVersionNumber>
+		<versionNumber>9</versionNumber>
+		<versionStatus>production</versionStatus>
+		<contactName>The World Health Organization</contactName>
+		<contactEmail>info@who.int</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds/>
+		<groupIds>
+		<int>6005</int>
+		</groupIds>
+		<isFoundry>0</isFoundry>
+		<dateCreated>2009-05-13 15:53:08.0 PDT</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>40261</id>
+		<ontologyId>1314</ontologyId>
+		<displayLabel>Cell Line Ontology</displayLabel>
+		<description>The Cell Line Knowledge Base is a public data warehouse for searching cell line data extracted from both ATCC and HyperCLDB. The knowledge base uses our Cell Line Ontology, created with the Protege ontology editing tool from the National Center for Biomedical Ontologies (NCBO) and merges concepts from other ontologies, including the Cell Type Ontology. </description>
+		<abbreviation>CLKB</abbreviation>
+		<format>OWL</format>
+		<internalVersionNumber>1</internalVersionNumber>
+		<versionNumber>1.0</versionNumber>
+		<contactName>Sirarat Sarntivijai</contactName>
+		<contactEmail>siiraa@umich.edu</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds>
+		<int>2809</int>
+		<int>5073</int>
+		<int>5065</int>
+		</categoryIds>
+		<groupIds/>
+		<isFoundry>0</isFoundry>
+		<dateCreated>2009-07-08 15:31:52.0 PDT</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>40898</id>
+		<ontologyId>1009</ontologyId>
+		<displayLabel>Human disease</displayLabel>
+		<description>Creating a comprehensive hierarchical controlled vocabulary for human disease representation.</description>
+		<abbreviation>DOID</abbreviation>
+		<format>OBO</format>
+		<internalVersionNumber>71</internalVersionNumber>
+		<versionNumber>1.87</versionNumber>
+		<versionStatus>pre_production</versionStatus>
+		<contactName>Human_disease Administrators</contactName>
+		<contactEmail>diseaseontology-discussion@lists.sourceforge.net</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds>
+		<int>2807</int>
+		</categoryIds>
+		<groupIds>
+		<int>6001</int>
+		</groupIds>
+		<isFoundry>1</isFoundry>
+		<dateCreated>2009-11-21 22:26:16.0 PST</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>40216</id>
+		<ontologyId>1094</ontologyId>
+		<displayLabel>Pathogen transmission</displayLabel>
+		<description>This vocabulary describes a process that is the means of how a pathogen is transmitted from one host, reservoir, or source to another host. This transmission may occur either directly or indirectly and may involve animate vectors or inanimate vehicles.</description>
+		<abbreviation>TRANS</abbreviation>
+		<format>OBO</format>
+		<internalVersionNumber>11</internalVersionNumber>
+		<versionNumber>1.11</versionNumber>
+		<versionStatus>pre_production</versionStatus>
+		<contactName>Human_disease Administrators</contactName>
+		<contactEmail>diseaseontology-discussion@lists.sourceforge.net</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds>
+		<int>2807</int>
+		</categoryIds>
+		<groupIds>
+		<int>6001</int>
+		</groupIds>
+		<isFoundry>1</isFoundry>
+		<dateCreated>2009-06-26 02:35:00.0 PDT</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>40739</id>
+		<ontologyId>1084</ontologyId>
+		<displayLabel>NIFSTD</displayLabel>
+		<description>NIF Standard ontology (NIFSTD) is a core component of Neuroscience Information Framework (NIF) project (http://neuinfo.org), a semantically enhanced portal for accessing and integrating neuroscience data, tools and information. NIFSTD includes a set of modular ontologies that provide a comprehensive collection of terminologies to describe neuroscience data and resources.</description>
+		<abbreviation>nif</abbreviation>
+		<format>OWL-DL</format>
+		<internalVersionNumber>6</internalVersionNumber>
+		<versionNumber>1.4</versionNumber>
+		<contactName>Fahim Imam</contactName>
+		<contactEmail>mimam@ucsd.edu</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds>
+		<int>2801</int>
+		<int>5068</int>
+		<int>2810</int>
+		<int>5065</int>
+		<int>5072</int>
+		<int>5067</int>
+		<int>5070</int>
+		<int>5069</int>
+		<int>5073</int>
+		<int>5066</int>
+		<int>5060</int>
+		<int>5071</int>
+		</categoryIds>
+		<groupIds/>
+		<isFoundry>0</isFoundry>
+		<dateCreated>2009-10-23 14:47:10.0 PDT</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>40904</id>
+		<ontologyId>1025</ontologyId>
+		<displayLabel>Mammalian phenotype</displayLabel>
+		<description>The Mammalian Phenotype Ontology is under development as a community effort to provide standard terms for annotating mammalian phenotypic data.</description>
+		<abbreviation>MP</abbreviation>
+		<format>OBO</format>
+		<internalVersionNumber>106</internalVersionNumber>
+		<versionNumber>1.308</versionNumber>
+		<versionStatus>production</versionStatus>
+		<contactName>JAX list</contactName>
+		<contactEmail>pheno@informatics.jax.org</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds>
+		<int>2807</int>
+		</categoryIds>
+		<groupIds>
+		<int>6001</int>
+		</groupIds>
+		<isFoundry>1</isFoundry>
+		<dateCreated>2009-11-22 22:26:43.0 PST</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>38801</id>
+		<ontologyId>1131</ontologyId>
+		<displayLabel>Microarray experimental conditions</displayLabel>
+		<description>Concepts, definitions, terms, and resources for standardized description of a microarray experiment in support of MAGE v.1.</description>
+		<abbreviation>MO</abbreviation>
+		<format>OWL-FULL</format>
+		<internalVersionNumber>1</internalVersionNumber>
+		<versionNumber>1.3.1.1</versionNumber>
+		<contactName>MGED</contactName>
+		<contactEmail>mged-ontologies@lists.sourceforge.net</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds>
+		<int>2805</int>
+		</categoryIds>
+		<groupIds>
+		<int>6002</int>
+		</groupIds>
+		<isFoundry>0</isFoundry>
+		<dateCreated>2009-05-21 10:24:23.0 PDT</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>40659</id>
+		<ontologyId>1035</ontologyId>
+		<displayLabel>Pathway ontology</displayLabel>
+		<abbreviation>PW</abbreviation>
+		<format>OBO</format>
+		<internalVersionNumber>9</internalVersionNumber>
+		<versionNumber>1.100709</versionNumber>
+		<contactName>Victoria Petri</contactName>
+		<contactEmail>vpetri@mcw.edu</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds>
+		<int>5060</int>
+		</categoryIds>
+		<groupIds/>
+		<isFoundry>0</isFoundry>
+		<dateCreated>2009-10-08 09:19:30.0 PDT</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>40392</id>
+		<ontologyId>1343</ontologyId>
+		<displayLabel>HL7 Version 3.0</displayLabel>
+		<description>HL7 Vocabulary Version 3.0</description>
+		<abbreviation>HL7V3.0</abbreviation>
+		<format>RRF</format>
+		<internalVersionNumber>1</internalVersionNumber>
+		<versionNumber>V3.0</versionNumber>
+		<contactName>Mark McDougall, Executive Director, Health Level Seven</contactName>
+		<contactEmail>HQ@HL7.ORG</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds>
+		<int>5058</int>
+		</categoryIds>
+		<groupIds>
+		<int>6008</int>
+		</groupIds>
+		<isFoundry>0</isFoundry>
+		<dateCreated>2009-07-31 05:58:22.0 PDT</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>2868</id>
+		<ontologyId>1002</ontologyId>
+		<displayLabel>Animal natural history and life history</displayLabel>
+		<description>An ontology for animal life history and natural history characteristics suitable for populations and higher taxonomic entities.</description>
+		<abbreviation>ADW</abbreviation>
+		<format>PROTEGE</format>
+		<internalVersionNumber>1</internalVersionNumber>
+		<versionNumber>See Remote Site</versionNumber>
+		<versionStatus>pre_production</versionStatus>
+		<contactName>Http://animaldiversity Administrators</contactName>
+		<contactEmail>adw_geeks@umich.edu</contactEmail>
+		<statusId>5</statusId>
+		<categoryIds>
+		<int>2810</int>
+		</categoryIds>
+		<groupIds/>
+		<isFoundry>0</isFoundry>
+		<dateCreated>2009-04-27 19:04:21.0 PDT</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>38241</id>
+		<ontologyId>1106</ontologyId>
+		<displayLabel>Gene Regulation Ontology</displayLabel>
+		<description>The BOOTStrep Ontology is a conceptual model for the domain of gene regulation. It covers processes that are linked to the regulation of gene expression as well as physical entities that are involved in these processes (such as genes and transcription factors) in terms of ontology classes and semantic relations between classes. GRO is intended to represent common knowledge about gene regulation in a formal way rather than representing extremely fine-grained classes as can be found in ontologies such as the Gene Ontology (GO) (created for data base annotation purposes) and various relevant databases. The main purpose of the ontology is to support NLP applications. It has a particular focus on the relations between processes and the molecules (participants) involved. The basic structure of the GRO is a direct acyclic graph (DAG) with ontology classes as nodes and is-a relations between classes as edges. The taxonomic backbone is further enriched by several semantic relation types (part-of, from-species, participates-in with the two sub-relations agent-of and patient-of).</description>
+		<abbreviation>BOOTStrep</abbreviation>
+		<format>OWL</format>
+		<internalVersionNumber>1</internalVersionNumber>
+		<versionNumber>See Remote Site</versionNumber>
+		<versionStatus>production</versionStatus>
+		<contactName>Vivian Lee</contactName>
+		<contactEmail>vlee@ebi.ac.uk</contactEmail>
+		<statusId>5</statusId>
+		<categoryIds/>
+		<groupIds/>
+		<isFoundry>0</isFoundry>
+		<dateCreated>2009-05-05 04:28:17.0 PDT</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>4519</id>
+		<ontologyId>1054</ontologyId>
+		<displayLabel>Amino Acid</displayLabel>
+		<description>An ontology of amino acids and their properties.</description>
+		<abbreviation>amino-acid</abbreviation>
+		<format>OWL-FULL</format>
+		<internalVersionNumber>1</internalVersionNumber>
+		<versionNumber>1.2</versionNumber>
+		<versionStatus>production</versionStatus>
+		<contactName>Nick Drummond, Georgina Moulton, Robert Stevens, Phil Lord </contactName>
+		<contactEmail>admin@co-ode.org</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds>
+		<int>2801</int>
+		</categoryIds>
+		<groupIds/>
+		<isFoundry>0</isFoundry>
+		<dateCreated>2009-04-25 15:43:29.0 PDT</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>4531</id>
+		<ontologyId>1056</ontologyId>
+		<displayLabel>Basic Vertebrate Anatomy</displayLabel>
+		<description>A basic vertebrate anatomy derived mainly from FMA. </description>
+		<abbreviation>basic-vertebrate-gross-anatomy</abbreviation>
+		<format>OWL-FULL</format>
+		<internalVersionNumber>1</internalVersionNumber>
+		<versionNumber>1.1</versionNumber>
+		<versionStatus>production</versionStatus>
+		<statusId>3</statusId>
+		<categoryIds>
+		<int>2811</int>
+		</categoryIds>
+		<groupIds/>
+		<isFoundry>0</isFoundry>
+		<dateCreated>2007-01-16 13:52:55.0 PST</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>40666</id>
+		<ontologyId>1012</ontologyId>
+		<displayLabel>Evidence codes</displayLabel>
+		<description>A rich ontology for experimental and other evidence statements.</description>
+		<abbreviation>ECO</abbreviation>
+		<format>OBO</format>
+		<internalVersionNumber>3</internalVersionNumber>
+		<versionNumber>1.20</versionNumber>
+		<versionStatus>production</versionStatus>
+		<contactName>Michelle Giglio</contactName>
+		<contactEmail>mgiglio@som.umaryland.edu</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds/>
+		<groupIds>
+		<int>6001</int>
+		</groupIds>
+		<isFoundry>1</isFoundry>
+		<dateCreated>2009-10-12 14:20:08.0 PDT</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>40873</id>
+		<ontologyId>1115</ontologyId>
+		<displayLabel>Yeast phenotypes</displayLabel>
+		<description>A structured controlled vocabulary for the phenotypes of budding yeast.</description>
+		<abbreviation>YPO</abbreviation>
+		<format>OBO</format>
+		<internalVersionNumber>12</internalVersionNumber>
+		<versionNumber>1.16</versionNumber>
+		<versionStatus>production</versionStatus>
+		<contactName>Mike Cherry</contactName>
+		<contactEmail>cherry@genome.stanford.edu</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds>
+		<int>2807</int>
+		</categoryIds>
+		<groupIds>
+		<int>6001</int>
+		</groupIds>
+		<isFoundry>1</isFoundry>
+		<dateCreated>2009-11-17 22:26:06.0 PST</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>38364</id>
+		<ontologyId>1001</ontologyId>
+		<displayLabel>Cereal plant gross anatomy</displayLabel>
+		<description>A structured controlled vocabulary for the anatomy of Graminae. Please note that this ontology has now been superseded by the &lt;a href="http://obo.sf.net/cgi-bin/detail.cgi?po_anatomy"&gt;plant anatomy ontology&lt;/a&gt;.</description>
+		<abbreviation>GRO</abbreviation>
+		<format>OBO</format>
+		<internalVersionNumber>2</internalVersionNumber>
+		<versionNumber>See Remote Site</versionNumber>
+		<versionStatus>pre_production</versionStatus>
+		<contactName>Po_anatomy Administrators</contactName>
+		<contactEmail>gramene@gramene.org</contactEmail>
+		<statusId>5</statusId>
+		<categoryIds>
+		<int>2810</int>
+		<int>5063</int>
+		<int>2816</int>
+		</categoryIds>
+		<groupIds/>
+		<isFoundry>0</isFoundry>
+		<dateCreated>2009-04-13 02:33:47.0 PDT</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>40828</id>
+		<ontologyId>1006</ontologyId>
+		<displayLabel>Cell type</displayLabel>
+		<description>The Cell Ontology is designed as a structured controlled vocabulary for cell types. This ontology was constructed for use by the model organism and other bioinformatics databases, where there is a need for a controlled vocabulary of cell types. This ontology is not organism specific; indeed it includes cell types from prokaryotes to mammals, including plants and fungi. A full description of the Cell Ontology can be found in &lt;a href="http://genomebiology.com/2005/6/2/R21"&gt;Bard, Rhee and Ashburner. 2005. An Ontology for Cell Types&lt;/a&gt;.</description>
+		<abbreviation>CL</abbreviation>
+		<format>OBO</format>
+		<internalVersionNumber>8</internalVersionNumber>
+		<versionNumber>1.40</versionNumber>
+		<versionStatus>production</versionStatus>
+		<contactName>Alex Diehl</contactName>
+		<contactEmail>adiehl@informatics.jax.org</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds>
+		<int>2810</int>
+		</categoryIds>
+		<groupIds>
+		<int>6001</int>
+		</groupIds>
+		<isFoundry>1</isFoundry>
+		<dateCreated>2009-11-09 22:25:21.0 PST</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>40914</id>
+		<ontologyId>1077</ontologyId>
+		<displayLabel>Mosquito insecticide resistance</displayLabel>
+		<description>Application ontology for entities related to insecticide resistance in mosquitos</description>
+		<abbreviation>MIRO</abbreviation>
+		<format>OBO</format>
+		<internalVersionNumber>394</internalVersionNumber>
+		<versionNumber>1.642</versionNumber>
+		<versionStatus>pre_production</versionStatus>
+		<contactName>C. Louis</contactName>
+		<contactEmail>louis@imbb.forth.gr</contactEmail>
+		<statusId>4</statusId>
+		<categoryIds>
+		<int>2807</int>
+		</categoryIds>
+		<groupIds>
+		<int>6001</int>
+		</groupIds>
+		<isFoundry>1</isFoundry>
+		<dateCreated>2009-11-24 22:26:28.0 PST</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>39580</id>
+		<ontologyId>1085</ontologyId>
+		<displayLabel>Ontology of Glucose Metabolism Disorder</displayLabel>
+		<description>Including the disease names. phenotypes and their classifications involved in Glucose Metabolism Disorder </description>
+		<format>OWL-DL</format>
+		<internalVersionNumber>2</internalVersionNumber>
+		<versionNumber>1.2</versionNumber>
+		<contactName>Yu Lin</contactName>
+		<contactEmail>linyu@cdb.riken.jp</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds>
+		<int>5058</int>
+		<int>2807</int>
+		</categoryIds>
+		<groupIds/>
+		<isFoundry>0</isFoundry>
+		<dateCreated>2009-05-18 19:19:35.0 PDT</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>36782</id>
+		<ontologyId>1045</ontologyId>
+		<displayLabel>Sequence Ontology</displayLabel>
+		<abbreviation>SO</abbreviation>
+		<format>OBO</format>
+		<internalVersionNumber>1</internalVersionNumber>
+		<versionNumber>1.105</versionNumber>
+		<versionStatus>production</versionStatus>
+		<contactName>SONG developers</contactName>
+		<contactEmail>song-devel@lists.sourceforge.net</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds>
+		<int>2820</int>
+		</categoryIds>
+		<groupIds/>
+		<isFoundry>0</isFoundry>
+		<dateCreated>2009-05-18 19:29:57.0 PDT</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>40885</id>
+		<ontologyId>1057</ontologyId>
+		<displayLabel>RadLex</displayLabel>
+		<description>RadLex is a controlled terminology for radiology-a single unified source of radiology terms for radiology practice, education, and research. For liscence information see: &lt;a href="http://www.rsna.org/RadLex/upload/radlex_public_license_version_1-0-1.pdf"&gt;http://www.rsna.org/RadLex/upload/radlex_public_license_version_1-0-1.pdf&lt;/a&gt;</description>
+		<abbreviation>RID</abbreviation>
+		<format>PROTEGE</format>
+		<internalVersionNumber>5</internalVersionNumber>
+		<versionNumber>3.0.1</versionNumber>
+		<contactName>Radiological Society of North America</contactName>
+		<contactEmail>radlexfeedback@rsna.org</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds>
+		<int>5057</int>
+		</categoryIds>
+		<groupIds>
+		<int>6002</int>
+		</groupIds>
+		<isFoundry>0</isFoundry>
+		<dateCreated>2009-11-19 05:53:10.0 PST</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>40655</id>
+		<ontologyId>1083</ontologyId>
+		<displayLabel>NanoParticle Ontology</displayLabel>
+		<description>An ontology that represents the basic knowledge of physical, chemical and functional characteristics of nanotechnology as used in cancer diagnosis and therapy.</description>
+		<abbreviation>NPO</abbreviation>
+		<format>OWL-FULL</format>
+		<internalVersionNumber>18</internalVersionNumber>
+		<versionNumber>2009-09-28 (inferred)</versionNumber>
+		<contactName>Nathan Baker</contactName>
+		<contactEmail>baker@ccb.wustl.edu</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds>
+		<int>2802</int>
+		</categoryIds>
+		<groupIds>
+		<int>6002</int>
+		</groupIds>
+		<isFoundry>0</isFoundry>
+		<dateCreated>2009-09-29 05:07:54.0 PDT</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>39966</id>
+		<ontologyId>1053</ontologyId>
+		<displayLabel>Foundational Model of Anatomy</displayLabel>
+		<description>FMA is a domain ontology that represents a coherent body of explicit declarative knowledge about human anatomy.</description>
+		<abbreviation>FMA</abbreviation>
+		<format>OWL-DL</format>
+		<internalVersionNumber>2</internalVersionNumber>
+		<versionNumber>3.0</versionNumber>
+		<versionStatus>production</versionStatus>
+		<contactName>Onard Mejino</contactName>
+		<contactEmail>mejino@u.washington.edu</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds>
+		<int>2810</int>
+		</categoryIds>
+		<groupIds>
+		<int>6008</int>
+		</groupIds>
+		<isFoundry>0</isFoundry>
+		<dateCreated>2009-05-12 12:36:31.0 PDT</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>40182</id>
+		<ontologyId>1031</ontologyId>
+		<displayLabel>Mouse pathology</displayLabel>
+		<description>A structured controlled vocabulary of mutant and transgenic mouse pathology phenotypes</description>
+		<abbreviation>MPATH</abbreviation>
+		<format>OBO</format>
+		<internalVersionNumber>3</internalVersionNumber>
+		<versionNumber>1.3</versionNumber>
+		<versionStatus>pre_production</versionStatus>
+		<contactName>Mouse_pathology Administrators</contactName>
+		<contactEmail>PS@mole.bio.cam.ac.uk</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds>
+		<int>2807</int>
+		</categoryIds>
+		<groupIds>
+		<int>6001</int>
+		</groupIds>
+		<isFoundry>1</isFoundry>
+		<dateCreated>2009-06-23 02:35:44.0 PDT</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>40603</id>
+		<ontologyId>1092</ontologyId>
+		<displayLabel>Infectious disease</displayLabel>
+		<description>
+		</description>
+		<abbreviation>IDO</abbreviation>
+		<format>OWL</format>
+		<internalVersionNumber>3</internalVersionNumber>
+		<versionNumber>See Remote Site</versionNumber>
+		<versionStatus>pre_production</versionStatus>
+		<contactName>Lindsay Cowell</contactName>
+		<contactEmail>ido@duke.edu</contactEmail>
+		<statusId>5</statusId>
+		<categoryIds>
+		<int>2807</int>
+		</categoryIds>
+		<groupIds>
+		<int>6001</int>
+		</groupIds>
+		<isFoundry>1</isFoundry>
+		<dateCreated>2009-09-10 02:35:25.0 PDT</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>40644</id>
+		<ontologyId>1032</ontologyId>
+		<displayLabel>NCI Thesaurus</displayLabel>
+		<description>A vocabulary for clinical care, translational and basic research, and public information and administrative activities.</description>
+		<abbreviation>NCIt</abbreviation>
+		<format>OWL-DL</format>
+		<internalVersionNumber>4</internalVersionNumber>
+		<versionNumber>09.07</versionNumber>
+		<contactName>NCICB Support</contactName>
+		<contactEmail>ncicb@pop.nci.nih.gov</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds/>
+		<groupIds>
+		<int>6002</int>
+		<int>6008</int>
+		</groupIds>
+		<isFoundry>0</isFoundry>
+		<dateCreated>2009-09-18 09:34:37.0 PDT</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>40608</id>
+		<ontologyId>1381</ontologyId>
+		<displayLabel>NIF Dysfunction</displayLabel>
+		<description>This ontology contains the former BIRNLex-Disease, version 1.3.2. -- The BIRN Project lexicon will provide entities for data and database annotation for the BIRN project, covering anatomy, disease, data collection, project management and experimental design.  It is built using the organizational framework provided by the foundational Basic Formal Ontology (BFO).  It uses an abstract biomedical layer on top of that - OBO-UBO which has been constructed  as a proposal to the OBO Foundry.  This is meant to support creating a sharable view of core biomedical objects such as biomaterial_entity, and organismal_entity that all biomedical ontologies are likely to need and want to use with the same intended meaning.  The BIRNLex biomaterial entities have already been factored to separately maintained ontology - BIRNLexBiomaterialEntity.owl which this BIRNLex-Main.owl file imports.  The Ontology of Biomedical Investigation (OBI) is also imported and forms the foundation for the formal description of all experiment-related artifacts.  The BIRNLex will serve as the basis for construction of a formal ontology for the multiscale investigation of neurological disease.</description>
+		<abbreviation>NIF_Dysfunction</abbreviation>
+		<format>OWL</format>
+		<internalVersionNumber>1</internalVersionNumber>
+		<versionNumber>See Remote Site</versionNumber>
+		<versionStatus>production</versionStatus>
+		<contactName>Fahim Imam</contactName>
+		<contactEmail>smtifahim@gmail.com</contactEmail>
+		<statusId>5</statusId>
+		<categoryIds/>
+		<groupIds/>
+		<isFoundry>0</isFoundry>
+		<dateCreated>2009-09-10 02:35:46.0 PDT</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>40642</id>
+		<ontologyId>1393</ontologyId>
+		<displayLabel>Information Artifact Ontology</displayLabel>
+		<description>The Information Artifact Ontology (IAO) is a new ontology of information entities, originally driven by work by the OBI digital entity and realizable information entity branch.</description>
+		<abbreviation>IAO</abbreviation>
+		<format>OWL</format>
+		<internalVersionNumber>1</internalVersionNumber>
+		<versionNumber>2009-07-15</versionNumber>
+		<contactName>Alan Ruttenberg</contactName>
+		<contactEmail>alanruttenberg@gmail.com</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds/>
+		<groupIds/>
+		<isFoundry>0</isFoundry>
+		<dateCreated>2009-09-18 01:39:45.0 PDT</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>40646</id>
+		<ontologyId>1394</ontologyId>
+		<displayLabel>Syndromic Surveillance Ontology</displayLabel>
+		<description>The SSO encodes agreement among experts about how Emergency Department (ED) chief complaints are grouped into syndromes of public health importance (consensus definitions). </description>
+		<abbreviation>SSO</abbreviation>
+		<format>OWL</format>
+		<internalVersionNumber>1</internalVersionNumber>
+		<versionNumber>1.0</versionNumber>
+		<contactName>Anya Okhmatovskaia, David L Buckeridge</contactName>
+		<contactEmail>anna.okhmatovskaia@mcgill.ca</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds>
+		<int>5059</int>
+		<int>2808</int>
+		</categoryIds>
+		<groupIds/>
+		<isFoundry>0</isFoundry>
+		<dateCreated>2009-09-18 20:17:07.0 PDT</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>40649</id>
+		<ontologyId>1395</ontologyId>
+		<displayLabel>MDSS Mo</displayLabel>
+		<description>Terms from our Decision Support System for Malaria (MDSS)</description>
+		<abbreviation>MO</abbreviation>
+		<format>OBO</format>
+		<internalVersionNumber>1</internalVersionNumber>
+		<versionNumber>1.0</versionNumber>
+		<contactEmail>david.penhall@colostate.edu</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds/>
+		<groupIds/>
+		<isFoundry>0</isFoundry>
+		<dateCreated>2009-09-25 08:21:02.0 PDT</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>40651</id>
+		<ontologyId>1397</ontologyId>
+		<displayLabel>Gazetteer Ontology</displayLabel>
+		<description>Gazetteer Ontology </description>
+		<abbreviation>GAZ</abbreviation>
+		<format>OBO</format>
+		<internalVersionNumber>1</internalVersionNumber>
+		<versionNumber>1.446</versionNumber>
+		<contactName>Michael Ashburner</contactName>
+		<contactEmail>ma11@gen.cam.ac.uk</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds/>
+		<groupIds/>
+		<isFoundry>0</isFoundry>
+		<dateCreated>2009-09-28 08:02:23.0 PDT</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>40652</id>
+		<ontologyId>1398</ontologyId>
+		<displayLabel>Ontology of Language Disorder in Autism</displayLabel>
+		<description>We present the short review of language terms used in the domain of autism and populate them into ontology available for consultation and sharing. The language terms were obtained via text mining and automatic retrieval of terms from the corpus of PubMed abstracts.</description>
+		<abbreviation>LDA</abbreviation>
+		<format>OWL</format>
+		<internalVersionNumber>1</internalVersionNumber>
+		<versionNumber>Protege 3.4</versionNumber>
+		<contactName>Administrator</contactName>
+		<contactEmail>hari.cohly@jsums.edu</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds>
+		<int>5058</int>
+		</categoryIds>
+		<groupIds/>
+		<isFoundry>0</isFoundry>
+		<dateCreated>2009-09-28 08:47:35.0 PDT</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>40653</id>
+		<ontologyId>1399</ontologyId>
+		<displayLabel>Pilot Ontology</displayLabel>
+		<description>This a pilot ontology</description>
+		<abbreviation>POL</abbreviation>
+		<format>OWL</format>
+		<internalVersionNumber>1</internalVersionNumber>
+		<versionNumber>0.1</versionNumber>
+		<contactEmail>sdkarnik@iupui.edu</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds/>
+		<groupIds/>
+		<isFoundry>0</isFoundry>
+		<dateCreated>2009-09-28 10:57:47.0 PDT</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>40726</id>
+		<ontologyId>1401</ontologyId>
+		<displayLabel>ICNP</displayLabel>
+		<description>International Classification for Nursing Practice</description>
+		<abbreviation>ICNP Version 2</abbreviation>
+		<format>OWL</format>
+		<internalVersionNumber>1</internalVersionNumber>
+		<versionNumber>2</versionNumber>
+		<contactName>Amy Coenen</contactName>
+		<contactEmail>aamherdt@uwm.edu</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds>
+		<int>2808</int>
+		</categoryIds>
+		<groupIds/>
+		<isFoundry>0</isFoundry>
+		<dateCreated>2009-10-21 09:29:25.0 PDT</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>40730</id>
+		<ontologyId>1402</ontologyId>
+		<displayLabel>NIF Cell</displayLabel>
+		<description>Cell types from NIFSTD</description>
+		<abbreviation>NIF_Cell</abbreviation>
+		<format>OWL</format>
+		<internalVersionNumber>1</internalVersionNumber>
+		<versionNumber>See Remote Site</versionNumber>
+		<versionStatus>production</versionStatus>
+		<contactName>Fahim Imam</contactName>
+		<contactEmail>smtifahim@gmail.com</contactEmail>
+		<statusId>5</statusId>
+		<categoryIds/>
+		<groupIds/>
+		<isFoundry>0</isFoundry>
+		<dateCreated>2009-10-21 22:25:31.0 PDT</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>40772</id>
+		<ontologyId>1403</ontologyId>
+		<displayLabel>Systems Biology</displayLabel>
+		<description>The Systems Biology Ontology aims to strictly index and define terms used in quantitative biochemistry. The ontology is made up of four orthogonal vocabularies. A controlled vocabulary defines the roles of reaction participants, such as "substrate", "catalyst", etc. A taxonomy orders the quantitative parameters used in biochemistry such as "Michaelis constant", but also "first-order forward rate constant". A precise classification of rate laws defines them, such as "first-order reversible mass action kinetics". Each term contains a precise mathematical expression stored as a MathML lambda function. Finally, a list of simulation frameworks, such as "discrete" or "continuous" precises the validity of a rate-law. The Systems Biology Ontology can be used to increase the semantic content of quantitative models. SBO vocabularies can also be used to annotate results of biochemical experiments in order to facilitate their efficient reuse.</description>
+		<abbreviation>SBO</abbreviation>
+		<format>OBO</format>
+		<internalVersionNumber>1</internalVersionNumber>
+		<versionNumber>See Remote Site</versionNumber>
+		<versionStatus>pre_production</versionStatus>
+		<contactName>Http://www Administrators</contactName>
+		<contactEmail>lenov@ebi.ac.uk</contactEmail>
+		<statusId>5</statusId>
+		<categoryIds/>
+		<groupIds/>
+		<isFoundry>1</isFoundry>
+		<dateCreated>2009-10-28 22:32:44.0 PDT</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>40777</id>
+		<ontologyId>1404</ontologyId>
+		<displayLabel>Uber anatomy ontology</displayLabel>
+		<description>Uberon is a multi-species anatomy ontology created to facilitate comparison of phenotypes across multiple species. Uberon is generated semi-automatically from the union of existing species-centric anatomy ontologies.</description>
+		<abbreviation>UBERON</abbreviation>
+		<format>OBO</format>
+		<internalVersionNumber>2</internalVersionNumber>
+		<versionNumber>1.72</versionNumber>
+		<versionStatus>pre_production</versionStatus>
+		<contactName>Http://obo Administrators</contactName>
+		<contactEmail>obo-anatomy@lists.sourceforge.net</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds>
+		<int>2810</int>
+		</categoryIds>
+		<groupIds/>
+		<isFoundry>0</isFoundry>
+		<dateCreated>2009-10-29 22:45:43.0 PDT</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>40792</id>
+		<ontologyId>1405</ontologyId>
+		<displayLabel>Amphibian taxonomy</displayLabel>
+		<description>A taxonomy of Amphibia</description>
+		<abbreviation>ATO</abbreviation>
+		<format>OBO</format>
+		<internalVersionNumber>1</internalVersionNumber>
+		<versionNumber>See Remote Site</versionNumber>
+		<versionStatus>pre_production</versionStatus>
+		<contactName>AmphiAnat list</contactName>
+		<contactEmail>sbhdbe@mst.edu</contactEmail>
+		<statusId>5</statusId>
+		<categoryIds/>
+		<groupIds/>
+		<isFoundry>1</isFoundry>
+		<dateCreated>2009-11-02 22:24:20.0 PST</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>40802</id>
+		<ontologyId>1406</ontologyId>
+		<displayLabel>linkingkin2pep</displayLabel>
+		<description>An ontology to try out the mapping capabilities of NCBO Bioportal</description>
+		<abbreviation>k2p</abbreviation>
+		<format>OWL-DL</format>
+		<internalVersionNumber>1</internalVersionNumber>
+		<versionNumber>0.1</versionNumber>
+		<contactEmail>jvanhal@pamgene.com</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds>
+		<int>2821</int>
+		<int>5065</int>
+		</categoryIds>
+		<groupIds/>
+		<isFoundry>0</isFoundry>
+		<dateCreated>2009-11-04 04:53:37.0 PST</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>40849</id>
+		<ontologyId>1407</ontologyId>
+		<displayLabel>Terminology for the Description of Dynamics</displayLabel>
+		<description>The TErminology for the Description of DYnamics (TEDDY) project aims to provide an ontology for dynamical behaviours, observable dynamical phenomena, and control elements of bio-models and biological systems in Systems Biology and Synthetic Biology.</description>
+		<abbreviation>TEDDY</abbreviation>
+		<format>OWL</format>
+		<internalVersionNumber>3</internalVersionNumber>
+		<versionNumber>rel-2009-10-16 (inferred)</versionNumber>
+		<contactName>Christian Knuepfer</contactName>
+		<contactEmail>christian.knuepfer@uni-jena.de</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds>
+		<int>2801</int>
+		</categoryIds>
+		<groupIds/>
+		<isFoundry>0</isFoundry>
+		<dateCreated>2009-11-13 06:00:16.0 PST</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>40836</id>
+		<ontologyId>1408</ontologyId>
+		<displayLabel>PKO_Test</displayLabel>
+		<description>Testing</description>
+		<abbreviation>PKO</abbreviation>
+		<format>PROTEGE</format>
+		<internalVersionNumber>1</internalVersionNumber>
+		<versionNumber>1.00</versionNumber>
+		<contactEmail>sdkarnik@iupui.edu</contactEmail>
+		<statusId>4</statusId>
+		<categoryIds/>
+		<groupIds/>
+		<isFoundry>0</isFoundry>
+		<dateCreated>2009-11-11 06:43:19.0 PST</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>40864</id>
+		<ontologyId>1409</ontologyId>
+		<displayLabel>PKO_Test</displayLabel>
+		<description>Testing</description>
+		<abbreviation>PKO</abbreviation>
+		<format>OWL-DL</format>
+		<internalVersionNumber>2</internalVersionNumber>
+		<versionNumber>1.1</versionNumber>
+		<contactEmail>sdkarnik@iupui.edu</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds/>
+		<groupIds/>
+		<isFoundry>0</isFoundry>
+		<dateCreated>2009-11-16 06:40:43.0 PST</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>40844</id>
+		<ontologyId>1410</ontologyId>
+		<displayLabel>Kinetic Simulation Algorithm Ontology</displayLabel>
+		<description>The KiSA Ontology covers the most important simulation algorithms and simulation methods used to simulate biological kinetic models and puts those algorithms and methods into relation. KiSAO aims at providing support in unambiguously referring to simulation algorithms when describing a simulation experiment.&#13;
+	&#13;
+	KiSAO is under continuous development. Please feel free to make suggestions for the improvement of the ontology's structure.</description>
+		<abbreviation>KiSAO</abbreviation>
+		<format>OBO</format>
+		<internalVersionNumber>1</internalVersionNumber>
+		<versionNumber>Sat Jan 24 18:58:35 2009 UTC</versionNumber>
+		<contactName>Dagmar Koehn</contactName>
+		<contactEmail>dagmar.koehn@uni-rostock.de</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds>
+		<int>2801</int>
+		</categoryIds>
+		<groupIds/>
+		<isFoundry>0</isFoundry>
+		<dateCreated>2009-11-12 05:58:23.0 PST</dateCreated>
+	</ontologyBean>
+	<ontologyBean>
+		<id>40865</id>
+		<ontologyId>1411</ontologyId>
+		<displayLabel>International Classification of Functioning, Disability and Health (ICF)</displayLabel>
+		<description>The International Classification of Functioning, Disability and Health, known more commonly as ICF, is a classification of health and health-related domains. These domains are classified from body, individual and societal perspectives by means of two lists: a list of body functions and structure, and a list of domains of activity and participation. Since an individual's functioning and disability occurs in a context, the ICF also includes a list of environmental factors.&#13;
+	&lt;br&gt;&lt;br&gt;&#13;
+	Source: &lt;a href="http://www.who.int/classifications/icf/en/"&gt;http://www.who.int/classifications/icf/en/&lt;/a&gt;</description>
+		<abbreviation>ICF</abbreviation>
+		<format>OWL</format>
+		<internalVersionNumber>1</internalVersionNumber>
+		<versionNumber>1.0</versionNumber>
+		<contactName>The World Health Organization</contactName>
+		<contactEmail>info@who.int</contactEmail>
+		<statusId>3</statusId>
+		<categoryIds/>
+		<groupIds/>
+		<isFoundry>0</isFoundry>
+		<dateCreated>2009-11-16 16:05:07.0 PST</dateCreated>
+	</ontologyBean>
+</list>
+</data>
+</success>

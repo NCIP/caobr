@@ -1,0 +1,116 @@
+<ns1:ServiceMetadata xmlns:ns1="gme://caGrid.caBIG/1.0/gov.nih.nci.cagrid.metadata">
+ <ns1:serviceDescription>
+  <ns2:Service description="" name="CaObr" version="1.3" xmlns:ns2="gme://caGrid.caBIG/1.0/gov.nih.nci.cagrid.metadata.service">
+   <ns2:pointOfContactCollection>
+    <ns3:PointOfContact affiliation="Washington University ,St. Louis" email="mtobias@wustl.edu" firstName="Malcolm" lastName="Tobias" phoneNumber="314.362.1594" role="Systems Manager" xmlns:ns3="gme://caGrid.caBIG/1.0/gov.nih.nci.cagrid.metadata.common"/>
+   </ns2:pointOfContactCollection>
+   <ns2:serviceContextCollection>
+    <ns2:ServiceContext description="" name="CaObr">
+     <ns2:operationCollection>
+      <ns2:Operation description="" name="GetMultipleResourceProperties">
+       <ns2:inputParameterCollection/>
+       <ns2:faultCollection/>
+      </ns2:Operation>
+      <ns2:Operation description="" name="GetResourceProperty">
+       <ns2:inputParameterCollection/>
+       <ns2:faultCollection/>
+      </ns2:Operation>
+      <ns2:Operation description="" name="QueryResourceProperties">
+       <ns2:inputParameterCollection/>
+       <ns2:faultCollection/>
+      </ns2:Operation>
+      <ns2:Operation description="" name="getServiceSecurityMetadata">
+       <ns2:inputParameterCollection/>
+       <ns2:Output qName="ns4:ServiceSecurityMetadata" dimensionality="1" isArray="false" xmlns:ns4="gme://caGrid.caBIG/1.0/gov.nih.nci.cagrid.metadata.security"/>
+       <ns2:faultCollection/>
+      </ns2:Operation>
+      <ns2:Operation description="" name="getAllAnnoations">
+       <ns2:inputParameterCollection>
+        <ns2:InputParameter qName="xsd:string" dimensionality="1" index="0" isArray="false" isRequired="false" name="token" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+       </ns2:inputParameterCollection>
+       <ns2:Output qName="ns5:Annotation" dimensionality="1" isArray="true" xmlns:ns5="gme://caCORE.caCORE/3.2/edu.wustl.caobr"/>
+       <ns2:faultCollection/>
+      </ns2:Operation>
+      <ns2:Operation description="" name="getAllConcepts">
+       <ns2:inputParameterCollection>
+        <ns2:InputParameter qName="xsd:string" dimensionality="1" index="0" isArray="false" isRequired="false" name="conceptName" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+       </ns2:inputParameterCollection>
+       <ns2:Output qName="ns6:Concept" dimensionality="1" isArray="true" xmlns:ns6="gme://caCORE.caCORE/3.2/edu.wustl.caobr"/>
+       <ns2:faultCollection/>
+      </ns2:Operation>
+      <ns2:Operation description="" name="getAllOntologies">
+       <ns2:inputParameterCollection/>
+       <ns2:Output qName="ns7:Ontology" dimensionality="1" isArray="true" xmlns:ns7="gme://caCORE.caCORE/3.2/edu.wustl.caobr"/>
+       <ns2:faultCollection/>
+      </ns2:Operation>
+      <ns2:Operation description="" name="getAllResources">
+       <ns2:inputParameterCollection/>
+       <ns2:Output qName="ns8:Resource" dimensionality="1" isArray="true" xmlns:ns8="gme://caCORE.caCORE/3.2/edu.wustl.caobr"/>
+       <ns2:faultCollection/>
+      </ns2:Operation>
+      <ns2:Operation description="" name="getAnnotations">
+       <ns2:inputParameterCollection>
+        <ns2:InputParameter qName="ns9:Ontology" dimensionality="1" index="0" isArray="true" isRequired="false" name="fromOntologies" xmlns:ns9="gme://caCORE.caCORE/3.2/edu.wustl.caobr"/>
+        <ns2:InputParameter qName="ns10:Resource" dimensionality="1" index="1" isArray="true" isRequired="false" name="fromResources" xmlns:ns10="gme://caCORE.caCORE/3.2/edu.wustl.caobr"/>
+        <ns2:InputParameter qName="xsd:string" dimensionality="1" index="2" isArray="false" isRequired="false" name="token" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+       </ns2:inputParameterCollection>
+       <ns2:Output qName="ns11:Annotation" dimensionality="1" isArray="true" xmlns:ns11="gme://caCORE.caCORE/3.2/edu.wustl.caobr"/>
+       <ns2:faultCollection/>
+      </ns2:Operation>
+      <ns2:Operation description="" name="getConcepts">
+       <ns2:inputParameterCollection>
+        <ns2:InputParameter qName="ns12:Ontology" dimensionality="1" index="0" isArray="true" isRequired="false" name="fromOntologies" xmlns:ns12="gme://caCORE.caCORE/3.2/edu.wustl.caobr"/>
+        <ns2:InputParameter qName="xsd:string" dimensionality="1" index="1" isArray="false" isRequired="false" name="conceptName" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+       </ns2:inputParameterCollection>
+       <ns2:Output qName="ns13:Concept" dimensionality="1" isArray="true" xmlns:ns13="gme://caCORE.caCORE/3.2/edu.wustl.caobr"/>
+       <ns2:faultCollection/>
+      </ns2:Operation>
+      <ns2:Operation description="" name="isConcept">
+       <ns2:inputParameterCollection>
+        <ns2:InputParameter qName="ns14:Ontology" dimensionality="1" index="0" isArray="true" isRequired="false" name="fromOntologies" xmlns:ns14="gme://caCORE.caCORE/3.2/edu.wustl.caobr"/>
+        <ns2:InputParameter qName="xsd:string" dimensionality="1" index="1" isArray="false" isRequired="false" name="searchTerm" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+       </ns2:inputParameterCollection>
+       <ns2:Output qName="xsd:boolean" dimensionality="1" isArray="false" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+       <ns2:faultCollection/>
+      </ns2:Operation>
+      <ns2:Operation description="" name="isConceptInAnyOntology">
+       <ns2:inputParameterCollection>
+        <ns2:InputParameter qName="xsd:string" dimensionality="1" index="0" isArray="false" isRequired="false" name="searchTerm" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+       </ns2:inputParameterCollection>
+       <ns2:Output qName="xsd:boolean" dimensionality="1" isArray="false" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+       <ns2:faultCollection/>
+      </ns2:Operation>
+      <ns2:Operation description="" name="isConcepts">
+       <ns2:inputParameterCollection>
+        <ns2:InputParameter qName="xsd:string" dimensionality="1" index="0" isArray="true" isRequired="false" name="tokens" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+        <ns2:InputParameter qName="ns15:Ontology" dimensionality="1" index="1" isArray="true" isRequired="false" name="ontologies" xmlns:ns15="gme://caCORE.caCORE/3.2/edu.wustl.caobr"/>
+       </ns2:inputParameterCollection>
+       <ns2:Output qName="xsd:boolean" dimensionality="1" isArray="true" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+       <ns2:faultCollection/>
+      </ns2:Operation>
+      <ns2:Operation description="" name="isConceptsInAnyOntology">
+       <ns2:inputParameterCollection>
+        <ns2:InputParameter qName="xsd:string" dimensionality="1" index="0" isArray="true" isRequired="false" name="tokens" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+       </ns2:inputParameterCollection>
+       <ns2:Output qName="xsd:boolean" dimensionality="1" isArray="true" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+       <ns2:faultCollection/>
+      </ns2:Operation>
+     </ns2:operationCollection>
+     <ns2:contextPropertyCollection>
+      <ns2:ContextProperty description="" name="{gme://caGrid.caBIG/1.0/gov.nih.nci.cagrid.metadata}ServiceMetadata"/>
+     </ns2:contextPropertyCollection>
+    </ns2:ServiceContext>
+   </ns2:serviceContextCollection>
+   <ns16:SemanticMetadata conceptCode="C63541" conceptDefinition="A service available on a system that coordinates resources that are not subject to central control, using open, general purpose protocols and interfaces to deliver nontrivial qualities of services." conceptName="Grid Service" order="0" xmlns:ns16="gme://caGrid.caBIG/1.0/gov.nih.nci.cagrid.metadata.common"/>
+   <ns17:SemanticMetadata conceptCode="C63543" conceptDefinition="A published API which receives data in the form of objects, performs computations based upon the input data, and returns information to a client via caGrid in the form of one or more objects." conceptName="Analytical Grid Service" order="1" xmlns:ns17="gme://caGrid.caBIG/1.0/gov.nih.nci.cagrid.metadata.common"/>
+  </ns2:Service>
+ </ns1:serviceDescription>
+ <ns1:hostingResearchCenter>
+  <ns18:ResearchCenter displayName="Washington University" shortName="caObr" xmlns:ns18="gme://caGrid.caBIG/1.0/gov.nih.nci.cagrid.metadata.common">
+   <ns18:Address country="US" locality="St. Louis" postalCode="63110" stateProvince="MO" street1="700 S" street2="Euclid Ave"/>
+   <ns18:pointOfContactCollection>
+    <ns18:PointOfContact affiliation="Washington University, St. Louis" email="mtobias@wustl.edu" firstName="Malcolm" lastName="Tobias" phoneNumber="314.362.1594" role="Systems Manager"/>
+    </ns18:pointOfContactCollection>
+  </ns18:ResearchCenter>
+ </ns1:hostingResearchCenter>
+</ns1:ServiceMetadata>

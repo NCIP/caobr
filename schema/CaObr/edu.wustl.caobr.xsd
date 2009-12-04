@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="gme://caCORE.caCORE/3.2/edu.wustl.caobr" targetNamespace="gme://caCORE.caCORE/3.2/edu.wustl.caobr" elementFormDefault="qualified">
+  <xs:element name="Resource" type="Resource" />
+  <xs:complexType name="Resource">
+    <xs:sequence>
+      <xs:element name="mainContext" minOccurs="0" maxOccurs="1">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="Context" minOccurs="0" maxOccurs="1" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="context" minOccurs="0" maxOccurs="1">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="Context" minOccurs="0" maxOccurs="unbounded" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="resourceId" type="xs:string" />
+    <xs:attribute name="name" type="xs:string" />
+    <xs:attribute name="description" type="xs:string" />
+    <xs:attribute name="elementURL" type="xs:string" />
+    <xs:attribute name="logoURL" type="xs:string" />
+  </xs:complexType>
+  <xs:element name="Ontology" type="Ontology" />
+  <xs:complexType name="Ontology">
+    <xs:sequence />
+    <xs:attribute name="ontologyId" type="xs:string" />
+    <xs:attribute name="displayLable" type="xs:string" />
+    <xs:attribute name="version" type="xs:string" />
+    <xs:attribute name="description" type="xs:string" />
+    <xs:attribute name="abbrevation" type="xs:string" />
+    <xs:attribute name="format" type="xs:string" />
+  </xs:complexType>
+  <xs:element name="Annotation" type="Annotation" />
+  <xs:complexType name="Annotation">
+    <xs:sequence>
+      <xs:element name="concept" minOccurs="0" maxOccurs="1">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="Concept" minOccurs="0" maxOccurs="1" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="resource" minOccurs="0" maxOccurs="1">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="Resource" minOccurs="0" maxOccurs="1" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="annotationContext" minOccurs="0" maxOccurs="1">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="AnnotationContext" minOccurs="0" maxOccurs="unbounded" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="elementId" type="xs:string" />
+    <xs:attribute name="description" type="xs:string" />
+    <xs:attribute name="url" type="xs:string" />
+    <xs:attribute name="score" type="xs:float" />
+    <xs:attribute name="isDirect" type="xs:boolean" />
+  </xs:complexType>
+  <xs:element name="Concept" type="Concept" />
+  <xs:complexType name="Concept">
+    <xs:sequence>
+      <xs:element name="ontology" minOccurs="0" maxOccurs="1">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="Ontology" minOccurs="0" maxOccurs="1" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="localId" type="xs:string" />
+    <xs:attribute name="preferredName" type="xs:string" />
+    <xs:attribute name="isRoot" type="xs:boolean" />
+  </xs:complexType>
+  <xs:element name="Context" type="Context" />
+  <xs:complexType name="Context">
+    <xs:sequence>
+      <xs:element name="ontology" minOccurs="0" maxOccurs="1">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="Ontology" minOccurs="0" maxOccurs="1" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="name" type="xs:string" />
+    <xs:attribute name="weight" type="xs:float" />
+  </xs:complexType>
+  <xs:element name="AnnotationContext" type="AnnotationContext" />
+  <xs:complexType name="AnnotationContext">
+    <xs:sequence>
+      <xs:element name="context" minOccurs="0" maxOccurs="1">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="Context" minOccurs="0" maxOccurs="1" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="isDirect" type="xs:boolean" />
+    <xs:attribute name="termId" type="xs:integer" />
+    <xs:attribute name="termName" type="xs:string" />
+    <xs:attribute name="value" type="xs:string" />
+  </xs:complexType>
+</xs:schema>
+
