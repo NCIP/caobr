@@ -7,11 +7,6 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.rmi.RemoteException;
-import java.util.List;
-
-import edu.wustl.caobr.Annotation;
-import edu.wustl.caobr.Concept;
-import edu.wustl.caobr.service.util.SearchBean;
 
 /**
  * This has all methods that deals with REST API invocation
@@ -104,27 +99,6 @@ public class RestApiInvoker {
         } catch (IOException e) {
             e.printStackTrace();
         }
-//        System.out.println("Printing..................");
-//        System.out.println(retrunData);
         return retrunData.toString();
-
-    }
-    /**
-     * This parses the given XML string to generate list of Search Bean
-     * @param targetUrl
-     * @return
-     */
-    public static List<SearchBean> getSearchBeans(String targetUrl) {
-        List<SearchBean> seachBeans = new XmlToObjectTransformer().toSearchBean(getResult(targetUrl));
-        return seachBeans;
-    }
-
-    /**
-     * @param url
-     * @return
-     */
-    public static List<Concept> getConcepts(String url) {
-        return new XmlToObjectTransformer().toConcepts(getResult(url));
-
     }
 }
