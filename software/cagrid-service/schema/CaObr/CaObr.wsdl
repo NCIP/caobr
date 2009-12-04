@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://caobr.cagrid.org/CaObr" xmlns:wsrp="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceProperties-1.2-draft-01.xsd" xmlns:wsrlw="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceLifetime-1.2-draft-01.wsdl" xmlns:wsdlpp="http://www.globus.org/namespaces/2004/10/WSDLPreprocessor" xmlns:gtwsdl1="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ServiceGroup-1.2-draft-01.wsdl" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/03/addressing" xmlns:wsntw="http://docs.oasis-open.org/wsn/2004/06/wsn-WS-BaseNotification-1.2-draft-01.wsdl" xmlns:wsrbfw="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-BaseFaults-1.2-draft-01.wsdl" xmlns:wsrpw="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceProperties-1.2-draft-01.wsdl" xmlns:wns1="http://security.introduce.cagrid.nci.nih.gov/ServiceSecurity" xmlns:wns0="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceProperties-1.2-draft-01.wsdl" xmlns:ns0="gme://caCORE.caCORE/3.2/edu.wustl.caobr" xmlns:ns4="gme://caGrid.caBIG/1.0/gov.nih.nci.cagrid.metadata.service" xmlns:ns2="gme://caGrid.caBIG/1.0/gov.nih.nci.cagrid.metadata.security" xmlns:ns1="http://caobr.cagrid.org/CaObr/types" xmlns:ns5="gme://caGrid.caBIG/1.0/gov.nih.nci.cagrid.metadata.common" xmlns:ns3="gme://caGrid.caBIG/1.0/gov.nih.nci.cagrid.metadata" name="CaObr" targetNamespace="http://caobr.cagrid.org/CaObr">
+  <import namespace="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceProperties-1.2-draft-01.wsdl" location="../wsrf/properties/WS-ResourceProperties.wsdl" />
+  <import namespace="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-BaseFaults-1.2-draft-01.wsdl" location="../wsrf/faults/WS-BaseFaults.wsdl" />
+  <import namespace="http://docs.oasis-open.org/wsn/2004/06/wsn-WS-BaseNotification-1.2-draft-01.wsdl" location="../wsrf/notification/WS-BaseN.wsdl" />
+  <import namespace="http://security.introduce.cagrid.nci.nih.gov/ServiceSecurity" location="./ServiceSecurity.wsdl" />
+  <import namespace="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceProperties-1.2-draft-01.wsdl" location="./../wsrf/properties/WS-ResourceProperties.wsdl" />
+  <!--============================================================
+
+                      T Y P E S
+                      
+  ============================================================-->
+  <types>
+    <schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:wsrbf="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-BaseFaults-1.2-draft-01.xsd" targetNamespace="http://caobr.cagrid.org/CaObr" elementFormDefault="qualified" attributeFormDefault="unqualified">
+      <import namespace="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-BaseFaults-1.2-draft-01.xsd" schemaLocation="../wsrf/faults/WS-BaseFaults.xsd" />
+      <import namespace="gme://caCORE.caCORE/3.2/edu.wustl.caobr" schemaLocation="./edu.wustl.caobr.xsd" />
+      <import namespace="gme://caGrid.caBIG/1.0/gov.nih.nci.cagrid.metadata.service" schemaLocation="./xsd/cagrid/types/service/servicemodel.xsd" />
+      <import namespace="gme://caGrid.caBIG/1.0/gov.nih.nci.cagrid.metadata.security" schemaLocation="./xsd/cagrid/types/security/security.xsd" />
+      <import namespace="http://caobr.cagrid.org/CaObr/types" schemaLocation="./CaObrTypes.xsd" />
+      <import namespace="gme://caGrid.caBIG/1.0/gov.nih.nci.cagrid.metadata.common" schemaLocation="./xsd/cagrid/types/common/common.xsd" />
+      <import namespace="gme://caGrid.caBIG/1.0/gov.nih.nci.cagrid.metadata" schemaLocation="./xsd/cagrid/types/caGridMetadata.xsd" />
+      <element name="GetAllAnnoationsRequest">
+        <complexType>
+          <sequence>
+            <element name="token" type="xs:string" minOccurs="1" maxOccurs="1" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="GetAllAnnoationsResponse">
+        <complexType>
+          <sequence>
+            <element ref="ns0:Annotation" minOccurs="1" maxOccurs="unbounded" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="GetAllConceptsRequest">
+        <complexType>
+          <sequence>
+            <element name="conceptName" type="xs:string" minOccurs="1" maxOccurs="1" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="GetAllConceptsResponse">
+        <complexType>
+          <sequence>
+            <element ref="ns0:Concept" minOccurs="1" maxOccurs="unbounded" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="GetAllOntologiesRequest">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="GetAllOntologiesResponse">
+        <complexType>
+          <sequence>
+            <element ref="ns0:Ontology" minOccurs="1" maxOccurs="unbounded" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="GetAllResourcesRequest">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="GetAllResourcesResponse">
+        <complexType>
+          <sequence>
+            <element ref="ns0:Resource" minOccurs="1" maxOccurs="unbounded" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="GetAnnotationsRequest">
+        <complexType>
+          <sequence>
+            <element name="fromOntologies">
+              <complexType>
+                <sequence>
+                  <element ref="ns0:Ontology" minOccurs="1" maxOccurs="unbounded" />
+                </sequence>
+              </complexType>
+            </element>
+            <element name="fromResources">
+              <complexType>
+                <sequence>
+                  <element ref="ns0:Resource" minOccurs="1" maxOccurs="unbounded" />
+                </sequence>
+              </complexType>
+            </element>
+            <element name="token" type="xs:string" minOccurs="1" maxOccurs="1" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="GetAnnotationsResponse">
+        <complexType>
+          <sequence>
+            <element ref="ns0:Annotation" minOccurs="1" maxOccurs="unbounded" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="GetConceptsRequest">
+        <complexType>
+          <sequence>
+            <element name="fromOntologies">
+              <complexType>
+                <sequence>
+                  <element ref="ns0:Ontology" minOccurs="1" maxOccurs="unbounded" />
+                </sequence>
+              </complexType>
+            </element>
+            <element name="conceptName" type="xs:string" minOccurs="1" maxOccurs="1" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="GetConceptsResponse">
+        <complexType>
+          <sequence>
+            <element ref="ns0:Concept" minOccurs="1" maxOccurs="unbounded" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="IsConceptRequest">
+        <complexType>
+          <sequence>
+            <element name="fromOntologies">
+              <complexType>
+                <sequence>
+                  <element ref="ns0:Ontology" minOccurs="1" maxOccurs="unbounded" />
+                </sequence>
+              </complexType>
+            </element>
+            <element name="searchTerm" type="xs:string" minOccurs="1" maxOccurs="1" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="IsConceptResponse">
+        <complexType>
+          <sequence>
+            <element name="response" type="xs:boolean" minOccurs="1" maxOccurs="1" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="IsConceptInAnyOntologyRequest">
+        <complexType>
+          <sequence>
+            <element name="searchTerm" type="xs:string" minOccurs="1" maxOccurs="1" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="IsConceptInAnyOntologyResponse">
+        <complexType>
+          <sequence>
+            <element name="response" type="xs:boolean" minOccurs="1" maxOccurs="1" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="IsConceptsRequest">
+        <complexType>
+          <sequence>
+            <element name="tokens" type="xs:string" minOccurs="1" maxOccurs="unbounded" />
+            <element name="ontologies">
+              <complexType>
+                <sequence>
+                  <element ref="ns0:Ontology" minOccurs="1" maxOccurs="unbounded" />
+                </sequence>
+              </complexType>
+            </element>
+          </sequence>
+        </complexType>
+      </element>
+      <element name="IsConceptsResponse">
+        <complexType>
+          <sequence>
+            <element name="response" type="xs:boolean" minOccurs="1" maxOccurs="unbounded" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="IsConceptsInAnyOntologyRequest">
+        <complexType>
+          <sequence>
+            <element name="tokens" type="xs:string" minOccurs="1" maxOccurs="unbounded" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="IsConceptsInAnyOntologyResponse">
+        <complexType>
+          <sequence>
+            <element name="response" type="xs:boolean" minOccurs="1" maxOccurs="unbounded" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="CaObrResourceProperties">
+        <complexType>
+          <sequence>
+            <element ref="ns3:ServiceMetadata" />
+          </sequence>
+        </complexType>
+      </element>
+    </schema>
+  </types>
+  <!--  place service messages here -->
+  <message name="GetAllAnnoationsRequest">
+    <part name="parameters" element="tns:GetAllAnnoationsRequest" />
+  </message>
+  <message name="GetAllAnnoationsResponse">
+    <part name="parameters" element="tns:GetAllAnnoationsResponse" />
+  </message>
+  <message name="GetAllConceptsRequest">
+    <part name="parameters" element="tns:GetAllConceptsRequest" />
+  </message>
+  <message name="GetAllConceptsResponse">
+    <part name="parameters" element="tns:GetAllConceptsResponse" />
+  </message>
+  <message name="GetAllOntologiesRequest">
+    <part name="parameters" element="tns:GetAllOntologiesRequest" />
+  </message>
+  <message name="GetAllOntologiesResponse">
+    <part name="parameters" element="tns:GetAllOntologiesResponse" />
+  </message>
+  <message name="GetAllResourcesRequest">
+    <part name="parameters" element="tns:GetAllResourcesRequest" />
+  </message>
+  <message name="GetAllResourcesResponse">
+    <part name="parameters" element="tns:GetAllResourcesResponse" />
+  </message>
+  <message name="GetAnnotationsRequest">
+    <part name="parameters" element="tns:GetAnnotationsRequest" />
+  </message>
+  <message name="GetAnnotationsResponse">
+    <part name="parameters" element="tns:GetAnnotationsResponse" />
+  </message>
+  <message name="GetConceptsRequest">
+    <part name="parameters" element="tns:GetConceptsRequest" />
+  </message>
+  <message name="GetConceptsResponse">
+    <part name="parameters" element="tns:GetConceptsResponse" />
+  </message>
+  <message name="IsConceptRequest">
+    <part name="parameters" element="tns:IsConceptRequest" />
+  </message>
+  <message name="IsConceptResponse">
+    <part name="parameters" element="tns:IsConceptResponse" />
+  </message>
+  <message name="IsConceptInAnyOntologyRequest">
+    <part name="parameters" element="tns:IsConceptInAnyOntologyRequest" />
+  </message>
+  <message name="IsConceptInAnyOntologyResponse">
+    <part name="parameters" element="tns:IsConceptInAnyOntologyResponse" />
+  </message>
+  <message name="IsConceptsRequest">
+    <part name="parameters" element="tns:IsConceptsRequest" />
+  </message>
+  <message name="IsConceptsResponse">
+    <part name="parameters" element="tns:IsConceptsResponse" />
+  </message>
+  <message name="IsConceptsInAnyOntologyRequest">
+    <part name="parameters" element="tns:IsConceptsInAnyOntologyRequest" />
+  </message>
+  <message name="IsConceptsInAnyOntologyResponse">
+    <part name="parameters" element="tns:IsConceptsInAnyOntologyResponse" />
+  </message>
+  <!--============================================================
+
+                       P O R T T Y P E
+                      
+  ============================================================-->
+  <portType name="CaObrPortType" wsrp:ResourceProperties="tns:CaObrResourceProperties">
+    <operation name="getAllAnnoations">
+      <input message="tns:GetAllAnnoationsRequest" wsa:Action="http://caobr.cagrid.org/CaObr/GetAllAnnoationsRequest" />
+      <output message="tns:GetAllAnnoationsResponse" wsa:Action="http://caobr.cagrid.org/CaObr/GetAllAnnoationsResponse" />
+    </operation>
+    <operation name="getAllConcepts">
+      <input message="tns:GetAllConceptsRequest" wsa:Action="http://caobr.cagrid.org/CaObr/GetAllConceptsRequest" />
+      <output message="tns:GetAllConceptsResponse" wsa:Action="http://caobr.cagrid.org/CaObr/GetAllConceptsResponse" />
+    </operation>
+    <operation name="getAllOntologies">
+      <input message="tns:GetAllOntologiesRequest" wsa:Action="http://caobr.cagrid.org/CaObr/GetAllOntologiesRequest" />
+      <output message="tns:GetAllOntologiesResponse" wsa:Action="http://caobr.cagrid.org/CaObr/GetAllOntologiesResponse" />
+    </operation>
+    <operation name="getAllResources">
+      <input message="tns:GetAllResourcesRequest" wsa:Action="http://caobr.cagrid.org/CaObr/GetAllResourcesRequest" />
+      <output message="tns:GetAllResourcesResponse" wsa:Action="http://caobr.cagrid.org/CaObr/GetAllResourcesResponse" />
+    </operation>
+    <operation name="getAnnotations">
+      <input message="tns:GetAnnotationsRequest" wsa:Action="http://caobr.cagrid.org/CaObr/GetAnnotationsRequest" />
+      <output message="tns:GetAnnotationsResponse" wsa:Action="http://caobr.cagrid.org/CaObr/GetAnnotationsResponse" />
+    </operation>
+    <operation name="getConcepts">
+      <input message="tns:GetConceptsRequest" wsa:Action="http://caobr.cagrid.org/CaObr/GetConceptsRequest" />
+      <output message="tns:GetConceptsResponse" wsa:Action="http://caobr.cagrid.org/CaObr/GetConceptsResponse" />
+    </operation>
+    <operation name="isConcept">
+      <input message="tns:IsConceptRequest" wsa:Action="http://caobr.cagrid.org/CaObr/IsConceptRequest" />
+      <output message="tns:IsConceptResponse" wsa:Action="http://caobr.cagrid.org/CaObr/IsConceptResponse" />
+    </operation>
+    <operation name="isConceptInAnyOntology">
+      <input message="tns:IsConceptInAnyOntologyRequest" wsa:Action="http://caobr.cagrid.org/CaObr/IsConceptInAnyOntologyRequest" />
+      <output message="tns:IsConceptInAnyOntologyResponse" wsa:Action="http://caobr.cagrid.org/CaObr/IsConceptInAnyOntologyResponse" />
+    </operation>
+    <operation name="isConcepts">
+      <input message="tns:IsConceptsRequest" wsa:Action="http://caobr.cagrid.org/CaObr/IsConceptsRequest" />
+      <output message="tns:IsConceptsResponse" wsa:Action="http://caobr.cagrid.org/CaObr/IsConceptsResponse" />
+    </operation>
+    <operation name="isConceptsInAnyOntology">
+      <input message="tns:IsConceptsInAnyOntologyRequest" wsa:Action="http://caobr.cagrid.org/CaObr/IsConceptsInAnyOntologyRequest" />
+      <output message="tns:IsConceptsInAnyOntologyResponse" wsa:Action="http://caobr.cagrid.org/CaObr/IsConceptsInAnyOntologyResponse" />
+    </operation>
+    <wsdl:operation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" name="GetMultipleResourceProperties">
+      <wsdl:input name="GetMultipleResourcePropertiesRequest" message="wsrpw:GetMultipleResourcePropertiesRequest" wsa:Action="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceProperties/GetMultipleResourceProperties" />
+      <wsdl:output name="GetMultipleResourcePropertiesResponse" message="wsrpw:GetMultipleResourcePropertiesResponse" wsa:Action="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceProperties/GetMultipleResourcePropertiesResponse" />
+      <wsdl:fault name="ResourceUnknownFault" message="wsrpw:ResourceUnknownFault" />
+      <wsdl:fault name="InvalidResourcePropertyQNameFault" message="wsrpw:InvalidResourcePropertyQNameFault" />
+    </wsdl:operation>
+    <wsdl:operation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" name="GetResourceProperty">
+      <wsdl:input name="GetResourcePropertyRequest" message="wsrpw:GetResourcePropertyRequest" wsa:Action="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceProperties/GetResourceProperty" />
+      <wsdl:output name="GetResourcePropertyResponse" message="wsrpw:GetResourcePropertyResponse" wsa:Action="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceProperties/GetResourcePropertyResponse" />
+      <wsdl:fault name="ResourceUnknownFault" message="wsrpw:ResourceUnknownFault" />
+      <wsdl:fault name="InvalidResourcePropertyQNameFault" message="wsrpw:InvalidResourcePropertyQNameFault" />
+    </wsdl:operation>
+    <wsdl:operation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" name="QueryResourceProperties">
+      <wsdl:input name="QueryResourcePropertiesRequest" message="wsrpw:QueryResourcePropertiesRequest" wsa:Action="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceProperties/QueryResourceProperties" />
+      <wsdl:output name="QueryResourcePropertiesResponse" message="wsrpw:QueryResourcePropertiesResponse" wsa:Action="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceProperties/QueryResourcePropertiesResponse" />
+      <wsdl:fault name="ResourceUnknownFault" message="wsrpw:ResourceUnknownFault" />
+      <wsdl:fault name="InvalidResourcePropertyQNameFault" message="wsrpw:InvalidResourcePropertyQNameFault" />
+      <wsdl:fault name="UnknownQueryExpressionDialectFault" message="wsrpw:UnknownQueryExpressionDialectFault" />
+      <wsdl:fault name="InvalidQueryExpressionFault" message="wsrpw:InvalidQueryExpressionFault" />
+      <wsdl:fault name="QueryEvaluationErrorFault" message="wsrpw:QueryEvaluationErrorFault" />
+    </wsdl:operation>
+    <operation name="getServiceSecurityMetadata">
+      <input message="wns1:GetServiceSecurityMetadataRequest" wsa:Action="http://security.introduce.cagrid.nci.nih.gov/ServiceSecurity/GetServiceSecurityMetadataRequest" />
+      <output message="wns1:GetServiceSecurityMetadataResponse" wsa:Action="http://security.introduce.cagrid.nci.nih.gov/ServiceSecurity/GetServiceSecurityMetadataResponse" />
+    </operation>
+  </portType>
+</definitions>
+

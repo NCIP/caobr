@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="caObr Service Swing Client" basedir="." default="startClient">
+
+	<property name="workArea.dir" location="./build" />
+	<property name="caNanoLab.src" location="src" />
+	<property name="caobr.classes.dir" location="${workArea.dir}/classes/java" />
+	<property name="main.class" value="edu.wustl.caobr.client.SwingClientcaObrService" />
+	
+	<path id="run.classpath">
+		<fileset dir="lib">
+			<include name="**/*.jar" />
+		</fileset>
+		<pathelement location="${caobr.classes.dir}" />
+	</path>
+
+
+	<target name="clean.all">
+		<delete includeemptydirs="true">
+			<fileset dir="${workArea.dir}">
+				<include name="**/*" />
+			</fileset>
+		</delete>
+	</target>
+
+	<target name="compile" depends="clean.all" description="Compiles the code with cleaning">
+		<mkdir dir="${caobr.classes.dir}" />
+		<javac srcdir="${caNanoLab.src}" destdir="${caobr.classes.dir}" fork="true" memoryMaximumSize="1024m" target="1.5" includes="**/*.java" debug="on" deprecation="true"   classpathref="run.classpath" failonerror="true" nowarn="on" />
+	</target>
+	
+	<target name="startClient" depends="compile" description="starts the client">
+			<echo message="Running main of class: ${main.class}" />
+			<java classname="${main.class}" classpathref="run.classpath" fork="yes" />
+		</target>
+	
+</project>
