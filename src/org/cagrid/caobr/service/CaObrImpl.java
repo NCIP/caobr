@@ -18,6 +18,7 @@ import edu.wustl.caobr.Ontology;
 import edu.wustl.caobr.Resource;
 import edu.wustl.caobr.service.ObrThreadPoolExecutor;
 import edu.wustl.caobr.service.RestApiInvoker;
+import edu.wustl.caobr.service.XmlToObjectTransformer;
 import edu.wustl.caobr.service.cache.OntologyResourceCache;
 import edu.wustl.caobr.service.util.RestApiInfo;
 import edu.wustl.caobr.service.util.SearchBean;
@@ -38,7 +39,6 @@ public class CaObrImpl extends CaObrImplBase {
 
     private static final long interval = 3600000 * 12;
 
-    // Is this really needed ? Below thread will execute it at least once, isn't it?
     static {
         new Timer().scheduleAtFixedRate(new TimerTask() {
             public void run() {
@@ -105,14 +105,17 @@ public class CaObrImpl extends CaObrImplBase {
     public Annotation[] getAnnotations(Ontology[] fromOntologies, Resource[] fromResources, String token)
             throws RemoteException {
         System.out.println("Fetching Annotation:");
-        List<SearchBean> seachBeans;
-        if (fromOntologies == null) {
-            seachBeans = RestApiInvoker.getSearchBeans(getTargetUrlWithOutAnyOntology(token));
+       String url;
+        if (fromOntologies == null || fromOntologies.length ==0) {
+            url = getTargetUrlWithOutAnyOntology(token);
         } else {
-            seachBeans = RestApiInvoker.getSearchBeans(getTargetUrl(fromOntologies, token));
+            url = getTargetUrl(fromOntologies, token);
         }
+        String result = RestApiInvoker.getResult(url);
+        List<SearchBean> seachBeans =  new XmlToObjectTransformer().toSearchBean(result);
+        
         Set<Annotation> annotation = new HashSet<Annotation>();
-        if (fromResources == null) {
+        if (fromResources == null || fromResources.length ==0) {
             fromResources = getAllResources();
         }
 
@@ -124,14 +127,7 @@ public class CaObrImpl extends CaObrImplBase {
             ObrThreadPoolExecutor executor = new ObrThreadPoolExecutor();
             annotation.addAll(executor.getAnnotations(urlParamForPostCall));
         }
-        Annotation[] returnedAnnotation = new Annotation[annotation.size()];
-
-        int i = 0;
-        for (Annotation ann : annotation) {
-            returnedAnnotation[i] = ann;
-            i++;
-        }
-        return returnedAnnotation;
+        return annotation.toArray(new Annotation[0]);
     }
 
     /**
@@ -189,14 +185,9 @@ public class CaObrImpl extends CaObrImplBase {
             url = getTargetUrl(fromOntologies, trimmedTerm);
         }
 
-        List<Concept> concepts = RestApiInvoker.getConcepts(url);
-        Concept[] returnConcepts = new Concept[concepts.size()];
-        int i = 0;
-        for (Concept concept : returnConcepts) {
-            returnConcepts[i] = concept;
-            i++;
-        }
-        return returnConcepts;
+        String result = RestApiInvoker.getResult(url);
+        List<Concept> concepts = new XmlToObjectTransformer().toConcepts(result);
+        return concepts.toArray(new Concept[0]);
     }
 
     /**
@@ -211,8 +202,9 @@ public class CaObrImpl extends CaObrImplBase {
             return false;
         }
         String targetUrl = getTargetUrl(fromOntologies, trimmedTerm);
-
-        if (RestApiInvoker.getSearchBeans(targetUrl).isEmpty()) {
+        String result = RestApiInvoker.getResult(targetUrl);
+        List<SearchBean> beans = new XmlToObjectTransformer().toSearchBean(result);
+        if (beans.isEmpty()) {
             return false;
         }
         return true;
@@ -229,11 +221,11 @@ public class CaObrImpl extends CaObrImplBase {
             return false;
         }
         String targetUrl = getTargetUrlWithOutAnyOntology(searchTerm);
-
-        if (RestApiInvoker.getSearchBeans(targetUrl).isEmpty()) {
+        String result  =RestApiInvoker.getResult(targetUrl);
+        List<SearchBean> beans = new XmlToObjectTransformer().toSearchBean(result);
+        if (beans.isEmpty()) {
             return false;
         }
-        System.out.println(targetUrl);
         return true;
 
     }
