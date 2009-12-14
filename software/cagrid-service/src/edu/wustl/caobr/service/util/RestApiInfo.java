@@ -20,6 +20,7 @@ public class RestApiInfo {
     static {
         properties = getPropertiesFromFile("caobr.properties");
     }
+
     //========================================================================
     public static String getResourceURL() {
         return properties.getProperty("resources.url");
@@ -32,17 +33,20 @@ public class RestApiInfo {
     public static String getOntologyDetailsURL() {
         return properties.getProperty("ontology.details.url");
     }
+
     public static String getOntologyURL() {
         return properties.getProperty("ontology.url");
     }
-    
+
     public static String getObrResultURL() {
         return properties.getProperty("obr.result.url");
     }
+
     //========================================================================
     public static String getTagNameResourceRoot() {
         return properties.getProperty("tagname.resource.root");
     }
+
     public static String getTagNameResourceName() {
         return properties.getProperty("tagname.resource.name");
     }
@@ -56,7 +60,7 @@ public class RestApiInfo {
     }
 
     public static String getTagNameResourceLogo() {
-        return properties.getProperty("tagname.resource.elementURL");
+        return properties.getProperty("tagname.resource.logo");
     }
 
     public static String getTagNameResourceId() {
@@ -70,6 +74,7 @@ public class RestApiInfo {
     public static String getTagNameResourceContexts() {
         return properties.getProperty("tagname.resource.contexts");
     }
+
     //========================================================================
     public static String getTagNameOntologyRoot() {
         return properties.getProperty("tagname.ontology.root");
@@ -78,6 +83,7 @@ public class RestApiInfo {
     public static String getTagNameOntologyId() {
         return properties.getProperty("tagname.ontology.id");
     }
+
     public static String getTagNameOntologyLocalId() {
         return properties.getProperty("tagname.ontology.local.id");
     }
@@ -101,14 +107,15 @@ public class RestApiInfo {
     public static String getTagNameOntologyVersion() {
         return properties.getProperty("tagname.ontology.version");
     }
+
     //========================================================================
-//    public static String getResourceXmlPath() {
-//        return resourceXmlPath;
-//    }
-//
-//    public static void setResourceXmlPath(String resourceXmlPath) {
-//        RestApiInfo.resourceXmlPath = resourceXmlPath;
-//    }
+    //    public static String getResourceXmlPath() {
+    //        return resourceXmlPath;
+    //    }
+    //
+    //    public static void setResourceXmlPath(String resourceXmlPath) {
+    //        RestApiInfo.resourceXmlPath = resourceXmlPath;
+    //    }
     /**
      * Loads properties from a property file present in classpath to java objects.
      * 
