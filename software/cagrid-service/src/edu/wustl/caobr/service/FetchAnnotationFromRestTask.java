@@ -2,6 +2,7 @@ package edu.wustl.caobr.service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.concurrent.Callable;
 
 import edu.wustl.caobr.Annotation;
@@ -12,13 +13,13 @@ import edu.wustl.caobr.service.util.RestApiInfo;
  * @author chandrakant_talele
  */
 public class FetchAnnotationFromRestTask implements Callable<List<Annotation>> {
-    private String urlParamForPostCall;
+    private Map<String, String> urlParamForPostCall;
 
     /**
      * Constructor
      * @param urlParamForPostCall
      */
-    public FetchAnnotationFromRestTask(String urlParamForPostCall) {
+    public FetchAnnotationFromRestTask(Map<String, String> urlParamForPostCall) {
         this.urlParamForPostCall = urlParamForPostCall;
     }
 
