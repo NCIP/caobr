@@ -2,6 +2,7 @@ package edu.wustl.caobr.service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -29,12 +30,12 @@ public class ObrThreadPoolExecutor {
      * @param urlParamForPostCall
      * @return List of annotations retrieved for given URLs  
      */
-    public List<Annotation> getAnnotations(List<String> urlParamForPostCall) {
+    public List<Annotation> getAnnotations(List<Map<String, String>> urlParamForPostCall) {
         if(executor.isShutdown() || executor.isTerminated()) {
             executor = init();
         }
         List<Future<List<Annotation>>> futures = new ArrayList<Future<List<Annotation>>>(100);
-        for (String urlParam : urlParamForPostCall) {
+        for (Map<String, String> urlParam : urlParamForPostCall) {
             FetchAnnotationFromRestTask task = new FetchAnnotationFromRestTask(urlParam);
             Future<List<Annotation>> future = executor.submit(task);
             futures.add(future);

@@ -1,4 +1,5 @@
 package edu.wustl.caobr.service;
+
 import java.io.BufferedReader;
 import java.io.DataOutputStream;
 import java.io.IOException;
@@ -6,7 +7,9 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.rmi.RemoteException;
+import java.util.Map;
+
+import org.apache.log4j.Logger;
 
 /**
  * This has all methods that deals with REST API invocation
@@ -14,6 +17,7 @@ import java.rmi.RemoteException;
  * @author lalit_chand
  */
 public class RestApiInvoker {
+    private static final Logger logger = Logger.getLogger(RestApiInvoker.class);
 
     /**
      * It invokes given URL using GET method and returns the string of response 
@@ -21,7 +25,7 @@ public class RestApiInvoker {
      * @return HTTP response string
      */
     public static String getResult(String targetUrl) {
-
+        logger.debug("using GET method, URL=" + targetUrl);
         StringBuilder retrunData = new StringBuilder();
         try {
 
@@ -46,11 +50,10 @@ public class RestApiInvoker {
                 data = in.readLine();
             }
             in.close();
-        } catch (RemoteException e) {
-
         } catch (Exception e) {
-            e.printStackTrace();
+            logger.debug("Could not get result from service  :" + targetUrl, e);
         }
+        logger.debug("Result XML " + retrunData);
         return retrunData.toString();
 
     }
@@ -62,8 +65,22 @@ public class RestApiInvoker {
      * @param parameters request parameters
      * @return HTTP response string
      */
-    public String getResultFromPost(String targetUrl, String parameters) {
+    public String getResultFromPost(String targetUrl, Map<String, String> paramtersMap) {
+        logger.debug("using POST method, URL=" + targetUrl);
 
+        StringBuilder parametersString = new StringBuilder();
+        int i = 0;
+        for (String key : paramtersMap.keySet()) {
+            String parameterValue = paramtersMap.get(key);
+            if (i == 0) {
+                parametersString.append(key).append("=").append(parameterValue);
+            } else {
+                parametersString.append("&").append(key).append("=").append(parameterValue);
+            }
+            i++;
+        }
+        logger.debug("Paramters are " + parametersString);
+        
         StringBuilder retrunData = new StringBuilder();
         try {
 
@@ -77,7 +94,7 @@ public class RestApiInvoker {
 
             //Send request
             DataOutputStream wr = new DataOutputStream(conn.getOutputStream());
-            wr.writeBytes(parameters);
+            wr.writeBytes(parametersString.toString());
             wr.flush();
             wr.close();
 
@@ -99,6 +116,7 @@ public class RestApiInvoker {
         } catch (IOException e) {
             e.printStackTrace();
         }
+        logger.debug("Result XML " + retrunData);
         return retrunData.toString();
     }
 }
