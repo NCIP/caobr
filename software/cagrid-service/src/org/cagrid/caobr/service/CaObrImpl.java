@@ -4,8 +4,10 @@ import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import java.rmi.RemoteException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 import java.util.Timer;
 import java.util.TimerTask;
@@ -58,7 +60,7 @@ public class CaObrImpl extends CaObrImplBase {
      */
     public CaObrImpl() throws RemoteException {
         super();
-       
+
     }
 
     /**
@@ -105,22 +107,22 @@ public class CaObrImpl extends CaObrImplBase {
     public Annotation[] getAnnotations(Ontology[] fromOntologies, Resource[] fromResources, String token)
             throws RemoteException {
         System.out.println("Fetching Annotation:");
-       String url;
-        if (fromOntologies == null || fromOntologies.length ==0) {
+        String url;
+        if (fromOntologies == null || fromOntologies.length == 0) {
             url = getTargetUrlWithOutAnyOntology(token);
         } else {
             url = getTargetUrl(fromOntologies, token);
         }
         String result = RestApiInvoker.getResult(url);
-        List<SearchBean> seachBeans =  new XmlToObjectTransformer().toSearchBean(result);
-        
+        List<SearchBean> seachBeans = new XmlToObjectTransformer().toSearchBean(result);
+
         Set<Annotation> annotation = new HashSet<Annotation>();
-        if (fromResources == null || fromResources.length ==0) {
+        if (fromResources == null || fromResources.length == 0) {
             fromResources = getAllResources();
         }
 
         for (Resource r : fromResources) {
-            List<String> urlParamForPostCall = new ArrayList<String>(seachBeans.size());
+            List<Map<String, String>> urlParamForPostCall = new ArrayList<Map<String, String>>(seachBeans.size());
             for (SearchBean searchBean : seachBeans) {
                 urlParamForPostCall.add(getParamStr(searchBean, r));
             }
@@ -135,22 +137,30 @@ public class CaObrImpl extends CaObrImplBase {
      * @param r
      * @return
      */
-    private String getParamStr(SearchBean searchBean, Resource r) {
+    private Map<String, String> getParamStr(SearchBean searchBean, Resource r) {
         //TODO need to check this with lalit. Can it be reduced to List of attribute-value pairs ?
-            
-        String urlParameters = "localConceptIDs=" + encode(searchBean.getOntologyId() + "/" + searchBean.getConceptIdShort())
-        + "&resourceID="      + encode(r.getResourceId()) 
-        + "&elementDetails="  + encode("true") 
-        + "&virtual="         + encode("true") 
-        + "&withContext="     + encode("true");
-        
-//        String urlParameters =
-//                    "localOntologyIDs=" + encode(searchBean.getOntologyVersionId().toString())
-//                    + "&localConceptIDs=" + encode(searchBean.getOntologyVersionId() + "/" + searchBean.getConceptIdShort())
-//                  + "&resourceID="      + encode(r.getResourceId()) 
-//                  + "&elementDetails="  + encode("true") 
-//                  + "&withContext="     + encode("true");
-            return urlParameters;
+
+        /* String urlParameters = "localConceptIDs="
+                  + encode(searchBean.getOntologyId() + "/" + searchBean.getConceptIdShort()) + "&resourceID="
+                  + encode(r.getResourceId()) + "&elementDetails=" + encode("true") + "&virtual=" + encode("true")
+                  + "&withContext=" + encode("true");
+         */
+        Map<String, String> parametersMap = new HashMap<String, String>();
+
+        parametersMap.put("localConceptIDs", encode(searchBean.getOntologyId() + "/"
+                + searchBean.getConceptIdShort()));
+        parametersMap.put("resourceID", encode(r.getResourceId()));
+        parametersMap.put("elementDetails", encode("true"));
+        parametersMap.put("virtual", encode("true"));
+        parametersMap.put("withContext", encode("true"));
+
+        //        String urlParameters =
+        //                    "localOntologyIDs=" + encode(searchBean.getOntologyVersionId().toString())
+        //                    + "&localConceptIDs=" + encode(searchBean.getOntologyVersionId() + "/" + searchBean.getConceptIdShort())
+        //                  + "&resourceID="      + encode(r.getResourceId()) 
+        //                  + "&elementDetails="  + encode("true") 
+        //                  + "&withContext="     + encode("true");
+        return parametersMap;
     }
 
     /**
@@ -166,6 +176,7 @@ public class CaObrImpl extends CaObrImplBase {
             throw new RuntimeException(e);
         }
     }
+
     /**
      * @param fromOntologies
      * @param conceptName
@@ -220,14 +231,33 @@ public class CaObrImpl extends CaObrImplBase {
         if (trimmedTerm.equals("")) {
             return false;
         }
-        String targetUrl = getTargetUrlWithOutAnyOntology(searchTerm);
-        String result  =RestApiInvoker.getResult(targetUrl);
+        if (checkSpecialCharacter(trimmedTerm)) {
+            return false;
+        }
+        String targetUrl = getTargetUrlWithOutAnyOntology(trimmedTerm);
+        String result = RestApiInvoker.getResult(targetUrl);
+        if (result.equals("")) {
+            logger.debug("Could not find concept for +" + trimmedTerm);
+            return false;
+        }
         List<SearchBean> beans = new XmlToObjectTransformer().toSearchBean(result);
         if (beans.isEmpty()) {
             return false;
         }
         return true;
 
+    }
+
+    private boolean checkSpecialCharacter(String token) {
+        String specialCharacters = "!@#$'/\"'^&*(),.{}+=~*[];:|\\<>?";
+
+        for (int i = 0; i < specialCharacters.length(); i++) {
+            for (int j = 0; j < token.length(); j++) {
+                if (token.charAt(j) == specialCharacters.charAt(i))
+                    return true;
+            }
+        }
+        return false;
     }
 
     /**
@@ -255,6 +285,7 @@ public class CaObrImpl extends CaObrImplBase {
         boolean[] flags = new boolean[tokens.length];
         int i = 0;
         for (String token : tokens) {
+            System.out.println("Searching for " + token);
             flags[i] = isConceptInAnyOntology(token);
             i++;
         }
@@ -280,9 +311,8 @@ public class CaObrImpl extends CaObrImplBase {
         }
         String targetUrl = null;
         try {
-            targetUrl =
-                    RestApiInfo.getConceptIdURL() + URLEncoder.encode(conceptName, "UTF-8") + "/" + ontologyIds
-                            + "&isexactmatch=1";
+            targetUrl = RestApiInfo.getConceptIdURL() + URLEncoder.encode(conceptName, "UTF-8") + "/"
+                    + ontologyIds + "&isexactmatch=1";
         } catch (UnsupportedEncodingException e) {
             logger.info("Unsupported Encoding ");
             e.printStackTrace();
