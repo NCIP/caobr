@@ -12,14 +12,10 @@ import java.awt.GridLayout;
 import java.awt.Point;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.io.PrintStream;
 import java.net.URISyntaxException;
 import java.net.URL;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -66,13 +62,6 @@ public class SwingClientcaObrService extends JFrame {
     private Font font = new JList().getFont();
 
     public static void main(String[] args) {
-        try {
-            System.setOut(new PrintStream(new File("c:/dbdump/out_"+System.currentTimeMillis()+".xml")));
-        } catch (FileNotFoundException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
-        
         SwingClientcaObrService frame = new SwingClientcaObrService();
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
@@ -160,8 +149,7 @@ public class SwingClientcaObrService extends JFrame {
     }
 
     private static Point getStartPosition(int width, int height) {
-        DisplayMode displayMode =
-                GraphicsEnvironment.getLocalGraphicsEnvironment().getDefaultScreenDevice().getDisplayMode();
+        DisplayMode displayMode = GraphicsEnvironment.getLocalGraphicsEnvironment().getDefaultScreenDevice().getDisplayMode();
         Float w = (displayMode.getWidth() - width) / 2F;
         Float h = (displayMode.getHeight() - height) / 2F;
         return new Point(w.intValue(), h.intValue());
@@ -252,16 +240,20 @@ public class SwingClientcaObrService extends JFrame {
 
             List<Annotation> directAnnotations = new ArrayList<Annotation>();
             List<Annotation> mappedAnnotations = new ArrayList<Annotation>();
+            List<Annotation> is_aAnnotations = new ArrayList<Annotation>();
             if (annotations != null && annotations.length != 0) {
                 for (Annotation ann : annotations) {
-                    if (ann.isIsDirect()) {
+                    if (ann.getType().equals("direct")) {
                         directAnnotations.add(ann);
-                    } else {
+                    } else if (ann.getType().equals("mapped")) {
                         mappedAnnotations.add(ann);
+                    } else if (ann.getType().equals("is_a")) {
+                        is_aAnnotations.add(ann);
+
                     }
                 }
             }
-            resultPanel.setText(getHtmlString(directAnnotations, mappedAnnotations));
+            resultPanel.setText(getHtmlString(directAnnotations, mappedAnnotations,is_aAnnotations));
         }
 
         /**
@@ -283,11 +275,12 @@ public class SwingClientcaObrService extends JFrame {
             return selections;
         }
 
-        private String getHtmlString(List<Annotation> directAnnotations, List<Annotation> mappedAnnotations) {
+        private String getHtmlString(List<Annotation> directAnnotations, List<Annotation> mappedAnnotations,List<Annotation> is_aAnnotations) {
             StringBuffer buff = new StringBuffer("<html>  <head>  </head>  <body>");
 
             addAnnotationUrls(directAnnotations, buff, "Direct");
             addAnnotationUrls(mappedAnnotations, buff, "Mapped");
+            addAnnotationUrls(is_aAnnotations, buff, "Is_A");
 
             buff.append("</body></html>");
             return buff.toString();
@@ -299,9 +292,9 @@ public class SwingClientcaObrService extends JFrame {
             buff.append(" Annotations found: ");
             buff.append(annotations.size());
             buff.append("<hr />");
-            int i=1;
+            int i = 1;
             for (Annotation ann : annotations) {
-                
+
                 buff.append(i);
                 buff.append(". Resource <b>");
                 buff.append(ann.getResource().getResource().getName());
@@ -313,10 +306,11 @@ public class SwingClientcaObrService extends JFrame {
                 buff.append("</a> <br> <i> Description: </i>");
                 buff.append(ann.getDescription());
                 buff.append("<hr />");
-                
+
                 System.out.println("---------------------------------------------------");
-                System.out.println(i+". Resource : " + ann.getResource().getResource().getName());
+                System.out.println(i + ". Resource : " + ann.getResource().getResource().getName());
                 System.out.println("Element id : " + ann.getElementId());
+                System.out.println("Logo URL : " + ann.getResource().getResource().getLogoURL());
                 System.out.println("Description : " + ann.getDescription());
                 i++;
             }
