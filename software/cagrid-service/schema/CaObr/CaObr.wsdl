@@ -290,15 +290,15 @@
       <input message="tns:GetConceptsRequest" wsa:Action="http://caobr.cagrid.org/CaObr/GetConceptsRequest" />
       <output message="tns:GetConceptsResponse" wsa:Action="http://caobr.cagrid.org/CaObr/GetConceptsResponse" />
     </operation>
-    <operation name="IsConcept">
+    <operation name="isConcept">
       <input message="tns:IsConceptRequest" wsa:Action="http://caobr.cagrid.org/CaObr/IsConceptRequest" />
       <output message="tns:IsConceptResponse" wsa:Action="http://caobr.cagrid.org/CaObr/IsConceptResponse" />
     </operation>
-    <operation name="IsConceptInAnyOntology">
+    <operation name="isConceptInAnyOntology">
       <input message="tns:IsConceptInAnyOntologyRequest" wsa:Action="http://caobr.cagrid.org/CaObr/IsConceptInAnyOntologyRequest" />
       <output message="tns:IsConceptInAnyOntologyResponse" wsa:Action="http://caobr.cagrid.org/CaObr/IsConceptInAnyOntologyResponse" />
     </operation>
-    <operation name="IsConcepts">
+    <operation name="isConcepts">
       <input message="tns:IsConceptsRequest" wsa:Action="http://caobr.cagrid.org/CaObr/IsConceptsRequest" />
       <output message="tns:IsConceptsResponse" wsa:Action="http://caobr.cagrid.org/CaObr/IsConceptsResponse" />
     </operation>
