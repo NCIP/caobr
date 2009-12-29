@@ -19,14 +19,14 @@
       <import namespace="http://caobr.cagrid.org/CaObr/types" schemaLocation="./CaObrTypes.xsd" />
       <import namespace="gme://caGrid.caBIG/1.0/gov.nih.nci.cagrid.metadata.common" schemaLocation="./xsd/cagrid/types/common/common.xsd" />
       <import namespace="gme://caGrid.caBIG/1.0/gov.nih.nci.cagrid.metadata" schemaLocation="./xsd/cagrid/types/caGridMetadata.xsd" />
-      <element name="GetAllAnnoationsRequest">
+      <element name="GetAllAnnotationsRequest">
         <complexType>
           <sequence>
             <element name="token" type="xs:string" minOccurs="1" maxOccurs="1" />
           </sequence>
         </complexType>
       </element>
-      <element name="GetAllAnnoationsResponse">
+      <element name="GetAllAnnotationsResponse">
         <complexType>
           <sequence>
             <element ref="ns0:Annotation" minOccurs="1" maxOccurs="unbounded" />
@@ -200,11 +200,11 @@
     </schema>
   </types>
   <!--  place service messages here -->
-  <message name="GetAllAnnoationsRequest">
-    <part name="parameters" element="tns:GetAllAnnoationsRequest" />
+  <message name="GetAllAnnotationsRequest">
+    <part name="parameters" element="tns:GetAllAnnotationsRequest" />
   </message>
-  <message name="GetAllAnnoationsResponse">
-    <part name="parameters" element="tns:GetAllAnnoationsResponse" />
+  <message name="GetAllAnnotationsResponse">
+    <part name="parameters" element="tns:GetAllAnnotationsResponse" />
   </message>
   <message name="GetAllConceptsRequest">
     <part name="parameters" element="tns:GetAllConceptsRequest" />
@@ -266,9 +266,9 @@
                       
   ============================================================-->
   <portType name="CaObrPortType" wsrp:ResourceProperties="tns:CaObrResourceProperties">
-    <operation name="getAllAnnoations">
-      <input message="tns:GetAllAnnoationsRequest" wsa:Action="http://caobr.cagrid.org/CaObr/GetAllAnnoationsRequest" />
-      <output message="tns:GetAllAnnoationsResponse" wsa:Action="http://caobr.cagrid.org/CaObr/GetAllAnnoationsResponse" />
+    <operation name="getAllAnnotations">
+      <input message="tns:GetAllAnnotationsRequest" wsa:Action="http://caobr.cagrid.org/CaObr/GetAllAnnotationsRequest" />
+      <output message="tns:GetAllAnnotationsResponse" wsa:Action="http://caobr.cagrid.org/CaObr/GetAllAnnotationsResponse" />
     </operation>
     <operation name="getAllConcepts">
       <input message="tns:GetAllConceptsRequest" wsa:Action="http://caobr.cagrid.org/CaObr/GetAllConceptsRequest" />
@@ -290,15 +290,15 @@
       <input message="tns:GetConceptsRequest" wsa:Action="http://caobr.cagrid.org/CaObr/GetConceptsRequest" />
       <output message="tns:GetConceptsResponse" wsa:Action="http://caobr.cagrid.org/CaObr/GetConceptsResponse" />
     </operation>
-    <operation name="isConcept">
+    <operation name="IsConcept">
       <input message="tns:IsConceptRequest" wsa:Action="http://caobr.cagrid.org/CaObr/IsConceptRequest" />
       <output message="tns:IsConceptResponse" wsa:Action="http://caobr.cagrid.org/CaObr/IsConceptResponse" />
     </operation>
-    <operation name="isConceptInAnyOntology">
+    <operation name="IsConceptInAnyOntology">
       <input message="tns:IsConceptInAnyOntologyRequest" wsa:Action="http://caobr.cagrid.org/CaObr/IsConceptInAnyOntologyRequest" />
       <output message="tns:IsConceptInAnyOntologyResponse" wsa:Action="http://caobr.cagrid.org/CaObr/IsConceptInAnyOntologyResponse" />
     </operation>
-    <operation name="isConcepts">
+    <operation name="IsConcepts">
       <input message="tns:IsConceptsRequest" wsa:Action="http://caobr.cagrid.org/CaObr/IsConceptsRequest" />
       <output message="tns:IsConceptsResponse" wsa:Action="http://caobr.cagrid.org/CaObr/IsConceptsResponse" />
     </operation>
