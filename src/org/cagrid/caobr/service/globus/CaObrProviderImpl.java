@@ -26,9 +26,9 @@ public class CaObrProviderImpl{
 	}
 	
 
-    public org.cagrid.caobr.stubs.GetAllAnnoationsResponse getAllAnnoations(org.cagrid.caobr.stubs.GetAllAnnoationsRequest params) throws RemoteException {
-    org.cagrid.caobr.stubs.GetAllAnnoationsResponse boxedResult = new org.cagrid.caobr.stubs.GetAllAnnoationsResponse();
-    boxedResult.setAnnotation(impl.getAllAnnoations(params.getToken()));
+    public org.cagrid.caobr.stubs.GetAllAnnotationsResponse getAllAnnotations(org.cagrid.caobr.stubs.GetAllAnnotationsRequest params) throws RemoteException {
+    org.cagrid.caobr.stubs.GetAllAnnotationsResponse boxedResult = new org.cagrid.caobr.stubs.GetAllAnnotationsResponse();
+    boxedResult.setAnnotation(impl.getAllAnnotations(params.getToken()));
     return boxedResult;
   }
 

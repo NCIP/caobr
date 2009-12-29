@@ -21,7 +21,9 @@ import javax.xml.xpath.XPathExpression;
 import javax.xml.xpath.XPathExpressionException;
 import javax.xml.xpath.XPathFactory;
 
+import org.apache.log4j.Logger;
 import org.w3c.dom.Document;
+import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.InputSource;
@@ -30,17 +32,20 @@ import org.xml.sax.SAXException;
 import edu.wustl.caobr.Annotation;
 import edu.wustl.caobr.AnnotationAnnotationContext;
 import edu.wustl.caobr.AnnotationConcept;
-import edu.wustl.caobr.AnnotationContext;
-import edu.wustl.caobr.AnnotationContextContext;
+import edu.wustl.caobr.AnnotationContextInformation;
+import edu.wustl.caobr.AnnotationContextInformationContext;
 import edu.wustl.caobr.AnnotationResource;
 import edu.wustl.caobr.Concept;
 import edu.wustl.caobr.ConceptOntology;
 import edu.wustl.caobr.Context;
 import edu.wustl.caobr.ContextOntology;
+import edu.wustl.caobr.DirectAnnotationContextInformation;
+import edu.wustl.caobr.MappedAnnotationContextInformation;
 import edu.wustl.caobr.Ontology;
 import edu.wustl.caobr.Resource;
 import edu.wustl.caobr.ResourceContext;
 import edu.wustl.caobr.ResourceMainContext;
+import edu.wustl.caobr.TransitiveClosureAnnotationContextInformation;
 import edu.wustl.caobr.service.cache.OntologyResourceCache;
 import edu.wustl.caobr.service.util.RestApiInfo;
 import edu.wustl.caobr.service.util.SearchBean;
@@ -51,6 +56,12 @@ import edu.wustl.caobr.service.util.SearchBean;
 public class XmlToObjectTransformer {
 
     static Map<String, String> idvsOntologyIdMap = new HashMap<String, String>();
+
+    static Map<String, String> ontologyIdVsVirtulaIdMap = new HashMap<String, String>();
+
+    private static final Logger logger = Logger.getLogger(XmlToObjectTransformer.class);
+
+    static String[] annotationType = { "direct", "mapped", "is_a" };
 
     Set<String> resourceIds = new HashSet<String>();
 
@@ -69,7 +80,7 @@ public class XmlToObjectTransformer {
         List<Concept> concepts = new ArrayList<Concept>();
         for (int j = 0; j < list.getLength(); j++) {
             Node node = list.item(j);
-            concepts.add(toConceptObject(node));
+            concepts.add(convertSeachBeantoConcept(toSearchtObject(node)));
         }
         return concepts;
     }
@@ -78,24 +89,33 @@ public class XmlToObjectTransformer {
      * @param node
      * @return
      */
-    private static Concept toConceptObject(Node node) {
+    private static Concept toAnnotationConceptObject(Node node) {
         NodeList list = node.getChildNodes();
         Concept concept = new Concept();
+
+        NamedNodeMap attributes = node.getAttributes();
+
+        for (int i = 1; i <= attributes.getLength(); i++) {
+            Node refrence = attributes.getNamedItem("reference");
+            if (refrence.getNodeName() != null) {
+                return null;
+            }
+        }
 
         for (int j = 0; j < list.getLength(); j++) {
             Node child = list.item(j);
             if ("localOntologyID".equals(child.getNodeName())) {
-                String id = child.getNodeValue();
-                String ontologyId = idvsOntologyIdMap.get(id);
-                ConceptOntology conceptOntology =
-                        new ConceptOntology(OntologyResourceCache.getInstance().getOntology(ontologyId));
+                String ontologyId = child.getTextContent();
+                String virtualOntoId = ontologyIdVsVirtulaIdMap.get(ontologyId);
+                ConceptOntology conceptOntology = new ConceptOntology(
+                        OntologyResourceCache.getInstance().getOntology(virtualOntoId));
                 concept.setOntology(conceptOntology);
             } else if ("preferredName".equals(child.getNodeName())) {
-                concept.setPreferredName(child.getNodeValue());
+                concept.setPreferredName(child.getTextContent());
             } else if ("isRoot".equals(child.getNodeName())) {
-                concept.setIsRoot(Boolean.parseBoolean(child.getNodeValue()));
+                concept.setIsRoot(Boolean.parseBoolean(child.getTextContent()));
             } else if ("localConceptID".equals(child.getNodeName())) {
-                concept.setLocalId(child.getNodeValue());
+                concept.setLocalConceptId(child.getTextContent());
             }
         }
         return concept;
@@ -123,7 +143,6 @@ public class XmlToObjectTransformer {
     private static SearchBean toSearchtObject(Node node) {
         NodeList list = node.getChildNodes();
         SearchBean searchBean = new SearchBean();
-
         for (int j = 0; j < list.getLength(); j++) {
             Node child = list.item(j);
             if ("ontologyId".equals(child.getNodeName())) {
@@ -134,17 +153,32 @@ public class XmlToObjectTransformer {
                 searchBean.setConceptId(child.getTextContent());
             } else if ("conceptIdShort".equals(child.getNodeName())) {
                 searchBean.setConceptIdShort(child.getTextContent());
+            } else if ("preferredName".equals(child.getNodeName())) {
+                searchBean.setPreferredName(child.getTextContent());
             }
         }
         return searchBean;
     }
 
+    private Concept convertSeachBeantoConcept(SearchBean s) {
+        Concept concept = new Concept();
+        concept.setIsRoot(false);
+        concept.setLocalConceptId(s.getConceptId());
+        String virtualOntoId = s.getOntologyId();
+        ConceptOntology conceptOntology = new ConceptOntology(
+                OntologyResourceCache.getInstance().getOntology(virtualOntoId));
+        concept.setOntology(conceptOntology);
+        concept.setPreferredName(s.getPreferredName());
+        return concept;
+
+    }
+
     /**
      * @param xmlResult
-     * @param ontologyIdsToLookFor 
+     * @param ontologyIdsToLookFor
      * @return
      */
-    public List<Ontology> toOntologies(String xmlResult, Set<String> ontologiesUsedWhileAnnotating) {
+    public List<Ontology> toOntologies(String xmlResult, Map<String, String> ontologiesUsedWhileAnnotating) {
         NodeList list = getElementsFromXML(xmlResult, "ontologyBean", false);
 
         List<Ontology> ontologies = new ArrayList<Ontology>();
@@ -166,12 +200,12 @@ public class XmlToObjectTransformer {
         NodeList list = node.getChildNodes();
         Ontology o = new Ontology();
         for (int j = 0; j < list.getLength(); j++) {
-            String id = null;
-            String ontologyId = null;
+
+            String virtualOntologyId = null;
             Node child = list.item(j);
-            if ("ontologyId".equals(child.getTextContent())) {
-                ontologyId = child.getTextContent();
-                o.setOntologyId(ontologyId);
+            if ("ontologyId".equals(child.getNodeName())) {
+                virtualOntologyId = child.getTextContent();
+                o.setOntologyId(virtualOntologyId);
             } else if ("abbreviation".equals(child.getNodeName())) {
                 o.setAbbrevation(child.getTextContent());
             } else if ("description".equals(child.getNodeName())) {
@@ -182,12 +216,6 @@ public class XmlToObjectTransformer {
                 o.setFormat(child.getTextContent());
             } else if ("versionNumber".equals(child.getNodeName())) {
                 o.setVersion(child.getTextContent());
-            } else if ("id".equals(child.getNodeName())) {
-                id = child.getTextContent();
-                idvsOntologyIdMap.put(id, ontologyId);
-            } else if ("ontologyId".equals(child.getNodeName())) {
-                ontologyId = child.getTextContent();
-                o.setOntologyId(ontologyId);
             }
         }
         return o;
@@ -198,28 +226,42 @@ public class XmlToObjectTransformer {
      * @param ontologyIdsToLookFor
      * @return
      */
-    private static boolean isUsedForAnnotation(Node node, Set<String> ontologiesUsedWhileAnnotating) {
+    private static boolean isUsedForAnnotation(Node node, Map<String, String> ontologiesUsedWhileAnnotating) {
         NodeList list = node.getChildNodes();
         boolean isUsedForAnnotation = false;
         for (int j = 0; j < list.getLength(); j++) {
             Node child = list.item(j);
             if ("ontologyId".equals(child.getNodeName())) {
                 String id = child.getTextContent();
-                isUsedForAnnotation = ontologiesUsedWhileAnnotating.contains(id);
+                isUsedForAnnotation = ontologiesUsedWhileAnnotating.containsKey(id);
             }
         }
         return isUsedForAnnotation;
-//        return true;
+        // return true;
     }
-    public  Set<String> getOntologiesUsedWhileAnnotating(String xmlResult) {
-        Set<String> set = new HashSet<String>();
-        NodeList list = getElementsFromXML(xmlResult, "virtualOntologyID", false);
+
+    public Map<String, String> getOntologiesUsedWhileAnnotating(String xmlResult) {
+        Map<String, String> map = new HashMap<String, String>();
+        NodeList list = getElementsFromXML(xmlResult, "obs.common.beans.OntologyBean", false);
         for (int j = 0; j < list.getLength(); j++) {
             Node node = list.item(j);
-            set.add(node.getTextContent());
+            NodeList childNodes = node.getChildNodes();
+            String localOntologyID = null;
+            String virtualOntologyID = null;
+            for (int i = 0; i < childNodes.getLength(); i++) {
+                Node childNode = childNodes.item(i);
+                if ("localOntologyID".equals(childNode.getNodeName())) {
+                    localOntologyID = childNode.getTextContent();
+                } else if ("virtualOntologyID".equals(childNode.getNodeName())) {
+                    virtualOntologyID = childNode.getTextContent();
+                }
+            }
+            map.put(virtualOntologyID, localOntologyID);
+            ontologyIdVsVirtulaIdMap.put(localOntologyID, virtualOntologyID);
         }
-        return set;
+        return map;
     }
+
     /**
      * @param xmlResult
      * @return
@@ -253,6 +295,8 @@ public class XmlToObjectTransformer {
                 r.setLogoURL(child.getTextContent());
             } else if (RestApiInfo.getTagNameResourceId().equals(child.getNodeName())) {
                 r.setResourceId(child.getTextContent());
+            } else if (RestApiInfo.getTagNameResourceURL().equals(child.getNodeName())) {
+                r.setResourceURL(child.getTextContent());
             } else if (RestApiInfo.getTagNameResourceMainContext().equals(child.getNodeName())) {
 
                 Iterator<String> keyIterator = contextNames.iterator();
@@ -265,8 +309,9 @@ public class XmlToObjectTransformer {
 
                         Double weight = weightValuesMap.get(key);
                         String id = ontologyValuesMap.get(key);
-                        String ontologyId = idvsOntologyIdMap.get(id);
-                        Ontology ontology = OntologyResourceCache.getInstance().getOntology(ontologyId);
+                        String virtualOntologyId = ontologyIdVsVirtulaIdMap.get(id);
+
+                        Ontology ontology = OntologyResourceCache.getInstance().getOntology(virtualOntologyId);
 
                         ContextOntology cntxOntology = new ContextOntology();
                         cntxOntology.setOntology(ontology);
@@ -282,9 +327,8 @@ public class XmlToObjectTransformer {
                             r.setMainContext(mainContext);
                         }
                         contexts.add(context);
-
-                        ResourceContext rContext =
-                                new ResourceContext(contexts.toArray(new Context[contexts.size()]));
+                        ResourceContext rContext = new ResourceContext(
+                                contexts.toArray(new Context[contexts.size()]));
                         r.setContext(rContext);
                     }
                 }
@@ -303,14 +347,11 @@ public class XmlToObjectTransformer {
             DocumentBuilder documentBuilder = factory.newDocumentBuilder();
             doc = documentBuilder.parse(src);
         } catch (ParserConfigurationException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
+            logger.error("Parser Configuration Exception ", e);
         } catch (SAXException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
+            logger.error("SAX Exception", e);
         } catch (IOException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
+            logger.error("IO Exception", e);
         }
         return doc;
     }
@@ -323,7 +364,7 @@ public class XmlToObjectTransformer {
      * @throws SAXException
      * @throws IOException
      * @throws XPathExpressionException
-     * @throws ParserConfigurationException 
+     * @throws ParserConfigurationException
      */
     private NodeList getElementsFromXML(String file, String nodeName, boolean flag) {
         Document doc = getDocument(file);
@@ -422,14 +463,17 @@ public class XmlToObjectTransformer {
         XPathFactory fact = XPathFactory.newInstance();
         XPath xpath = fact.newXPath();
         List<Annotation> annotationList = new ArrayList<Annotation>();
+
         String annotationPath = "//directAnnotations/obs.common.beans.ObrAnnotationBeanDetailled";
-        setAllAnnotation(annotationList, doc, xpath, true, annotationPath);
+        setAllAnnotation(annotationList, doc, xpath, annotationPath);
 
         annotationPath = "//mappingAnnotations/obs.common.beans.ObrAnnotationBeanDetailled";
-        setAllAnnotation(annotationList, doc, xpath, true, annotationPath);
+        setAllAnnotation(annotationList, doc, xpath, annotationPath);
+
+        annotationPath = "//isaAnnotations/obs.common.beans.ObrAnnotationBeanDetailled";
+        setAllAnnotation(annotationList, doc, xpath, annotationPath);
 
         return annotationList;
-
     }
 
     /**
@@ -440,42 +484,79 @@ public class XmlToObjectTransformer {
      * @param annotationPath
      * @throws XPathExpressionException
      */
-    void setAllAnnotation(List<Annotation> annotationList, Document doc, XPath xpath, boolean isDirectAnnotation,
-                          String annotationPath) {
+    void setAllAnnotation(List<Annotation> annotationList, Document doc, XPath xpath, String annotationPath) {
         NodeList list = evaluate(doc, xpath, annotationPath);
 
+        Concept referencedConcept = null;
         for (int j = 0; j < list.getLength(); j++) {
 
             Node node = list.item(j);
             Annotation annotation = null;
-            String contextName = null;
             boolean isDirect = false;
-            BigInteger termID = null;
+            BigInteger termId = null;
             String termName = null;
-            Concept concept = null;
             String localElementID = null;
+            Concept concept = null;
             String annotationDescription = null;
             float score = 0.0f;
+            String childConceptId = null;
+            BigInteger level = null;
+            BigInteger from = null;
+            BigInteger to = null;
+            String mappingType = null;
+            String mappedConceptId = null;
 
             NodeList chilrenNodeList = node.getChildNodes();
 
             for (int k = 0; k < chilrenNodeList.getLength(); k++) {
                 Node child = chilrenNodeList.item(k);
                 if ("concept".equals(child.getNodeName())) {
-                    concept = toConceptObject(child);
-                } else if ("context".equals(child.getNodeName())) {
-                    contextName = getChild(child, "contextName").getTextContent();
-                    isDirect = Boolean.parseBoolean(getChild(child, "isDirect").getTextContent());
-                    Node nodeTermID = getChild(child, "termID");
-                    if (!(nodeTermID == null)) {
-
-                        termID = BigInteger.valueOf(Long.parseLong(nodeTermID.getTextContent()));
+                    concept = toAnnotationConceptObject(child);
+                    if (concept != null) {
+                        referencedConcept = concept;
                     }
 
-                    Node nodeTermName = getChild(child, "termName");
+                } else if ("context".equals(child.getNodeName())) {
+                    isDirect = Boolean.parseBoolean(getChild(child, "isDirect").getTextContent());
+                    if (isDirect) {
+                        Node nodeTermID = getChild(child, "termID");
+                        if (nodeTermID != null) {
+                            termId = BigInteger.valueOf(Long.parseLong(nodeTermID.getTextContent()));
+                        }
 
-                    if (!(nodeTermName == null)) {
-                        termName = nodeTermName.getTextContent();
+                        Node nodeTermName = getChild(child, "termName");
+                        if (nodeTermName != null) {
+                            termName = nodeTermName.getTextContent();
+                        }
+                        Node nodeFrom = getChild(child, "from");
+                        if (nodeFrom != null) {
+                            from = BigInteger.valueOf(Integer.parseInt(nodeFrom.getTextContent()));
+                        }
+                        Node nodeTo = getChild(child, "to");
+                        if (nodeTo != null) {
+                            to = BigInteger.valueOf(Integer.parseInt(nodeTo.getTextContent()));
+                        }
+                    } else {
+
+                        Node nodeChildConceptID = getChild(child, "childConceptID");
+                        if (nodeChildConceptID != null) {
+                            childConceptId = nodeChildConceptID.getTextContent();
+                        }
+
+                        Node nodeLevel = getChild(child, "level");
+                        if (nodeLevel != null) {
+                            level = BigInteger.valueOf(Integer.parseInt(nodeLevel.getTextContent()));
+                        }
+
+                        Node nodeMappedConceptId = getChild(child, "mappedConceptID");
+                        if (nodeMappedConceptId != null) {
+                            mappedConceptId = nodeMappedConceptId.getTextContent();
+                        }
+
+                        Node nodeMappingType = getChild(child, "mappingType");
+                        if (nodeMappingType != null) {
+                            mappingType = nodeMappingType.getTextContent();
+                        }
                     }
 
                 } else if ("localElementID".equals(child.getNodeName())) {
@@ -488,44 +569,65 @@ public class XmlToObjectTransformer {
                     Node resourceId = getChild(elementStructure, "resourceID");
                     Node contexts = getChild(elementStructure, "contexts");
                     List<Node> entries = getChildren(contexts, "entry");
+
+                    Resource resource = OntologyResourceCache.getInstance().getResource(
+                                                                                        resourceId.getTextContent());
+                    int length = resource.getContext().getContext().length;
+                    AnnotationContextInformation[] annotationContextInformations = new AnnotationContextInformation[length];
+                    int i = 0;
+
                     for (Node entry : entries) {
                         String entryContextName = entry.getChildNodes().item(1).getTextContent();
                         String entryContextValue = entry.getChildNodes().item(3).getTextContent();
 
-                        Resource resource =
-                                OntologyResourceCache.getInstance().getResource(resourceId.getTextContent());
-
-                        int length = resource.getContext().getContext().length;
-                        AnnotationContext[] annotationContexts = new AnnotationContext[length];
-                        int i = 0;
                         for (Context resourceContext : resource.getContext().getContext()) {
                             if (resourceContext.getName().equals(entryContextName)) {
-                                AnnotationContextContext annotationContextContext = new AnnotationContextContext();
+                                AnnotationContextInformationContext annotationContextContext = new AnnotationContextInformationContext();
                                 annotationContextContext.setContext(resourceContext);
-                                isDirect = entryContextName.equals(contextName);
-                                AnnotationContext annotationContext =
-                                        new AnnotationContext(annotationContextContext, isDirect, termID,
-                                                termName, entryContextValue);
+                                // isDirect = entryContextName.equals(contextName);
+                                AnnotationContextInformation annotationContext = null;
+                                annotation = new Annotation();
+                                if (isDirect) {
+                                    annotationContext = new DirectAnnotationContextInformation(from, termId,
+                                            termName, to);
 
-                                annotationContexts[i] = annotationContext;
+                                    annotation.setType(annotationType[0]);
+                                } else {
+                                    if (mappedConceptId != null & mappingType != null) {
+                                        annotationContext = new MappedAnnotationContextInformation(
+                                                mappedConceptId, mappingType);
+                                        annotation.setType(annotationType[1]);
+                                    }
+                                    if (childConceptId != null & level != null) {
+                                        annotationContext = new TransitiveClosureAnnotationContextInformation(
+                                                childConceptId, level);
+                                        annotation.setType(annotationType[2]);
+                                    }
+                                }
+                                annotationContext.setContext(annotationContextContext);
+                                annotationContext.setValue(entryContextValue);
+
+                                annotationContextInformations[i] = annotationContext;
                                 i++;
                                 if (resource.getMainContext().getContext().getName().equals(entryContextName)) {
                                     annotationDescription = entryContextValue;
                                 }
                             }
-
                         }
-                        AnnotationConcept annotationConcept = new AnnotationConcept(concept);
-                        AnnotationAnnotationContext annotationAnnotationContext =
-                                new AnnotationAnnotationContext(annotationContexts);
+                        AnnotationConcept annotationConcept = new AnnotationConcept(referencedConcept);
+                        AnnotationAnnotationContext annotationAnnotationContext = new AnnotationAnnotationContext(
+                                annotationContextInformations);
 
                         AnnotationResource annotationResource = new AnnotationResource(resource);
 
                         String annotationURL = resource.getElementURL() + localElementID;
-                        annotation =
-                                new Annotation(annotationAnnotationContext, annotationConcept,
-                                        annotationDescription, localElementID, isDirectAnnotation,
-                                        annotationResource, score, annotationURL);
+                        annotation.setAnnotationContext(annotationAnnotationContext);
+                        annotation.setConcept(annotationConcept);
+                        annotation.setDescription(annotationDescription);
+                        annotation.setElementId(localElementID);
+                        annotation.setResource(annotationResource);
+                        annotation.setUrl(annotationURL);
+                        annotation.setScore(score);
 
                     }
                 }
@@ -540,8 +642,7 @@ public class XmlToObjectTransformer {
             Object result = expr.evaluate(doc, XPathConstants.NODESET);
             return (NodeList) result;
         } catch (XPathExpressionException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
+            logger.error("XPath Expression Exception", e);
         }
         return null;
     }

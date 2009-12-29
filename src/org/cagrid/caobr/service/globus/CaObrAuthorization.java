@@ -71,7 +71,7 @@ public class CaObrAuthorization implements PDP {
 		
 	}
 	   				
-	public void authorizeGetAllAnnoations(Subject peerSubject, MessageContext context, QName operation) throws AuthorizationException {
+	public void authorizeGetAllAnnotations(Subject peerSubject, MessageContext context, QName operation) throws AuthorizationException {
 		
 	}
 	   				
@@ -130,8 +130,8 @@ public class CaObrAuthorization implements PDP {
 		} else if(operation.getLocalPart().equals("getServiceSecurityMetadata")){
 			authorizeGetServiceSecurityMetadata(peerSubject, context, operation);
 			return true;
-		} else if(operation.getLocalPart().equals("getAllAnnoations")){
-			authorizeGetAllAnnoations(peerSubject, context, operation);
+		} else if(operation.getLocalPart().equals("getAllAnnotations")){
+			authorizeGetAllAnnotations(peerSubject, context, operation);
 			return true;
 		} else if(operation.getLocalPart().equals("getAllConcepts")){
 			authorizeGetAllConcepts(peerSubject, context, operation);

@@ -18,7 +18,7 @@ public interface CaObrI {
 
   public org.oasis.wsrf.properties.QueryResourcePropertiesResponse queryResourceProperties(org.oasis.wsrf.properties.QueryResourceProperties_Element params) throws RemoteException ;
 
-  public edu.wustl.caobr.Annotation[] getAllAnnoations(java.lang.String token) throws RemoteException ;
+  public edu.wustl.caobr.Annotation[] getAllAnnotations(java.lang.String token) throws RemoteException ;
 
   public edu.wustl.caobr.Concept[] getAllConcepts(java.lang.String conceptName) throws RemoteException ;
 

@@ -2,11 +2,14 @@
  <ns2:Namespaces xsi:type="ns2:NamespacesType" xmlns:ns2="gme://gov.nih.nci.cagrid.introduce/1/Namespace" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <ns2:Namespace location="./edu.wustl.caobr.xsd" namespace="gme://caCORE.caCORE/3.2/edu.wustl.caobr" packageName="edu.wustl.caobr" xsi:type="ns2:NamespaceType">
    <ns2:SchemaElement type="Annotation" xsi:type="ns2:SchemaElementType"/>
-   <ns2:SchemaElement type="AnnotationContext" xsi:type="ns2:SchemaElementType"/>
+   <ns2:SchemaElement type="AnnotationContextInformation" xsi:type="ns2:SchemaElementType"/>
    <ns2:SchemaElement type="Concept" xsi:type="ns2:SchemaElementType"/>
    <ns2:SchemaElement type="Context" xsi:type="ns2:SchemaElementType"/>
+   <ns2:SchemaElement type="DirectAnnotationContextInformation" xsi:type="ns2:SchemaElementType"/>
+   <ns2:SchemaElement type="MappedAnnotationContextInformation" xsi:type="ns2:SchemaElementType"/>
    <ns2:SchemaElement type="Ontology" xsi:type="ns2:SchemaElementType"/>
    <ns2:SchemaElement type="Resource" xsi:type="ns2:SchemaElementType"/>
+   <ns2:SchemaElement type="TransitiveClosureAnnotationContextInformation" xsi:type="ns2:SchemaElementType"/>
   </ns2:Namespace>
   <ns2:Namespace generateStubs="false" namespace="http://www.w3.org/2001/XMLSchema" xsi:type="ns2:NamespaceType">
    <ns2:SchemaElement type="anySimpleType" xsi:type="ns2:SchemaElementType"/>
@@ -132,7 +135,7 @@
      <ns4:ImportInformation namespace="http://security.introduce.cagrid.nci.nih.gov/ServiceSecurity" packageName="gov.nih.nci.cagrid.introduce.security.stubs" portTypeName="ServiceSecurityPortType" wsdlFile="ServiceSecurity.wsdl"/>
      <ns4:ProviderInformation providerClass="gov.nih.nci.cagrid.introduce.security.service.globus.ServiceSecurityProviderImpl"/>
     </ns4:Method>
-    <ns4:Method description="" isImported="false" isProvided="false" name="getAllAnnoations" xsi:type="ns4:MethodType">
+    <ns4:Method description="" isImported="false" isProvided="false" name="getAllAnnotations" xsi:type="ns4:MethodType">
      <ns4:Inputs>
       <ns4:Input qName="xsd:string" description="" isArray="false" name="token" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
      </ns4:Inputs>

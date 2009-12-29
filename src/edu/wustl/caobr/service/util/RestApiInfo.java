@@ -75,6 +75,11 @@ public class RestApiInfo {
         return properties.getProperty("tagname.resource.contexts");
     }
 
+    public static String getTagNameResourceURL() {
+        return properties.getProperty("tagname.resource.resourceURL");
+    }
+    
+    
     //========================================================================
     public static String getTagNameOntologyRoot() {
         return properties.getProperty("tagname.ontology.root");
