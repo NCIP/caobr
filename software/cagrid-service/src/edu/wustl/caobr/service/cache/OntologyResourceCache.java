@@ -42,21 +42,21 @@ public class OntologyResourceCache {
     }
 
     private void intializeOntologyMap() {
-        Set<String> ontologiesUsedWhileAnnotating = getOntologiesUsedWhileAnnotating();
+        Map<String, String> ontologiesUsedWhileAnnotating = getOntologiesUsedWhileAnnotating();
         String targetUrl = RestApiInfo.getOntologyDetailsURL();
         String result = RestApiInvoker.getResult(targetUrl);
-        List<Ontology> obean = new XmlToObjectTransformer().toOntologies(result,ontologiesUsedWhileAnnotating);
+        List<Ontology> obean = new XmlToObjectTransformer().toOntologies(result, ontologiesUsedWhileAnnotating);
 
         for (Ontology ontology : obean) {
             ontologyMap.put(ontology.getOntologyId(), ontology);
         }
     }
-    
-    private Set<String> getOntologiesUsedWhileAnnotating() {
+
+    private Map<String, String> getOntologiesUsedWhileAnnotating() {
         String targetUrl = RestApiInfo.getOntologyURL();
         String result = RestApiInvoker.getResult(targetUrl);
-        Set<String> idSet = new XmlToObjectTransformer().getOntologiesUsedWhileAnnotating(result);
-        return idSet;
+        Map<String, String> virtualOntlogyMap = new XmlToObjectTransformer().getOntologiesUsedWhileAnnotating(result);
+        return virtualOntlogyMap;
     }
 
     /**

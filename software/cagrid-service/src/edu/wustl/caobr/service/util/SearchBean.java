@@ -14,6 +14,16 @@ public class SearchBean {
 
     private String conceptIdShort;
 
+    private String preferredName;
+
+    public String getPreferredName() {
+        return preferredName;
+    }
+
+    public void setPreferredName(String preferredName) {
+        this.preferredName = preferredName;
+    }
+
     public SearchBean() {
     }
 

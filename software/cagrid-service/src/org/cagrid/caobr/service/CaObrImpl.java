@@ -25,9 +25,9 @@ import edu.wustl.caobr.service.cache.OntologyResourceCache;
 import edu.wustl.caobr.service.util.RestApiInfo;
 import edu.wustl.caobr.service.util.SearchBean;
 
-/** 
- * This class is the entry point to service. 
- * All methods exposed by service are implemented here.
+/**
+ * This class is the entry point to service. All methods exposed by service are
+ * implemented here.
  * 
  * @created by Introduce Toolkit version 1.3
  * @author chandrakant_talele
@@ -45,7 +45,8 @@ public class CaObrImpl extends CaObrImplBase {
         new Timer().scheduleAtFixedRate(new TimerTask() {
             public void run() {
                 try {
-                    //Any exception kills the thread. So adding this try catch to keep thread alive
+                    // Any exception kills the thread. So adding this try catch
+                    // to keep thread alive
                     OntologyResourceCache.getInstance();
                 } catch (Throwable t) {
                     logger.error(t);
@@ -60,24 +61,23 @@ public class CaObrImpl extends CaObrImplBase {
      */
     public CaObrImpl() throws RemoteException {
         super();
-
     }
 
     /**
      * @param token
-     * @return
+     * @return Annotations
      * @throws RemoteException
      */
-    public Annotation[] getAllAnnoations(String token) throws RemoteException {
+    public edu.wustl.caobr.Annotation[] getAllAnnotations(java.lang.String token) throws RemoteException {
         return getAnnotations(null, null, token);
     }
 
     /**
      * @param conceptName
-     * @return
+     * @return Concepts
      * @throws RemoteException
      */
-    public Concept[] getAllConcepts(String conceptName) throws RemoteException {
+    public edu.wustl.caobr.Concept[] getAllConcepts(java.lang.String conceptName) throws RemoteException {
         return getConcepts(null, conceptName);
     }
 
@@ -85,7 +85,7 @@ public class CaObrImpl extends CaObrImplBase {
      * @return
      * @throws RemoteException
      */
-    public Ontology[] getAllOntologies() throws RemoteException {
+    public edu.wustl.caobr.Ontology[] getAllOntologies() throws RemoteException {
         return OntologyResourceCache.getInstance().getAllOntologies();
     }
 
@@ -93,7 +93,7 @@ public class CaObrImpl extends CaObrImplBase {
      * @return
      * @throws RemoteException
      */
-    public Resource[] getAllResources() throws RemoteException {
+    public edu.wustl.caobr.Resource[] getAllResources() throws RemoteException {
         return OntologyResourceCache.getInstance().getAllResources();
     }
 
@@ -101,11 +101,12 @@ public class CaObrImpl extends CaObrImplBase {
      * @param fromOntologies
      * @param fromResources
      * @param token
-     * @return
+     * @return Annotations
      * @throws RemoteException
      */
-    public Annotation[] getAnnotations(Ontology[] fromOntologies, Resource[] fromResources, String token)
-            throws RemoteException {
+    public edu.wustl.caobr.Annotation[] getAnnotations(edu.wustl.caobr.Ontology[] fromOntologies,
+                                                       edu.wustl.caobr.Resource[] fromResources,
+                                                       java.lang.String token) throws RemoteException {
         System.out.println("Fetching Annotation:");
         String url;
         if (fromOntologies == null || fromOntologies.length == 0) {
@@ -138,28 +139,17 @@ public class CaObrImpl extends CaObrImplBase {
      * @return
      */
     private Map<String, String> getParamStr(SearchBean searchBean, Resource r) {
-        //TODO need to check this with lalit. Can it be reduced to List of attribute-value pairs ?
 
-        /* String urlParameters = "localConceptIDs="
-                  + encode(searchBean.getOntologyId() + "/" + searchBean.getConceptIdShort()) + "&resourceID="
-                  + encode(r.getResourceId()) + "&elementDetails=" + encode("true") + "&virtual=" + encode("true")
-                  + "&withContext=" + encode("true");
-         */
         Map<String, String> parametersMap = new HashMap<String, String>();
-
         parametersMap.put("localConceptIDs", encode(searchBean.getOntologyId() + "/"
                 + searchBean.getConceptIdShort()));
         parametersMap.put("resourceID", encode(r.getResourceId()));
         parametersMap.put("elementDetails", encode("true"));
         parametersMap.put("virtual", encode("true"));
         parametersMap.put("withContext", encode("true"));
+        parametersMap.put("from", encode("1"));
+        parametersMap.put("number", encode(Integer.toString(Integer.MAX_VALUE)));
 
-        //        String urlParameters =
-        //                    "localOntologyIDs=" + encode(searchBean.getOntologyVersionId().toString())
-        //                    + "&localConceptIDs=" + encode(searchBean.getOntologyVersionId() + "/" + searchBean.getConceptIdShort())
-        //                  + "&resourceID="      + encode(r.getResourceId()) 
-        //                  + "&elementDetails="  + encode("true") 
-        //                  + "&withContext="     + encode("true");
         return parametersMap;
     }
 
@@ -171,8 +161,7 @@ public class CaObrImpl extends CaObrImplBase {
         try {
             return URLEncoder.encode(str, "UTF-8");
         } catch (UnsupportedEncodingException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
+            logger.error("UnSupported Encoding Exception", e);
             throw new RuntimeException(e);
         }
     }
@@ -183,7 +172,8 @@ public class CaObrImpl extends CaObrImplBase {
      * @return
      * @throws RemoteException
      */
-    public Concept[] getConcepts(Ontology[] fromOntologies, String conceptName) throws RemoteException {
+    public edu.wustl.caobr.Concept[] getConcepts(edu.wustl.caobr.Ontology[] fromOntologies,
+                                                 java.lang.String conceptName) throws RemoteException {
         String trimmedTerm = conceptName.trim();
         if (trimmedTerm.equals("")) {
             return new Concept[0];
@@ -207,7 +197,8 @@ public class CaObrImpl extends CaObrImplBase {
      * @return
      * @throws RemoteException
      */
-    public boolean isConcept(Ontology[] fromOntologies, String searchTerm) throws RemoteException {
+    public boolean isConcept(edu.wustl.caobr.Ontology[] fromOntologies, java.lang.String searchTerm)
+            throws RemoteException {
         String trimmedTerm = searchTerm.trim();
         if (trimmedTerm.equals("")) {
             return false;
@@ -226,7 +217,7 @@ public class CaObrImpl extends CaObrImplBase {
      * @return
      * @throws RemoteException
      */
-    public boolean isConceptInAnyOntology(String searchTerm) throws RemoteException {
+    public boolean isConceptInAnyOntology(java.lang.String searchTerm) throws RemoteException {
         String trimmedTerm = searchTerm.trim();
         if (trimmedTerm.equals("")) {
             return false;
@@ -266,7 +257,8 @@ public class CaObrImpl extends CaObrImplBase {
      * @return
      * @throws RemoteException
      */
-    public boolean[] isConcepts(String[] tokens, Ontology[] ontologies) throws RemoteException {
+    public boolean[] isConcepts(java.lang.String[] tokens, edu.wustl.caobr.Ontology[] ontologies)
+            throws RemoteException {
         boolean[] flags = new boolean[tokens.length];
         int i = 0;
         for (String token : tokens) {
@@ -281,7 +273,7 @@ public class CaObrImpl extends CaObrImplBase {
      * @return
      * @throws RemoteException
      */
-    public boolean[] isConceptsInAnyOntology(String[] tokens) throws RemoteException {
+    public boolean[] isConceptsInAnyOntology(java.lang.String[] tokens) throws RemoteException {
         boolean[] flags = new boolean[tokens.length];
         int i = 0;
         for (String token : tokens) {
@@ -293,14 +285,15 @@ public class CaObrImpl extends CaObrImplBase {
     }
 
     /**
-     * This method returns the target URL for searching concept 
+     * This method returns the target URL for searching concept
+     * 
      * @param ontologies
      * @param conceptName
      * @return
      */
     private String getTargetUrl(Ontology[] ontologies, String conceptName) {
 
-        String ontologyIds = "?ontologyids="; // TODO from  1 dec 09 looks like it should be small case
+        String ontologyIds = "?ontologyids=";
         for (int i = 0; i < ontologies.length; i++) {
             Ontology ontology = ontologies[i];
             if (i != ontologies.length - 1) {
