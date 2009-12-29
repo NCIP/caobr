@@ -23,6 +23,7 @@
     <xs:attribute name="description" type="xs:string" />
     <xs:attribute name="elementURL" type="xs:string" />
     <xs:attribute name="logoURL" type="xs:string" />
+    <xs:attribute name="resourceURL" type="xs:string" />
   </xs:complexType>
   <xs:element name="Ontology" type="Ontology" />
   <xs:complexType name="Ontology">
@@ -37,13 +38,6 @@
   <xs:element name="Annotation" type="Annotation" />
   <xs:complexType name="Annotation">
     <xs:sequence>
-      <xs:element name="concept" minOccurs="0" maxOccurs="1">
-        <xs:complexType>
-          <xs:sequence>
-            <xs:element ref="Concept" minOccurs="0" maxOccurs="1" />
-          </xs:sequence>
-        </xs:complexType>
-      </xs:element>
       <xs:element name="resource" minOccurs="0" maxOccurs="1">
         <xs:complexType>
           <xs:sequence>
@@ -51,10 +45,17 @@
           </xs:sequence>
         </xs:complexType>
       </xs:element>
+      <xs:element name="concept" minOccurs="0" maxOccurs="1">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="Concept" minOccurs="0" maxOccurs="1" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
       <xs:element name="annotationContext" minOccurs="0" maxOccurs="1">
         <xs:complexType>
           <xs:sequence>
-            <xs:element ref="AnnotationContext" minOccurs="0" maxOccurs="unbounded" />
+            <xs:element ref="AnnotationContextInformation" minOccurs="0" maxOccurs="unbounded" />
           </xs:sequence>
         </xs:complexType>
       </xs:element>
@@ -63,7 +64,7 @@
     <xs:attribute name="description" type="xs:string" />
     <xs:attribute name="url" type="xs:string" />
     <xs:attribute name="score" type="xs:float" />
-    <xs:attribute name="isDirect" type="xs:boolean" />
+    <xs:attribute name="type" type="xs:string" />
   </xs:complexType>
   <xs:element name="Concept" type="Concept" />
   <xs:complexType name="Concept">
@@ -76,7 +77,7 @@
         </xs:complexType>
       </xs:element>
     </xs:sequence>
-    <xs:attribute name="localId" type="xs:string" />
+    <xs:attribute name="localConceptId" type="xs:string" />
     <xs:attribute name="preferredName" type="xs:string" />
     <xs:attribute name="isRoot" type="xs:boolean" />
   </xs:complexType>
@@ -94,8 +95,8 @@
     <xs:attribute name="name" type="xs:string" />
     <xs:attribute name="weight" type="xs:float" />
   </xs:complexType>
-  <xs:element name="AnnotationContext" type="AnnotationContext" />
-  <xs:complexType name="AnnotationContext">
+  <xs:element name="AnnotationContextInformation" type="AnnotationContextInformation" />
+  <xs:complexType name="AnnotationContextInformation">
     <xs:sequence>
       <xs:element name="context" minOccurs="0" maxOccurs="1">
         <xs:complexType>
@@ -105,10 +106,39 @@
         </xs:complexType>
       </xs:element>
     </xs:sequence>
-    <xs:attribute name="isDirect" type="xs:boolean" />
-    <xs:attribute name="termId" type="xs:integer" />
-    <xs:attribute name="termName" type="xs:string" />
     <xs:attribute name="value" type="xs:string" />
+  </xs:complexType>
+  <xs:element name="TransitiveClosureAnnotationContextInformation" type="TransitiveClosureAnnotationContextInformation" />
+  <xs:complexType name="TransitiveClosureAnnotationContextInformation">
+    <xs:complexContent>
+      <xs:extension base="AnnotationContextInformation">
+        <xs:sequence />
+        <xs:attribute name="childConceptId" type="xs:string" />
+        <xs:attribute name="level" type="xs:integer" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DirectAnnotationContextInformation" type="DirectAnnotationContextInformation" />
+  <xs:complexType name="DirectAnnotationContextInformation">
+    <xs:complexContent>
+      <xs:extension base="AnnotationContextInformation">
+        <xs:sequence />
+        <xs:attribute name="termId" type="xs:integer" />
+        <xs:attribute name="termName" type="xs:string" />
+        <xs:attribute name="from" type="xs:integer" />
+        <xs:attribute name="to" type="xs:integer" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="MappedAnnotationContextInformation" type="MappedAnnotationContextInformation" />
+  <xs:complexType name="MappedAnnotationContextInformation">
+    <xs:complexContent>
+      <xs:extension base="AnnotationContextInformation">
+        <xs:sequence />
+        <xs:attribute name="mappedConceptId" type="xs:string" />
+        <xs:attribute name="mappingType" type="xs:string" />
+      </xs:extension>
+    </xs:complexContent>
   </xs:complexType>
 </xs:schema>
 
