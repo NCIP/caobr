@@ -51,7 +51,8 @@ public class RestApiInvoker {
             }
             in.close();
         } catch (Exception e) {
-            logger.debug("Could not get result from service  :" + targetUrl, e);
+            logger.error("Could not get result from service  :" + targetUrl);
+            throw new RuntimeException(e);
         }
         logger.debug("Result XML " + retrunData);
         return retrunData.toString();
@@ -114,7 +115,7 @@ public class RestApiInvoker {
             }
             in.close();
         } catch (IOException e) {
-            e.printStackTrace();
+            throw new RuntimeException(e);
         }
         logger.debug("Result XML " + retrunData);
         return retrunData.toString();

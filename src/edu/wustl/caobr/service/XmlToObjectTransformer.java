@@ -46,7 +46,8 @@ import edu.wustl.caobr.Resource;
 import edu.wustl.caobr.ResourceContext;
 import edu.wustl.caobr.ResourceMainContext;
 import edu.wustl.caobr.TransitiveClosureAnnotationContextInformation;
-import edu.wustl.caobr.service.cache.OntologyResourceCache;
+import edu.wustl.caobr.service.cache.OntologyCache;
+import edu.wustl.caobr.service.cache.ResourceCache;
 import edu.wustl.caobr.service.util.RestApiInfo;
 import edu.wustl.caobr.service.util.SearchBean;
 
@@ -108,7 +109,7 @@ public class XmlToObjectTransformer {
                 String ontologyId = child.getTextContent();
                 String virtualOntoId = ontologyIdVsVirtulaIdMap.get(ontologyId);
                 ConceptOntology conceptOntology = new ConceptOntology(
-                        OntologyResourceCache.getInstance().getOntology(virtualOntoId));
+                        OntologyCache.getInstance().getOntology(virtualOntoId));
                 concept.setOntology(conceptOntology);
             } else if ("preferredName".equals(child.getNodeName())) {
                 concept.setPreferredName(child.getTextContent());
@@ -166,7 +167,7 @@ public class XmlToObjectTransformer {
         concept.setLocalConceptId(s.getConceptId());
         String virtualOntoId = s.getOntologyId();
         ConceptOntology conceptOntology = new ConceptOntology(
-                OntologyResourceCache.getInstance().getOntology(virtualOntoId));
+                OntologyCache.getInstance().getOntology(virtualOntoId));
         concept.setOntology(conceptOntology);
         concept.setPreferredName(s.getPreferredName());
         return concept;
@@ -311,7 +312,7 @@ public class XmlToObjectTransformer {
                         String id = ontologyValuesMap.get(key);
                         String virtualOntologyId = ontologyIdVsVirtulaIdMap.get(id);
 
-                        Ontology ontology = OntologyResourceCache.getInstance().getOntology(virtualOntologyId);
+                        Ontology ontology = OntologyCache.getInstance().getOntology(virtualOntologyId);
 
                         ContextOntology cntxOntology = new ContextOntology();
                         cntxOntology.setOntology(ontology);
@@ -346,13 +347,10 @@ public class XmlToObjectTransformer {
         try {
             DocumentBuilder documentBuilder = factory.newDocumentBuilder();
             doc = documentBuilder.parse(src);
-        } catch (ParserConfigurationException e) {
-            logger.error("Parser Configuration Exception ", e);
-        } catch (SAXException e) {
-            logger.error("SAX Exception", e);
-        } catch (IOException e) {
-            logger.error("IO Exception", e);
-        }
+        } catch (Exception e) {
+            logger.error("Exception while converting input string to XML document \n" + xmlString, e);
+            throw new RuntimeException(e);
+        } 
         return doc;
     }
 
@@ -570,7 +568,7 @@ public class XmlToObjectTransformer {
                     Node contexts = getChild(elementStructure, "contexts");
                     List<Node> entries = getChildren(contexts, "entry");
 
-                    Resource resource = OntologyResourceCache.getInstance().getResource(
+                    Resource resource = ResourceCache.getInstance().getResource(
                                                                                         resourceId.getTextContent());
                     int length = resource.getContext().getContext().length;
                     AnnotationContextInformation[] annotationContextInformations = new AnnotationContextInformation[length];
