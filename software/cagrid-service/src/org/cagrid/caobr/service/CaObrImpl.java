@@ -21,7 +21,8 @@ import edu.wustl.caobr.Resource;
 import edu.wustl.caobr.service.ObrThreadPoolExecutor;
 import edu.wustl.caobr.service.RestApiInvoker;
 import edu.wustl.caobr.service.XmlToObjectTransformer;
-import edu.wustl.caobr.service.cache.OntologyResourceCache;
+import edu.wustl.caobr.service.cache.OntologyCache;
+import edu.wustl.caobr.service.cache.ResourceCache;
 import edu.wustl.caobr.service.util.RestApiInfo;
 import edu.wustl.caobr.service.util.SearchBean;
 
@@ -47,7 +48,8 @@ public class CaObrImpl extends CaObrImplBase {
                 try {
                     // Any exception kills the thread. So adding this try catch
                     // to keep thread alive
-                    OntologyResourceCache.getInstance();
+                    OntologyCache.getInstance();
+                    ResourceCache.getInstance();
                 } catch (Throwable t) {
                     logger.error(t);
                 }
@@ -68,7 +70,7 @@ public class CaObrImpl extends CaObrImplBase {
      * @return Annotations
      * @throws RemoteException
      */
-    public edu.wustl.caobr.Annotation[] getAllAnnotations(java.lang.String token) throws RemoteException {
+    public Annotation[] getAllAnnotations(String token) throws RemoteException {
         return getAnnotations(null, null, token);
     }
 
@@ -77,7 +79,7 @@ public class CaObrImpl extends CaObrImplBase {
      * @return Concepts
      * @throws RemoteException
      */
-    public edu.wustl.caobr.Concept[] getAllConcepts(java.lang.String conceptName) throws RemoteException {
+    public Concept[] getAllConcepts(String conceptName) throws RemoteException {
         return getConcepts(null, conceptName);
     }
 
@@ -85,16 +87,16 @@ public class CaObrImpl extends CaObrImplBase {
      * @return
      * @throws RemoteException
      */
-    public edu.wustl.caobr.Ontology[] getAllOntologies() throws RemoteException {
-        return OntologyResourceCache.getInstance().getAllOntologies();
+    public Ontology[] getAllOntologies() throws RemoteException {
+        return OntologyCache.getInstance().getAllOntologies();
     }
 
     /**
      * @return
      * @throws RemoteException
      */
-    public edu.wustl.caobr.Resource[] getAllResources() throws RemoteException {
-        return OntologyResourceCache.getInstance().getAllResources();
+    public Resource[] getAllResources() throws RemoteException {
+        return ResourceCache.getInstance().getAllResources();
     }
 
     /**
@@ -104,9 +106,9 @@ public class CaObrImpl extends CaObrImplBase {
      * @return Annotations
      * @throws RemoteException
      */
-    public edu.wustl.caobr.Annotation[] getAnnotations(edu.wustl.caobr.Ontology[] fromOntologies,
-                                                       edu.wustl.caobr.Resource[] fromResources,
-                                                       java.lang.String token) throws RemoteException {
+    public Annotation[] getAnnotations(Ontology[] fromOntologies,
+                                                       Resource[] fromResources,
+                                                       String token) throws RemoteException {
         System.out.println("Fetching Annotation:");
         String url;
         if (fromOntologies == null || fromOntologies.length == 0) {
@@ -172,8 +174,8 @@ public class CaObrImpl extends CaObrImplBase {
      * @return
      * @throws RemoteException
      */
-    public edu.wustl.caobr.Concept[] getConcepts(edu.wustl.caobr.Ontology[] fromOntologies,
-                                                 java.lang.String conceptName) throws RemoteException {
+    public Concept[] getConcepts(Ontology[] fromOntologies,
+                                                 String conceptName) throws RemoteException {
         String trimmedTerm = conceptName.trim();
         if (trimmedTerm.equals("")) {
             return new Concept[0];
@@ -197,10 +199,10 @@ public class CaObrImpl extends CaObrImplBase {
      * @return
      * @throws RemoteException
      */
-    public boolean isConcept(edu.wustl.caobr.Ontology[] fromOntologies, java.lang.String searchTerm)
+    public boolean isConcept(Ontology[] fromOntologies, String searchTerm)
             throws RemoteException {
         String trimmedTerm = searchTerm.trim();
-        if (trimmedTerm.equals("")) {
+        if (trimmedTerm.equals("") || checkSpecialCharacter(trimmedTerm)) {
             return false;
         }
         String targetUrl = getTargetUrl(fromOntologies, trimmedTerm);
@@ -217,12 +219,9 @@ public class CaObrImpl extends CaObrImplBase {
      * @return
      * @throws RemoteException
      */
-    public boolean isConceptInAnyOntology(java.lang.String searchTerm) throws RemoteException {
+    public boolean isConceptInAnyOntology(String searchTerm) throws RemoteException {
         String trimmedTerm = searchTerm.trim();
-        if (trimmedTerm.equals("")) {
-            return false;
-        }
-        if (checkSpecialCharacter(trimmedTerm)) {
+        if (trimmedTerm.equals("") || checkSpecialCharacter(trimmedTerm)) {
             return false;
         }
         String targetUrl = getTargetUrlWithOutAnyOntology(trimmedTerm);
@@ -257,7 +256,7 @@ public class CaObrImpl extends CaObrImplBase {
      * @return
      * @throws RemoteException
      */
-    public boolean[] isConcepts(java.lang.String[] tokens, edu.wustl.caobr.Ontology[] ontologies)
+    public boolean[] isConcepts(String[] tokens, Ontology[] ontologies)
             throws RemoteException {
         boolean[] flags = new boolean[tokens.length];
         int i = 0;
@@ -273,7 +272,7 @@ public class CaObrImpl extends CaObrImplBase {
      * @return
      * @throws RemoteException
      */
-    public boolean[] isConceptsInAnyOntology(java.lang.String[] tokens) throws RemoteException {
+    public boolean[] isConceptsInAnyOntology(String[] tokens) throws RemoteException {
         boolean[] flags = new boolean[tokens.length];
         int i = 0;
         for (String token : tokens) {
