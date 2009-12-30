@@ -1,24 +1,170 @@
 package edu.wustl.caobr.service;
 
-import java.io.IOException;
-import java.io.StringReader;
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.rmi.RemoteException;
 
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
-import javax.xml.parsers.ParserConfigurationException;
+import junit.framework.TestCase;
 
-import org.w3c.dom.Document;
-import org.w3c.dom.Node;
-import org.w3c.dom.NodeList;
-import org.xml.sax.InputSource;
-import org.xml.sax.SAXException;
+import org.cagrid.caobr.service.CaObrImpl;
 
-public class TestOntology {
-    static List<DetailedOntologyBean> detailedOntologyBeans;
+import edu.wustl.caobr.Annotation;
+import edu.wustl.caobr.Concept;
+import edu.wustl.caobr.Ontology;
+import edu.wustl.caobr.Resource;
+
+public class TestCaObrImpl extends TestCase {
+
+    public void testGetAllOntologies() {
+        try {
+            Ontology[] ontologies = new CaObrImpl().getAllOntologies();
+            assertTrue("No ontologies found", (ontologies.length > 0));
+        } catch (Throwable e) {
+            e.printStackTrace();
+            fail("Exception while getting all ontologies");
+        }
+    }
+
+    public void testGetAllResources() {
+        try {
+            Resource[] resources = new CaObrImpl().getAllResources();
+            assertTrue("No resources found", (resources.length > 0));
+        } catch (Throwable e) {
+            e.printStackTrace();
+            fail("Exception while getting all resources");
+        }
+    }
+
+    public void testGetAllConcepts() {
+        try {
+            Concept[] concepts = new CaObrImpl().getAllConcepts("melanoma");
+            assertTrue("No concepts found for melanoma", (concepts.length > 0));
+        } catch (Throwable e) {
+            e.printStackTrace();
+            fail("Exception while getting all resources");
+        }
+    }
+
+    public void testGetAllAnnotations() {
+        Resource r = new Resource(null, null, null, null, null, null, "CANANO", null);
+        Resource[] arr = new Resource[1];
+        arr[0] = r;
+
+        Ontology[] onto = new Ontology[1];
+        onto[0] = new Ontology(null, null, null, null, "1083", null);
+
+        try {
+            Annotation[] res = new CaObrImpl().getAnnotations(onto, arr, "nanorod");
+            assertTrue(res.length > 10); // As of 30 dec we get more than 10 annotations
+            for (Annotation a : res) {
+                Ontology o = a.getConcept().getConcept().getOntology().getOntology();
+                assertNotNull(o);
+            }
+        } catch (RemoteException e) {
+            e.printStackTrace();
+            fail("Exception while getting all resources");
+        }
+    }
+
+    public void testGetConcepts() {
+        Ontology[] ontologies = new Ontology[1];
+        ontologies[0] = new Ontology(null, null, null, null, "1083", null);
+        Concept[] cons = null;
+        try {
+            cons = new CaObrImpl().getConcepts(ontologies, "nanorod");
+
+        } catch (RemoteException e) {
+            e.printStackTrace();
+            fail("Exception in getConcepts()");
+        }
+        assertNotNull(cons);
+        assertEquals(1, cons.length);
+        assertNotNull(cons[0].getLocalConceptId());
+        assertEquals("1083", cons[0].getOntology().getOntology().getOntologyId());
+        assertNotNull(cons[0].getPreferredName());
+
+    }
+
+    public void testIsConceptTrue() {
+        String concept = "nanorod";
+        Ontology[] onto = new Ontology[1];
+        onto[0] = new Ontology(null, null, null, null, "1083", null);
+        try {
+            assertTrue(new CaObrImpl().isConcept(onto, concept));
+        } catch (RemoteException e) {
+            e.printStackTrace();
+            fail("Exception in isConcept()");
+        }
+    }
+
+    public void testIsConceptFalse() {
+        Ontology[] onto = new Ontology[1];
+        onto[0] = new Ontology(null, null, null, null, "1083", null);
+        try {
+            assertFalse(new CaObrImpl().isConcept(onto, "dog"));
+        } catch (RemoteException e) {
+            e.printStackTrace();
+            fail("Exception in isConcept()");
+        }
+    }
+
+    public void testIsConceptInAnyOntologyTrue() {
+        String concept = "nanorod";
+        try {
+            assertTrue(new CaObrImpl().isConceptInAnyOntology(concept));
+        } catch (RemoteException e) {
+            e.printStackTrace();
+            fail("Exception in isConceptInAnyOntology()");
+        }
+    }
+
+    public void testIsConceptInAnyOntologyFalse() {
+        try {
+            assertFalse(new CaObrImpl().isConceptInAnyOntology("asasbhyuasvgja"));
+        } catch (RemoteException e) {
+            e.printStackTrace();
+            fail("Exception in isConceptInAnyOntology()");
+        }
+    }
+
+    public void testIsConcepts() {
+        String tokens[] = { "PET/MRI", "dy&*e  ", "melanoma" };
+
+        Ontology[] onto = new Ontology[3];
+        onto[0] = new Ontology(null, null, null, null, "1083", null);
+        onto[1] = new Ontology(null, null, null, null, "1245", null);
+        onto[2] = new Ontology(null, null, null, null, "1083", null);
+        boolean[] arr = null;
+        try {
+            arr = new CaObrImpl().isConcepts(tokens, onto);
+
+        } catch (RemoteException e) {
+            e.printStackTrace();
+            fail("Exception in isConcepts()");
+        }
+        assertEquals(3, arr.length);
+        assertFalse(arr[0]);
+        assertFalse(arr[1]);
+        assertTrue(arr[2]);
+        
+    }
+
+    public void testIsConceptsInAnyOntology() {
+        String tokens[] = { "PET/MRI", "dye  ", "melanoma" };
+
+        boolean[] arr = null;
+        try {
+            arr = new CaObrImpl().isConceptsInAnyOntology(tokens);
+        } catch (RemoteException e) {
+            e.printStackTrace();
+            fail("Exception in isConceptsInAnyOntology()");
+        }
+        assertFalse(arr[0]);
+        assertTrue(arr[1]);
+        assertTrue(arr[2]);
+    }
+}
+
+/*
+  static List<DetailedOntologyBean> detailedOntologyBeans;
 
     static List<SmallOntologyBean> smallOntologyBeans;
 
@@ -152,4 +298,5 @@ class DetailedOntologyBean {
     String versionNumber;
 
     String description;
-}
+} 
+ */
