@@ -54,7 +54,7 @@ public class CaObrImpl extends CaObrImplBase {
                     logger.error(t);
                 }
             }
-        }, delay, interval);
+        }, delay, interval);               
     }
 
     /**
@@ -92,7 +92,7 @@ public class CaObrImpl extends CaObrImplBase {
     }
 
     /**
-     * @return
+     * @return Resources from OBR 
      * @throws RemoteException
      */
     public Resource[] getAllResources() throws RemoteException {
@@ -103,13 +103,14 @@ public class CaObrImpl extends CaObrImplBase {
      * @param fromOntologies
      * @param fromResources
      * @param token
-     * @return Annotations
+     * @return Annotations  having conceptIds present in fromOntologies from resources.
      * @throws RemoteException
      */
-    public Annotation[] getAnnotations(Ontology[] fromOntologies,
-                                                       Resource[] fromResources,
-                                                       String token) throws RemoteException {
-        System.out.println("Fetching Annotation:");
+    public Annotation[] getAnnotations(Ontology[] fromOntologies, Resource[] fromResources, String token)
+            throws RemoteException {
+
+    	logger.debug(" getAnnotations called with ::"+token);    	
+    	
         String url;
         if (fromOntologies == null || fromOntologies.length == 0) {
             url = getTargetUrlWithOutAnyOntology(token);
@@ -171,11 +172,10 @@ public class CaObrImpl extends CaObrImplBase {
     /**
      * @param fromOntologies
      * @param conceptName
-     * @return
+     * @return Concepts present in fromOntologies for a conceptName
      * @throws RemoteException
      */
-    public Concept[] getConcepts(Ontology[] fromOntologies,
-                                                 String conceptName) throws RemoteException {
+    public Concept[] getConcepts(Ontology[] fromOntologies, String conceptName) throws RemoteException {
         String trimmedTerm = conceptName.trim();
         if (trimmedTerm.equals("")) {
             return new Concept[0];
@@ -196,11 +196,13 @@ public class CaObrImpl extends CaObrImplBase {
     /**
      * @param fromOntologies
      * @param searchTerm
-     * @return
+     * @return true  if searchTerm is a concept in fromOntologies
      * @throws RemoteException
      */
-    public boolean isConcept(Ontology[] fromOntologies, String searchTerm)
-            throws RemoteException {
+    public boolean isConcept(Ontology[] fromOntologies, String searchTerm) throws RemoteException {
+    	
+    	logger.debug(" isConcept called with ::"+searchTerm+ " fromOntologies ::"+fromOntologies);    	
+    	
         String trimmedTerm = searchTerm.trim();
         if (trimmedTerm.equals("") || checkSpecialCharacter(trimmedTerm)) {
             return false;
@@ -216,26 +218,31 @@ public class CaObrImpl extends CaObrImplBase {
 
     /**
      * @param searchTerm
-     * @return
+     * @return true  if searchTerm is a concept  
      * @throws RemoteException
      */
     public boolean isConceptInAnyOntology(String searchTerm) throws RemoteException {
+    	
         String trimmedTerm = searchTerm.trim();
         if (trimmedTerm.equals("") || checkSpecialCharacter(trimmedTerm)) {
             return false;
         }
-        String targetUrl = getTargetUrlWithOutAnyOntology(trimmedTerm);
-        String result = RestApiInvoker.getResult(targetUrl);
-        if (result.equals("")) {
-            logger.debug("Could not find concept for +" + trimmedTerm);
-            return false;
-        }
-        List<SearchBean> beans = new XmlToObjectTransformer().toSearchBean(result);
-        if (beans.isEmpty()) {
-            return false;
-        }
+        try{
+        	 String targetUrl = getTargetUrlWithOutAnyOntology(trimmedTerm);
+             String result = RestApiInvoker.getResult(targetUrl);
+             if (result.equals("")) {
+                 logger.debug("Could not find concept for +" + trimmedTerm);
+                 return false;
+             }
+             List<SearchBean> beans = new XmlToObjectTransformer().toSearchBean(result);
+             if (beans.isEmpty()) {
+                 return false;
+             }
+        }catch (RuntimeException re) {
+        	logger.error(" RuntimeException Occured :: "+re,re);
+        	return false;
+		}       
         return true;
-
     }
 
     private boolean checkSpecialCharacter(String token) {
@@ -253,11 +260,10 @@ public class CaObrImpl extends CaObrImplBase {
     /**
      * @param tokens
      * @param ontologies
-     * @return
+     * @return true  if each token in tokens is a concept in ontologies , otherwise returns false
      * @throws RemoteException
      */
-    public boolean[] isConcepts(String[] tokens, Ontology[] ontologies)
-            throws RemoteException {
+    public boolean[] isConcepts(String[] tokens, Ontology[] ontologies) throws RemoteException {
         boolean[] flags = new boolean[tokens.length];
         int i = 0;
         for (String token : tokens) {
@@ -269,14 +275,13 @@ public class CaObrImpl extends CaObrImplBase {
 
     /**
      * @param tokens
-     * @return
+     * @return true  if each token in tokens is a concept ,otherwise returns false
      * @throws RemoteException
      */
     public boolean[] isConceptsInAnyOntology(String[] tokens) throws RemoteException {
         boolean[] flags = new boolean[tokens.length];
         int i = 0;
         for (String token : tokens) {
-            System.out.println("Searching for " + token);
             flags[i] = isConceptInAnyOntology(token);
             i++;
         }
@@ -284,11 +289,9 @@ public class CaObrImpl extends CaObrImplBase {
     }
 
     /**
-     * This method returns the target URL for searching concept
-     * 
      * @param ontologies
      * @param conceptName
-     * @return
+     * @return target URL for searching concept 
      */
     private String getTargetUrl(Ontology[] ontologies, String conceptName) {
 
@@ -309,16 +312,16 @@ public class CaObrImpl extends CaObrImplBase {
             logger.info("Unsupported Encoding ");
             e.printStackTrace();
         }
-        System.out.println("Target :" + targetUrl);
         return targetUrl;
 
     }
 
     /**
      * @param term
-     * @return
+     * @return target URL for searching concept
      */
     private String getTargetUrlWithOutAnyOntology(String term) {
-        return RestApiInfo.getConceptIdURL() + encode(term) + "/" + "&isexactmatch=1";
+        return RestApiInfo.getConceptIdURL() + encode(term) + "/" + "?isexactmatch=1";
     }
+
 }
