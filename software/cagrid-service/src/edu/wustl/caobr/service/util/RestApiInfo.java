@@ -113,14 +113,8 @@ public class RestApiInfo {
         return properties.getProperty("tagname.ontology.version");
     }
 
-    //========================================================================
-    //    public static String getResourceXmlPath() {
-    //        return resourceXmlPath;
-    //    }
-    //
-    //    public static void setResourceXmlPath(String resourceXmlPath) {
-    //        RestApiInfo.resourceXmlPath = resourceXmlPath;
-    //    }
+    
+    
     /**
      * Loads properties from a property file present in classpath to java objects.
      * 

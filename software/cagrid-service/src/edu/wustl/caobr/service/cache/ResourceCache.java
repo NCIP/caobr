@@ -26,7 +26,7 @@ public class ResourceCache {
     private Map<String, Resource> resourceMap = new HashMap<String, Resource>();
 
     /**
-     * This gives the singleton instance of the OntologyResourceCache class. If not it creates it. 
+     * This gives the singleton instance of the ResourceCache class. If not it creates it. 
      * @return Returns the singleton instance of the pathFinder class.
      */
     public static synchronized ResourceCache getInstance() {

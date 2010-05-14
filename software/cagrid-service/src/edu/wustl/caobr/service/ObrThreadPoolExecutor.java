@@ -8,6 +8,8 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 
+import org.apache.log4j.Logger;
+
 import edu.wustl.caobr.Annotation;
 
 /**
@@ -15,6 +17,9 @@ import edu.wustl.caobr.Annotation;
  * @author chandrakant_talele
  */
 public class ObrThreadPoolExecutor {
+
+    private static final Logger logger = Logger.getLogger(ObrThreadPoolExecutor.class);
+
     private static final int poolSize = 500;
 
     private static ExecutorService executor = init();
@@ -25,13 +30,14 @@ public class ObrThreadPoolExecutor {
     private static ExecutorService init() {
         return Executors.newFixedThreadPool(poolSize);
     }
+
     /**
      * Returns annotations for each URL parameter String. 
      * @param urlParamForPostCall
      * @return List of annotations retrieved for given URLs  
      */
     public List<Annotation> getAnnotations(List<Map<String, String>> urlParamForPostCall) {
-        if(executor.isShutdown() || executor.isTerminated()) {
+        if (executor.isShutdown() || executor.isTerminated()) {
             executor = init();
         }
         List<Future<List<Annotation>>> futures = new ArrayList<Future<List<Annotation>>>(100);
@@ -55,11 +61,9 @@ public class ObrThreadPoolExecutor {
                 List<Annotation> result = future.get();
                 annotations.addAll(result);
             } catch (InterruptedException e) {
-                // TODO Auto-generated catch block
-                e.printStackTrace();
+                logger.error("InterruptedException thrown", e);
             } catch (ExecutionException e) {
-                // TODO Auto-generated catch block
-                e.printStackTrace();
+                logger.error("ExecutionException thrown", e);
             }
         }
         return annotations;

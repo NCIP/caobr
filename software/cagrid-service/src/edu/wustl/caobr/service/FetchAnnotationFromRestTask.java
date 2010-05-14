@@ -5,6 +5,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.Callable;
 
+import org.apache.log4j.Logger;
+
 import edu.wustl.caobr.Annotation;
 import edu.wustl.caobr.service.util.RestApiInfo;
 
@@ -13,6 +15,8 @@ import edu.wustl.caobr.service.util.RestApiInfo;
  * @author chandrakant_talele
  */
 public class FetchAnnotationFromRestTask implements Callable<List<Annotation>> {
+    private static final Logger logger = Logger.getLogger(ObrThreadPoolExecutor.class);
+
     private Map<String, String> urlParamForPostCall;
 
     /**
@@ -28,12 +32,11 @@ public class FetchAnnotationFromRestTask implements Callable<List<Annotation>> {
      */
     public List<Annotation> call() throws Exception {
         String targetUrl = RestApiInfo.getObrResultURL();
-        try {
-            String res = new RestApiInvoker().getResultFromPost(targetUrl, urlParamForPostCall);
+        try {        	
+            String res = new RestApiInvoker().getResultFromPost(targetUrl, urlParamForPostCall);            
             return new XmlToObjectTransformer().getAnnotation(res);
-        } catch (Exception e1) {
-            //TODO Do exception handling
-            e1.printStackTrace();
+        } catch (Exception e) {
+            logger.error("Exception Thrown ", e);
         }
         return new ArrayList<Annotation>(0);
     }

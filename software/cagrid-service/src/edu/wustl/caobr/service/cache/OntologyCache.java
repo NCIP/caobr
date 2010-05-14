@@ -25,7 +25,7 @@ public class OntologyCache {
     private Map<String, Ontology> ontologyMap = new HashMap<String, Ontology>();
 
     /**
-     * This gives the singleton instance of the OntologyResourceCache class. If not it creates it. 
+     * This gives the singleton instance of the OntologyCache class. If not it creates it. 
      * @return Returns the singleton instance of the pathFinder class.
      */
     public static synchronized OntologyCache getInstance() {
@@ -59,7 +59,7 @@ public class OntologyCache {
  
     /**
      * @param ontologyId
-     * @return
+     * @return Ontology
      */
     public Ontology getOntology(String ontologyId) {
         return ontologyMap.get(ontologyId);
@@ -67,7 +67,7 @@ public class OntologyCache {
     }
 
     /**
-     * @return
+     * @return ontologyMap
      */
     public Map<String, Ontology> getOntologyMap() {
         return ontologyMap;
@@ -75,7 +75,7 @@ public class OntologyCache {
     }
 
     /**
-     * @return
+     * @return All ontologies which are used for generating annotation
      */
     public Ontology[] getAllOntologies() {
         Map<String, Ontology> map = getOntologyMap();

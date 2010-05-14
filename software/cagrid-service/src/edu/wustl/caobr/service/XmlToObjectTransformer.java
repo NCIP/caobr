@@ -74,7 +74,7 @@ public class XmlToObjectTransformer {
 
     /**
      * @param xmlResult
-     * @return
+     * @return It parses the xml and returns list of Concept
      */
     public List<Concept> toConcepts(String xmlResult) {
         NodeList list = getElementsFromXML(xmlResult, "searchBean", false);
@@ -88,7 +88,7 @@ public class XmlToObjectTransformer {
 
     /**
      * @param node
-     * @return
+     * @return returns Concept Object made from  node
      */
     private static Concept toAnnotationConceptObject(Node node) {
         NodeList list = node.getChildNodes();
@@ -124,7 +124,7 @@ public class XmlToObjectTransformer {
 
     /**
      * @param xmlResult
-     * @return
+     * @return It parses the xml and returns list of SearchBean
      */
     public List<SearchBean> toSearchBean(String xmlResult) {
         NodeList list = getElementsFromXML(xmlResult, "searchBean", false);
@@ -138,8 +138,8 @@ public class XmlToObjectTransformer {
     }
 
     /**
-     * @param node
-     * @return
+     * @param node 
+     * @return reutrn Search Object
      */
     private static SearchBean toSearchtObject(Node node) {
         NodeList list = node.getChildNodes();
@@ -161,6 +161,10 @@ public class XmlToObjectTransformer {
         return searchBean;
     }
 
+    /**
+     * @param s
+     * @return It  converts SearchBean Object to Concept Object
+     */
     private Concept convertSeachBeantoConcept(SearchBean s) {
         Concept concept = new Concept();
         concept.setIsRoot(false);
@@ -177,7 +181,7 @@ public class XmlToObjectTransformer {
     /**
      * @param xmlResult
      * @param ontologyIdsToLookFor
-     * @return
+     * @return List of Ontology
      */
     public List<Ontology> toOntologies(String xmlResult, Map<String, String> ontologiesUsedWhileAnnotating) {
         NodeList list = getElementsFromXML(xmlResult, "ontologyBean", false);
@@ -195,7 +199,7 @@ public class XmlToObjectTransformer {
 
     /**
      * @param node
-     * @return
+     * @return Ontology Object 
      */
     private static Ontology toOntologyObject(Node node) {
         NodeList list = node.getChildNodes();
@@ -225,7 +229,7 @@ public class XmlToObjectTransformer {
     /**
      * @param node
      * @param ontologyIdsToLookFor
-     * @return
+     * @return It checks the node and return true if node contains ontlogyId is present in ontologiesUsedWhileAnnotating
      */
     private static boolean isUsedForAnnotation(Node node, Map<String, String> ontologiesUsedWhileAnnotating) {
         NodeList list = node.getChildNodes();
@@ -238,9 +242,12 @@ public class XmlToObjectTransformer {
             }
         }
         return isUsedForAnnotation;
-        // return true;
     }
 
+    /**
+     * @param xmlResult
+     * @return Map of ontology used in annotation in OBR 
+     */
     public Map<String, String> getOntologiesUsedWhileAnnotating(String xmlResult) {
         Map<String, String> map = new HashMap<String, String>();
         NodeList list = getElementsFromXML(xmlResult, "obs.common.beans.OntologyBean", false);
@@ -263,9 +270,10 @@ public class XmlToObjectTransformer {
         return map;
     }
 
+    
     /**
      * @param xmlResult
-     * @return
+     * @return List of Resource from xml 
      */
     public List<Resource> toResources(String xmlResult) {
         NodeList list = getElementsFromXML(xmlResult, RestApiInfo.getTagNameResourceRoot(), true);
@@ -279,7 +287,7 @@ public class XmlToObjectTransformer {
 
     /**
      * @param node
-     * @return
+     * @return Resource Object
      */
     private Resource toResourceObject(Node node) {
         NodeList list = node.getChildNodes();
@@ -338,6 +346,10 @@ public class XmlToObjectTransformer {
         return r;
     }
 
+    /**
+     * @param xmlString
+     * @return Document object
+     */
     private Document getDocument(String xmlString) {
         Document doc = null;
 
@@ -350,10 +362,11 @@ public class XmlToObjectTransformer {
         } catch (Exception e) {
             logger.error("Exception while converting input string to XML document \n" + xmlString, e);
             throw new RuntimeException(e);
-        } 
+        }
         return doc;
     }
 
+    
     /**
      * @param file
      * @param nodeName
@@ -453,7 +466,7 @@ public class XmlToObjectTransformer {
 
     /**
      * @param annotationXML
-     * @return
+     * @return Returns list of Annotation
      */
     public List<Annotation> getAnnotation(String annotationXML) {
         Document doc = getDocument(annotationXML);
@@ -461,10 +474,11 @@ public class XmlToObjectTransformer {
         XPathFactory fact = XPathFactory.newInstance();
         XPath xpath = fact.newXPath();
         List<Annotation> annotationList = new ArrayList<Annotation>();
-
-        String annotationPath = "//directAnnotations/obs.common.beans.ObrAnnotationBeanDetailled";
+        
+        //String annotationPath = "//directAnnotations/obs.common.beans.ObrAnnotationBeanDetailled";
+         String annotationPath = "//mgrepAnnotations/obs.common.beans.ObrAnnotationBeanDetailled";
         setAllAnnotation(annotationList, doc, xpath, annotationPath);
-
+        
         annotationPath = "//mappingAnnotations/obs.common.beans.ObrAnnotationBeanDetailled";
         setAllAnnotation(annotationList, doc, xpath, annotationPath);
 
@@ -568,8 +582,7 @@ public class XmlToObjectTransformer {
                     Node contexts = getChild(elementStructure, "contexts");
                     List<Node> entries = getChildren(contexts, "entry");
 
-                    Resource resource = ResourceCache.getInstance().getResource(
-                                                                                        resourceId.getTextContent());
+                    Resource resource = ResourceCache.getInstance().getResource(resourceId.getTextContent());
                     int length = resource.getContext().getContext().length;
                     AnnotationContextInformation[] annotationContextInformations = new AnnotationContextInformation[length];
                     int i = 0;
@@ -648,7 +661,7 @@ public class XmlToObjectTransformer {
     /**
      * @param node
      * @param matchingvalue
-     * @return
+     * @return childNode of node
      */
     private Node getChild(Node node, String matchingvalue) {
 
@@ -665,7 +678,7 @@ public class XmlToObjectTransformer {
     /**
      * @param node
      * @param matchingvalue
-     * @return
+     * @return children of node
      */
     private List<Node> getChildren(Node node, String matchingvalue) {
 
