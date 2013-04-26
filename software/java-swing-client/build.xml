@@ -1,4 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
+<!--L
+  Copyright Washington University at St. Louis and Persistent Systems
+
+  Distributed under the OSI-approved BSD 3-Clause License.
+  See http://ncip.github.com/caobr/LICENSE.txt for details.
+L-->
+
 <project name="caObr Service Swing Client" basedir="." default="startClient">
 
 	<property name="workArea.dir" location="./build" />
