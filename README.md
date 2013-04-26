@@ -1,7 +1,7 @@
 Welcome to the caOBR Project!
 ==============================
 
-The goal of caOBR is to develop a caGrid-enabled service that allows caBIG community to access the data indexed by OBR by wrapping OBR�s REST-based API. 
+The goal of caOBR is to develop a caGrid-enabled service that allows caBIG community to access the data indexed by OBR by wrapping OBR's REST-based API. 
 It is developed in Java and requires Apache Ant for building.
 
 caOBR is distributed under the BSD 3-Clause License. Please see the NOTICE and LICENSE files for details.
