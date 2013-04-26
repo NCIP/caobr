@@ -10,8 +10,8 @@ You will find more details about caOBR in the following links:
 
 
  * [Code Repository](https://github.com/NCIP/caobr)
- * [NCI Documentation](https://gforge.nci.nih.gov/docman/index.php?group_id=639&selected_doc_group_id=5376&language_id=1)
- * [WUSTL Documentation](http://www.bioontology.org/caOBR)
+ * [Documentation (NCI)](https://gforge.nci.nih.gov/docman/index.php?group_id=639&selected_doc_group_id=5376&language_id=1)
+ * [Documentation (NCBO)](http://www.bioontology.org/caOBR)
  * [Installation Package](https://gforge.nci.nih.gov/frs/?group_id=639&release_id=3985)
  
 Please join us in further developing and improving caOBR.
